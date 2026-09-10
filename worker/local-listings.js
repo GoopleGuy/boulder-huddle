@@ -39,6 +39,7 @@ export function localReport(games,listings,checkedAt=new Date().toISOString()){
  return {checkedAt,games:rows};
 }
 export async function fetchLocalListings(games,fetcher=fetch){
+ if(!games.length)return {rows:[],successfulPages:0,diagnostics:[],checkedAt:new Date().toISOString()};
  // The provider defaults to the visitor's location, including overseas CI runners.
  // Set an anonymous session preference before requesting Denver's dated listings.
  let cookie='';
