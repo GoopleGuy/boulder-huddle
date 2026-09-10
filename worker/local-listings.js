@@ -39,6 +39,10 @@ export function localReport(games,listings,checkedAt=new Date().toISOString()){
  return {checkedAt,games:rows};
 }
 export async function fetchLocalListings(games,fetcher=fetch){
+ // The provider defaults to the visitor's location, including overseas CI runners.
+ // Set an anonymous session preference before requesting Denver's dated listings.
+ let cookie='';
+ try{const preference=await fetcher('https://www.tvpassport.com/my-passport/dashboard/save_timezone',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:'timezone=America%2FDenver',signal:AbortSignal.timeout(12000)});cookie=(preference.headers.get('set-cookie')||'').split(';')[0];}catch{}
  const dates=[...new Set(games.map(g=>localDate(g.date)))];
  const jobs=dates.flatMap(day=>LOCAL_STATIONS.filter(station=>games.some(g=>localDate(g.date)===day&&(g.networks.includes(station.network)||g.away.abbr==='DEN'||g.home.abbr==='DEN'||(station.network==='ABC'&&g.networks.includes('ESPN'))))).map(station=>({day,station})));
  const rows=[],diagnostics=[];let successfulPages=0;
@@ -46,7 +50,7 @@ export async function fetchLocalListings(games,fetcher=fetch){
  await Promise.all(Array.from({length:Math.min(4,jobs.length)},async()=>{
   while(jobs.length){const {day,station}=jobs.pop();
    try{const url=`https://www.tvpassport.com/tv-listings/stations/${station.path}/${day}`;
-    let response=await fetcher(url,{headers:{Accept:'text/html','User-Agent':'BoulderHuddle/1.0','Accept-Language':'en-US,en;q=0.9'},signal:AbortSignal.timeout(12000)});
+    let response=await fetcher(url,{headers:{Accept:'text/html','User-Agent':'BoulderHuddle/1.0','Accept-Language':'en-US,en;q=0.9',...(cookie?{Cookie:cookie}:{})},signal:AbortSignal.timeout(12000)});
     let html=response.ok?await response.text():'';let via='direct';
     if(!/data-listdatetime=/i.test(html)){
      // Fetch rendered HTML, not model-generated text. The same strict date/team parser applies.
@@ -54,6 +58,7 @@ export async function fetchLocalListings(games,fetcher=fetch){
      html=response.ok?await response.text():'';via='reader';
     }
     if(html.length>2000000)continue;
+    if(!/timezone:\s*"America\/Denver"/.test(html)){diagnostics.push({call:station.call,day,error:'Unconfirmed listing timezone'});continue;}
     const parsed=parseListings(html,station,day);rows.push(...parsed);if(parsed.length)successfulPages++;diagnostics.push({call:station.call,day,status:response.status,parsed:parsed.length,via});
    }catch(e){diagnostics.push({call:station.call,day,error:e.name});}
   }
