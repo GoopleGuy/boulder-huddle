@@ -1,6 +1,7 @@
+import {SERVICE_LABELS,PROVIDERS} from './preferences.js';
 export const ZONE = 'America/Denver';
 export const STATIONS = {CBS: 'KCNC · 4.1', FOX: 'KDVR · 31.1', NBC: 'KUSA · 9.1', ABC: 'KMGH · 7.1'};
-export const DEFAULT_SERVICES = {ota:true, prime:true, netflix:true, nfl:true, redzone:true};
+export const DEFAULT_SERVICES = {...Object.fromEntries(Object.keys(SERVICE_LABELS).map(k=>[k,false])),ota:true, prime:true, netflix:true, nfl:true, redzone:true};
 export function localDate(date) {return new Intl.DateTimeFormat('en-CA',{timeZone:ZONE,year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date(date));}
 export function mountain(date, options={}) {return new Intl.DateTimeFormat('en-US',{timeZone:ZONE,...options}).format(new Date(date));}
 export function kickoff(game) {return game.timeTbd ? 'Time TBD' : mountain(game.date,{hour:'numeric',minute:'2-digit'});}
@@ -23,17 +24,29 @@ export function freshVerification(g,now=Date.now()) {return !!g.verifiedAt && no
 export function access(g,services=DEFAULT_SERVICES,now=Date.now()) {
   const fresh=freshVerification(g,now);const nets=g.networks.map(x=>x.toLowerCase());const has=s=>nets.some(n=>n===s||n.includes(s));
   const sunday=isSundayAfternoon(g),station=fresh&&g.local==='yes'?g.station:null;
-  const mobile=services.nfl&&fresh&&g.mobile===true;
+  const mobile=(services.nfl||services.redzone)&&fresh&&g.mobile===true;
+  const provider=PROVIDERS.find(k=>services[k]);
+  const tv=key=>!!provider&&services['tv_'+key];
   let full=null;
   if(station&&services.ota)full=station+' with your antenna';
   else if(services.prime&&(has('prime video')||has('amazon')))full='Prime Video';
   else if(services.netflix&&has('netflix'))full='Netflix';
-  else if(services.nfl&&has('nfl network'))full='NFL Network through NFL+';
+  else if((services.nfl||services.redzone)&&has('nfl network'))full='NFL Network through NFL+';
+  else if(services.ticket&&sunday&&fresh&&g.local==='no')full='NFL Sunday Ticket';
+  else if(services.peacock&&(has('peacock')||has('nbc')))full='Peacock';
+  else if(services.paramount&&((station&&has('cbs'))||has('paramount')))full='Paramount+';
+  else if(services.foxone&&station&&has('fox'))full='FOX One';
+  else if(services.espn&&nets.some(n=>['espn','espn2','abc','espn+','espn unlimited','nfl network'].includes(n)))full='ESPN Unlimited';
+  else if(services.espnplus&&has('espn+'))full='ESPN Select / ESPN+';
+  else if(services.youtube&&nets.includes('youtube'))full='YouTube';
+  else if(services.twitch&&has('twitch'))full='Twitch';
+  else if(services.tubi&&has('tubi'))full='Tubi';
+  else if(provider&&((station&&['cbs','fox','nbc','abc'].some(n=>tv(n)&&nets.includes(n)))||(tv('espn')&&nets.some(n=>['espn','espn2'].includes(n)))||(tv('nfl')&&has('nfl network'))))full=SERVICE_LABELS[provider]+(station?' · '+station:'');
   // Network affiliation alone is not evidence of a game's local carriage.
-  const rz=sunday&&services.redzone;
+  const rz=sunday&&(services.redzone||tv('redzone'));
   if(full)return {kind:'full',label:'Full game',line:full,detail:mobile?'Also on NFL+ · phone/tablet only; no TV casting.':(fresh?'Live full-game access with your services.':'Broadcaster listed by schedule feed; rights verification pending.'),mobile,redzone:rz,station};
   if(mobile)return {kind:'mobile',label:'Mobile / tablet',line:'NFL+ on your phone or tablet',detail:'Full game on mobile only; no TV casting. '+(g.requiredService?`For TV: ${g.requiredService} (not in your services).`:'TV service not in your subscriptions.'),mobile:true,redzone:rz,station};
-  if(rz)return {kind:fresh&&g.local==='no'?'redzone':'pending',label:fresh&&g.local==='no'?'RedZone only':'Local TV unconfirmed',line:'NFL RedZone through NFL+ Premium',detail:fresh&&g.local==='no'?'No full local broadcast with your services. RedZone shows live look-ins, not the full game. Sunday Ticket is needed for the full out-of-market game.':'Full local broadcast is not confirmed. RedZone offers look-ins only; check the Denver assignment before planning to watch.',mobile,redzone:true,station};
+  if(rz)return {kind:fresh&&g.local==='no'?'redzone':'pending',label:fresh&&g.local==='no'?'RedZone only':'Local TV unconfirmed',line:services.redzone?'NFL RedZone through NFL+ Premium':'NFL RedZone through '+SERVICE_LABELS[provider],detail:fresh&&g.local==='no'?'No full local broadcast with your services. RedZone shows live look-ins, not the full game. Sunday Ticket is needed for the full out-of-market game.':'Full local broadcast is not confirmed. RedZone offers look-ins only; check the Denver assignment before planning to watch.',mobile,redzone:true,station};
   const required=g.requiredService||g.networks.join(' / ')||'Broadcaster TBD';
   return {kind:fresh?'extra':'pending',label:fresh?'Extra service':'Access unconfirmed',line:fresh?required:'Verify local broadcast & streaming rights',detail:fresh?`No confirmed full-game access with your services. ${required} is needed; check its eligible plan.`:'NFL+ mobile eligibility and any Denver simulcast are still unconfirmed. Open the sources for the latest listing.',mobile:false,redzone:false,station};
 }
