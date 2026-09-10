@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-09-10T18:31:34.532Z",
+  "generatedAt": "2026-09-10T21:14:00.797Z",
   "slates": [
     {
       "start": "2026-09-08",
@@ -95,13 +95,6 @@
       "successfulPages": 5,
       "diagnostics": [
         {
-          "call": "KMGH",
-          "day": "2026-09-14",
-          "status": 200,
-          "parsed": 1,
-          "via": "direct"
-        },
-        {
           "call": "KUSA",
           "day": "2026-09-14",
           "status": 200,
@@ -109,14 +102,21 @@
           "via": "direct"
         },
         {
-          "call": "KCNC",
+          "call": "KMGH",
+          "day": "2026-09-14",
+          "status": 200,
+          "parsed": 1,
+          "via": "direct"
+        },
+        {
+          "call": "KDVR",
           "day": "2026-09-14",
           "status": 200,
           "parsed": 0,
           "via": "direct"
         },
         {
-          "call": "KDVR",
+          "call": "KCNC",
           "day": "2026-09-14",
           "status": 200,
           "parsed": 0,
@@ -151,13 +151,25 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-09-10T18:31:33.921Z"
+      "checkedAt": "2026-09-10T21:14:00.198Z"
     },
     {
       "start": "2026-09-15",
       "end": "2026-09-21",
       "signature": "35c3972f9a9edc5d4a15849726385e2bcb45466ee6ffd595c407652863683f05",
       "rows": [
+        {
+          "network": "NBC",
+          "call": "KUSA",
+          "day": "2026-09-20",
+          "minute": 1095,
+          "teams": [
+            "Indianapolis Colts",
+            "Kansas City Chiefs"
+          ],
+          "title": "Indianapolis Colts at Kansas City Chiefs",
+          "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-09-20"
+        },
         {
           "network": "ABC",
           "call": "KMGH",
@@ -171,20 +183,39 @@
           "url": "https://www.tvpassport.com/tv-listings/stations/abc-kmgh-denver-co-hd/5723/2026-09-21"
         },
         {
-          "network": "NBC",
-          "call": "KUSA",
+          "network": "FOX",
+          "call": "KDVR",
           "day": "2026-09-20",
-          "minute": 1095,
+          "minute": 660,
           "teams": [
-            "Indianapolis Colts",
-            "Kansas City Chiefs"
+            "Minnesota Vikings",
+            "Chicago Bears"
           ],
-          "title": "Indianapolis Colts at Kansas City Chiefs",
-          "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-09-20"
+          "title": "Minnesota Vikings at Chicago Bears",
+          "url": "https://www.tvpassport.com/tv-listings/stations/fox-kdvr-denver-co-hd/6401/2026-09-20"
+        },
+        {
+          "network": "FOX",
+          "call": "KDVR",
+          "day": "2026-09-20",
+          "minute": 865,
+          "teams": [
+            "Washington Commanders",
+            "Dallas Cowboys"
+          ],
+          "title": "Washington Commanders at Dallas Cowboys",
+          "url": "https://www.tvpassport.com/tv-listings/stations/fox-kdvr-denver-co-hd/6401/2026-09-20"
         }
       ],
-      "successfulPages": 2,
+      "successfulPages": 3,
       "diagnostics": [
+        {
+          "call": "KUSA",
+          "day": "2026-09-20",
+          "status": 200,
+          "parsed": 1,
+          "via": "direct"
+        },
         {
           "call": "KMGH",
           "day": "2026-09-20",
@@ -200,17 +231,10 @@
           "via": "direct"
         },
         {
-          "call": "KUSA",
-          "day": "2026-09-20",
-          "status": 200,
-          "parsed": 1,
-          "via": "direct"
-        },
-        {
           "call": "KDVR",
           "day": "2026-09-20",
           "status": 200,
-          "parsed": 0,
+          "parsed": 2,
           "via": "direct"
         },
         {
@@ -221,7 +245,7 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-09-10T18:31:34.532Z"
+      "checkedAt": "2026-09-10T21:14:00.796Z"
     }
   ]
 }
