@@ -21,7 +21,7 @@ export async function getGuide(env,start,fetcher=fetch){
  let listings=null;
  if(env.LISTINGS_URL){try{
   let feed=await getCache(env,'published-listings');
-  if(!feed){const r=await fetcher(env.LISTINGS_URL,{signal:AbortSignal.timeout(15000)});if(r.ok){feed=await r.json();await putCache(env,'published-listings',feed,FIVE);}}
+  if(!feed){const feedUrl=new URL(env.LISTINGS_URL);feedUrl.searchParams.set('refresh',String(Math.floor(Date.now()/FIVE)));const r=await fetcher(feedUrl.href,{signal:AbortSignal.timeout(15000)});if(r.ok){feed=await r.json();await putCache(env,'published-listings',feed,FIVE);}}
   listings=selectPublishedListings(feed,signature);
  }catch{}}
  const listingKey='keyless-local:'+signature;
