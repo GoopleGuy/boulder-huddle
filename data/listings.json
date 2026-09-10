@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-09-10T15:12:49.842Z",
+  "generatedAt": "2026-09-10T18:31:34.532Z",
   "slates": [
     {
       "start": "2026-09-08",
@@ -95,13 +95,6 @@
       "successfulPages": 5,
       "diagnostics": [
         {
-          "call": "KUSA",
-          "day": "2026-09-14",
-          "status": 200,
-          "parsed": 0,
-          "via": "direct"
-        },
-        {
           "call": "KMGH",
           "day": "2026-09-14",
           "status": 200,
@@ -110,9 +103,9 @@
         },
         {
           "call": "KUSA",
-          "day": "2026-09-13",
+          "day": "2026-09-14",
           "status": 200,
-          "parsed": 1,
+          "parsed": 0,
           "via": "direct"
         },
         {
@@ -127,6 +120,13 @@
           "day": "2026-09-14",
           "status": 200,
           "parsed": 0,
+          "via": "direct"
+        },
+        {
+          "call": "KUSA",
+          "day": "2026-09-13",
+          "status": 200,
+          "parsed": 1,
           "via": "direct"
         },
         {
@@ -151,7 +151,7 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-09-10T15:12:48.975Z"
+      "checkedAt": "2026-09-10T18:31:33.921Z"
     },
     {
       "start": "2026-09-15",
@@ -187,16 +187,16 @@
       "diagnostics": [
         {
           "call": "KMGH",
-          "day": "2026-09-21",
+          "day": "2026-09-20",
           "status": 200,
-          "parsed": 1,
+          "parsed": 0,
           "via": "direct"
         },
         {
           "call": "KMGH",
-          "day": "2026-09-20",
+          "day": "2026-09-21",
           "status": 200,
-          "parsed": 0,
+          "parsed": 1,
           "via": "direct"
         },
         {
@@ -221,7 +221,7 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-09-10T15:12:49.841Z"
+      "checkedAt": "2026-09-10T18:31:34.532Z"
     }
   ]
 }
