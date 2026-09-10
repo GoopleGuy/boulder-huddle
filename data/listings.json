@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-09-10T05:55:56.349Z",
+  "generatedAt": "2026-09-10T06:00:35.431Z",
   "slates": [
     {
       "start": "2026-09-08",
@@ -8,22 +8,10 @@
       "signature": "55bd08477f6f9e5adafa809cbb1fda6d963da13fafb1e4933ffbc8d5b3642845",
       "rows": [
         {
-          "network": "ABC",
-          "call": "KMGH",
-          "day": "2026-09-14",
-          "minute": 1080,
-          "teams": [
-            "Denver Broncos",
-            "Kansas City Chiefs"
-          ],
-          "title": "Denver Broncos at Kansas City Chiefs",
-          "url": "https://www.tvpassport.com/tv-listings/stations/abc-kmgh-denver-co-hd/5723/2026-09-14"
-        },
-        {
           "network": "FOX",
           "call": "KDVR",
           "day": "2026-09-13",
-          "minute": 660,
+          "minute": 1140,
           "teams": [
             "Atlanta Falcons",
             "Pittsburgh Steelers"
@@ -35,7 +23,7 @@
           "network": "FOX",
           "call": "KDVR",
           "day": "2026-09-13",
-          "minute": 865,
+          "minute": 1345,
           "teams": [
             "Washington Commanders",
             "Philadelphia Eagles"
@@ -44,22 +32,10 @@
           "url": "https://www.tvpassport.com/tv-listings/stations/fox-kdvr-denver-co-hd/6401/2026-09-13"
         },
         {
-          "network": "NBC",
-          "call": "KUSA",
-          "day": "2026-09-13",
-          "minute": 1095,
-          "teams": [
-            "Dallas Cowboys",
-            "New York Giants"
-          ],
-          "title": "Dallas Cowboys at New York Giants",
-          "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-09-13"
-        },
-        {
           "network": "CBS",
           "call": "KCNC",
           "day": "2026-09-13",
-          "minute": 660,
+          "minute": 1140,
           "teams": [
             "Buffalo Bills",
             "Houston Texans"
@@ -71,125 +47,88 @@
           "network": "CBS",
           "call": "KCNC",
           "day": "2026-09-13",
-          "minute": 865,
+          "minute": 1345,
           "teams": [
             "Arizona Cardinals",
             "Los Angeles Chargers"
           ],
           "title": "Arizona Cardinals at Los Angeles Chargers",
           "url": "https://www.tvpassport.com/tv-listings/stations/cbs-kcnc-denver-co/1566/2026-09-13"
-        },
-        {
-          "network": "NBC",
-          "call": "KUSA",
-          "day": "2026-09-09",
-          "minute": 1095,
-          "teams": [
-            "New England Patriots",
-            "Seattle Seahawks"
-          ],
-          "title": "New England Patriots at Seattle Seahawks",
-          "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-09-09"
-        }
-      ],
-      "successfulPages": 5,
-      "diagnostics": [
-        {
-          "call": "KCNC",
-          "day": "2026-09-14",
-          "status": 200,
-          "parsed": 0,
-          "via": "direct"
-        },
-        {
-          "call": "KUSA",
-          "day": "2026-09-14",
-          "status": 200,
-          "parsed": 0,
-          "via": "direct"
-        },
-        {
-          "call": "KDVR",
-          "day": "2026-09-14",
-          "status": 200,
-          "parsed": 0,
-          "via": "direct"
-        },
-        {
-          "call": "KMGH",
-          "day": "2026-09-14",
-          "status": 200,
-          "parsed": 1,
-          "via": "direct"
-        },
-        {
-          "call": "KDVR",
-          "day": "2026-09-13",
-          "status": 200,
-          "parsed": 2,
-          "via": "direct"
-        },
-        {
-          "call": "KUSA",
-          "day": "2026-09-13",
-          "status": 200,
-          "parsed": 1,
-          "via": "direct"
-        },
-        {
-          "call": "KCNC",
-          "day": "2026-09-13",
-          "status": 200,
-          "parsed": 2,
-          "via": "direct"
-        },
-        {
-          "call": "KUSA",
-          "day": "2026-09-09",
-          "status": 200,
-          "parsed": 1,
-          "via": "direct"
-        }
-      ],
-      "checkedAt": "2026-09-10T05:55:55.885Z"
-    },
-    {
-      "start": "2026-09-15",
-      "end": "2026-09-21",
-      "signature": "35c3972f9a9edc5d4a15849726385e2bcb45466ee6ffd595c407652863683f05",
-      "rows": [
-        {
-          "network": "ABC",
-          "call": "KMGH",
-          "day": "2026-09-21",
-          "minute": 1080,
-          "teams": [
-            "New York Giants",
-            "Los Angeles Rams"
-          ],
-          "title": "New York Giants at Los Angeles Rams",
-          "url": "https://www.tvpassport.com/tv-listings/stations/abc-kmgh-denver-co-hd/5723/2026-09-21"
-        },
-        {
-          "network": "NBC",
-          "call": "KUSA",
-          "day": "2026-09-20",
-          "minute": 1095,
-          "teams": [
-            "Indianapolis Colts",
-            "Kansas City Chiefs"
-          ],
-          "title": "Indianapolis Colts at Kansas City Chiefs",
-          "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-09-20"
         }
       ],
       "successfulPages": 2,
       "diagnostics": [
         {
           "call": "KMGH",
+          "day": "2026-09-14",
+          "status": 200,
+          "parsed": 0,
+          "via": "direct"
+        },
+        {
+          "call": "KUSA",
+          "day": "2026-09-14",
+          "status": 200,
+          "parsed": 0,
+          "via": "direct"
+        },
+        {
+          "call": "KCNC",
+          "day": "2026-09-14",
+          "status": 200,
+          "parsed": 0,
+          "via": "direct"
+        },
+        {
+          "call": "KDVR",
+          "day": "2026-09-14",
+          "status": 200,
+          "parsed": 0,
+          "via": "direct"
+        },
+        {
+          "call": "KUSA",
+          "day": "2026-09-13",
+          "status": 200,
+          "parsed": 0,
+          "via": "direct"
+        },
+        {
+          "call": "KDVR",
+          "day": "2026-09-13",
+          "status": 200,
+          "parsed": 2,
+          "via": "direct"
+        },
+        {
+          "call": "KCNC",
+          "day": "2026-09-13",
+          "status": 200,
+          "parsed": 2,
+          "via": "direct"
+        },
+        {
+          "call": "KUSA",
+          "day": "2026-09-09",
+          "status": 200,
+          "parsed": 0,
+          "via": "direct"
+        }
+      ],
+      "checkedAt": "2026-09-10T06:00:35.008Z"
+    },
+    {
+      "start": "2026-09-15",
+      "end": "2026-09-21",
+      "signature": "35c3972f9a9edc5d4a15849726385e2bcb45466ee6ffd595c407652863683f05",
+      "rows": [],
+      "successfulPages": 0,
+      "diagnostics": [
+        {
+          "call": "KMGH",
           "day": "2026-09-21",
           "status": 200,
-          "parsed": 1,
+          "parsed": 0,
           "via": "direct"
         },
         {
@@ -200,14 +139,14 @@
           "via": "direct"
         },
         {
-          "call": "KUSA",
+          "call": "KMGH",
           "day": "2026-09-20",
           "status": 200,
-          "parsed": 1,
+          "parsed": 0,
           "via": "direct"
         },
         {
-          "call": "KMGH",
+          "call": "KUSA",
           "day": "2026-09-20",
           "status": 200,
           "parsed": 0,
@@ -221,7 +160,7 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-09-10T05:55:56.348Z"
+      "checkedAt": "2026-09-10T06:00:35.431Z"
     }
   ]
 }
