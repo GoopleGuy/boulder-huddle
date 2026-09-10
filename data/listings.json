@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-09-10T21:14:00.797Z",
+  "generatedAt": "2026-09-10T23:13:37.556Z",
   "slates": [
     {
       "start": "2026-09-08",
@@ -151,13 +151,37 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-09-10T21:14:00.198Z"
+      "checkedAt": "2026-09-10T23:13:36.944Z"
     },
     {
       "start": "2026-09-15",
       "end": "2026-09-21",
       "signature": "35c3972f9a9edc5d4a15849726385e2bcb45466ee6ffd595c407652863683f05",
       "rows": [
+        {
+          "network": "FOX",
+          "call": "KDVR",
+          "day": "2026-09-20",
+          "minute": 660,
+          "teams": [
+            "Minnesota Vikings",
+            "Chicago Bears"
+          ],
+          "title": "Minnesota Vikings at Chicago Bears",
+          "url": "https://www.tvpassport.com/tv-listings/stations/fox-kdvr-denver-co-hd/6401/2026-09-20"
+        },
+        {
+          "network": "FOX",
+          "call": "KDVR",
+          "day": "2026-09-20",
+          "minute": 865,
+          "teams": [
+            "Washington Commanders",
+            "Dallas Cowboys"
+          ],
+          "title": "Washington Commanders at Dallas Cowboys",
+          "url": "https://www.tvpassport.com/tv-listings/stations/fox-kdvr-denver-co-hd/6401/2026-09-20"
+        },
         {
           "network": "NBC",
           "call": "KUSA",
@@ -183,32 +207,27 @@
           "url": "https://www.tvpassport.com/tv-listings/stations/abc-kmgh-denver-co-hd/5723/2026-09-21"
         },
         {
-          "network": "FOX",
-          "call": "KDVR",
+          "network": "CBS",
+          "call": "KCNC",
           "day": "2026-09-20",
-          "minute": 660,
+          "minute": 840,
           "teams": [
-            "Minnesota Vikings",
-            "Chicago Bears"
+            "Jacksonville Jaguars",
+            "Denver Broncos"
           ],
-          "title": "Minnesota Vikings at Chicago Bears",
-          "url": "https://www.tvpassport.com/tv-listings/stations/fox-kdvr-denver-co-hd/6401/2026-09-20"
-        },
-        {
-          "network": "FOX",
-          "call": "KDVR",
-          "day": "2026-09-20",
-          "minute": 865,
-          "teams": [
-            "Washington Commanders",
-            "Dallas Cowboys"
-          ],
-          "title": "Washington Commanders at Dallas Cowboys",
-          "url": "https://www.tvpassport.com/tv-listings/stations/fox-kdvr-denver-co-hd/6401/2026-09-20"
+          "title": "Jacksonville Jaguars at Denver Broncos",
+          "url": "https://www.tvpassport.com/tv-listings/stations/cbs-kcnc-denver-co/1566/2026-09-20"
         }
       ],
-      "successfulPages": 3,
+      "successfulPages": 4,
       "diagnostics": [
+        {
+          "call": "KDVR",
+          "day": "2026-09-20",
+          "status": 200,
+          "parsed": 2,
+          "via": "direct"
+        },
         {
           "call": "KUSA",
           "day": "2026-09-20",
@@ -231,21 +250,14 @@
           "via": "direct"
         },
         {
-          "call": "KDVR",
-          "day": "2026-09-20",
-          "status": 200,
-          "parsed": 2,
-          "via": "direct"
-        },
-        {
           "call": "KCNC",
           "day": "2026-09-20",
           "status": 200,
-          "parsed": 0,
+          "parsed": 1,
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-09-10T21:14:00.796Z"
+      "checkedAt": "2026-09-10T23:13:37.556Z"
     }
   ]
 }
