@@ -1,0 +1,11 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {parseListings,localReport,LOCAL_STATIONS} from '../worker/local-listings.js';
+const station=LOCAL_STATIONS[0],day='2026-09-13';
+const fixture=`<div data-listDateTime="2026-09-13 11:00:00" data-callsign="KCNC-TV" data-showName="NFL Football" data-live="1" data-team1="Buffalo Bills" data-team2="Houston Texans" data-episodeTitle="Buffalo Bills at Houston Texans"></div>`;
+const g={id:'1',date:'2026-09-13T17:00:00Z',networks:['CBS'],seasonType:2,away:{name:'Buffalo Bills'},home:{name:'Houston Texans'}};
+test('station parser requires exact date, callsign, live game and named teams',()=>{assert.equal(parseListings(fixture,station,day).length,1);assert.equal(parseListings(fixture,station,'2026-09-20').length,0);assert.equal(parseListings(fixture,LOCAL_STATIONS[1],day).length,0);assert.equal(parseListings(fixture.replace('data-live="1"','data-live="0"'),station,day).length,0);assert.equal(parseListings(fixture.replace('data-team1="Buffalo Bills"','data-team1=""'),station,day).length,0);});
+test('a matched game supplies the precise channel; another game in the same window is not local',()=>{const other={...g,id:'2',away:{name:'Baltimore Ravens'},home:{name:'Indianapolis Colts'}};const result=localReport([g,other],parseListings(fixture,station,day));assert.equal(result.games[0].station,'KCNC · 4.1');assert.equal(result.games[0].local,'yes');assert.equal(result.games[1].local,'no');assert.match(result.games[1].notes,/Buffalo Bills/);});
+test('a different kickoff, unmatched listing, or another network does not prove non-carriage',()=>{const rows=parseListings(fixture,station,day);assert.equal(localReport([{...g,date:'2026-09-13T20:25:00Z'}],rows).games.length,0);assert.equal(localReport([{...g,id:'2',networks:['FOX'],away:{name:'Bears'}}],rows).games.length,0);});
+test('local kickoff matching uses Mountain daylight saving rules',()=>{const winter=fixture.replaceAll('2026-09-13','2026-11-15');const result=localReport([{...g,date:'2026-11-15T18:00:00Z'}],parseListings(winter,station,'2026-11-15'));assert.equal(result.games[0].local,'yes');});
+test('named game listing can start 15 minutes before kickoff',()=>{const result=localReport([{...g,date:'2026-09-13T17:15:00Z'}],parseListings(fixture,station,day));assert.equal(result.games[0].local,'yes');});

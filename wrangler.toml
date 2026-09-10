@@ -1,0 +1,23 @@
+name = "boulder-huddle-service"
+main = "worker/index.js"
+compatibility_date = "2026-09-09"
+
+[vars]
+APP_ORIGIN = "https://boulder-huddle-service.draft-room-pro.workers.dev"
+ADDITIONAL_ORIGINS = "https://goopleguy.github.io"
+APP_URL = "https://boulder-huddle-service.draft-room-pro.workers.dev/"
+LISTINGS_URL = "https://raw.githubusercontent.com/GoopleGuy/boulder-huddle/main/data/listings.json"
+VAPID_SUBJECT = "https://github.com/GoopleGuy/boulder-huddle"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "boulder-huddle"
+database_id = "1e201027-906a-4ffd-9121-fa56c9149f34"
+
+[triggers]
+crons = ["*/5 * * * *"]
+
+[assets]
+directory = "./dist"
+binding = "ASSETS"
+run_worker_first = true

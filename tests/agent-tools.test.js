@@ -1,0 +1,4 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {registerGuideTools} from '../src/agent-tools.js';
+test('optional agent tool contract updates shared state and rejects invalid input',()=>{const registered=[];let state={filter:'all',team:''};const cleanup=registerGuideTools({registerTool(tool,options){registered.push({tool,options});}},()=>state,(filter,team)=>{state={filter,team};});assert.deepEqual(registered.map(r=>r.tool.name),['get_nfl_viewing_guide','filter_nfl_viewing_guide']);assert.deepEqual(registered[1].tool.execute({filter:'full',team:'Denver'}),{filter:'full',team:'Denver'});assert.throws(()=>registered[1].tool.execute({filter:'invented'}));assert.deepEqual(registered[0].tool.execute({}),state);cleanup();assert.equal(registered[0].options.signal.aborted,true);});

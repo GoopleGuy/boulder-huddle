@@ -1,0 +1,7 @@
+{
+  "name": "boulder-huddle", "version": "1.0.0", "private": true, "type": "module",
+  "scripts": {"dev": "vite --host 127.0.0.1", "build": "vite build && node scripts/precache.js", "preview": "vite preview --host 127.0.0.1", "test": "node --test tests/*.test.js", "worker:dev": "wrangler dev", "worker:deploy": "wrangler deploy", "keys": "node scripts/generate-keys.js"},
+  "dependencies": {"@block65/webcrypto-web-push": "^2.0.0", "lucide": "^0.468.0"},
+  "devDependencies": {"vite": "^7.1.0", "wrangler": "^4.30.0"},
+  "overrides": {"sharp": "^0.35.4"}
+}
