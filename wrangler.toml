@@ -6,7 +6,7 @@ compatibility_date = "2026-09-09"
 APP_ORIGIN = "https://boulder-huddle-service.draft-room-pro.workers.dev"
 ADDITIONAL_ORIGINS = "https://goopleguy.github.io"
 APP_URL = "https://boulder-huddle-service.draft-room-pro.workers.dev/"
-LISTINGS_URL = "https://raw.githubusercontent.com/GoopleGuy/boulder-huddle/main/data/listings.json"
+LISTINGS_URL = "https://api.github.com/repos/GoopleGuy/boulder-huddle/contents/data/listings.json"
 VAPID_SUBJECT = "https://github.com/GoopleGuy/boulder-huddle"
 
 [[d1_databases]]
@@ -21,3 +21,4 @@ crons = ["*/5 * * * *"]
 directory = "./dist"
 binding = "ASSETS"
 run_worker_first = true
+
