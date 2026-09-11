@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-09-11T21:21:19.114Z",
+  "generatedAt": "2026-09-11T23:32:56.960Z",
   "slates": [
     {
       "start": "2026-09-08",
@@ -83,13 +83,6 @@
       "successfulPages": 4,
       "diagnostics": [
         {
-          "call": "KUSA",
-          "day": "2026-09-14",
-          "status": 200,
-          "parsed": 0,
-          "via": "direct"
-        },
-        {
           "call": "KMGH",
           "day": "2026-09-14",
           "status": 200,
@@ -97,7 +90,7 @@
           "via": "direct"
         },
         {
-          "call": "KDVR",
+          "call": "KUSA",
           "day": "2026-09-14",
           "status": 200,
           "parsed": 0,
@@ -105,6 +98,13 @@
         },
         {
           "call": "KCNC",
+          "day": "2026-09-14",
+          "status": 200,
+          "parsed": 0,
+          "via": "direct"
+        },
+        {
+          "call": "KDVR",
           "day": "2026-09-14",
           "status": 200,
           "parsed": 0,
@@ -139,37 +139,13 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-09-11T21:21:18.254Z"
+      "checkedAt": "2026-09-11T23:32:56.154Z"
     },
     {
       "start": "2026-09-15",
       "end": "2026-09-21",
       "signature": "35c3972f9a9edc5d4a15849726385e2bcb45466ee6ffd595c407652863683f05",
       "rows": [
-        {
-          "network": "ABC",
-          "call": "KMGH",
-          "day": "2026-09-21",
-          "minute": 1080,
-          "teams": [
-            "New York Giants",
-            "Los Angeles Rams"
-          ],
-          "title": "New York Giants at Los Angeles Rams",
-          "url": "https://www.tvpassport.com/tv-listings/stations/abc-kmgh-denver-co-hd/5723/2026-09-21"
-        },
-        {
-          "network": "NBC",
-          "call": "KUSA",
-          "day": "2026-09-20",
-          "minute": 1095,
-          "teams": [
-            "Indianapolis Colts",
-            "Kansas City Chiefs"
-          ],
-          "title": "Indianapolis Colts at Kansas City Chiefs",
-          "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-09-20"
-        },
         {
           "network": "FOX",
           "call": "KDVR",
@@ -195,6 +171,30 @@
           "url": "https://www.tvpassport.com/tv-listings/stations/fox-kdvr-denver-co-hd/6401/2026-09-20"
         },
         {
+          "network": "ABC",
+          "call": "KMGH",
+          "day": "2026-09-21",
+          "minute": 1080,
+          "teams": [
+            "New York Giants",
+            "Los Angeles Rams"
+          ],
+          "title": "New York Giants at Los Angeles Rams",
+          "url": "https://www.tvpassport.com/tv-listings/stations/abc-kmgh-denver-co-hd/5723/2026-09-21"
+        },
+        {
+          "network": "NBC",
+          "call": "KUSA",
+          "day": "2026-09-20",
+          "minute": 1095,
+          "teams": [
+            "Indianapolis Colts",
+            "Kansas City Chiefs"
+          ],
+          "title": "Indianapolis Colts at Kansas City Chiefs",
+          "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-09-20"
+        },
+        {
           "network": "CBS",
           "call": "KCNC",
           "day": "2026-09-20",
@@ -211,23 +211,9 @@
       "diagnostics": [
         {
           "call": "KMGH",
-          "day": "2026-09-21",
-          "status": 200,
-          "parsed": 1,
-          "via": "direct"
-        },
-        {
-          "call": "KMGH",
           "day": "2026-09-20",
           "status": 200,
           "parsed": 0,
-          "via": "direct"
-        },
-        {
-          "call": "KUSA",
-          "day": "2026-09-20",
-          "status": 200,
-          "parsed": 1,
           "via": "direct"
         },
         {
@@ -238,6 +224,20 @@
           "via": "direct"
         },
         {
+          "call": "KMGH",
+          "day": "2026-09-21",
+          "status": 200,
+          "parsed": 1,
+          "via": "direct"
+        },
+        {
+          "call": "KUSA",
+          "day": "2026-09-20",
+          "status": 200,
+          "parsed": 1,
+          "via": "direct"
+        },
+        {
           "call": "KCNC",
           "day": "2026-09-20",
           "status": 200,
@@ -245,7 +245,7 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-09-11T21:21:19.112Z"
+      "checkedAt": "2026-09-11T23:32:56.959Z"
     }
   ]
 }
