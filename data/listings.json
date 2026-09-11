@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-09-10T23:13:37.556Z",
+  "generatedAt": "2026-09-11T01:10:41.510Z",
   "slates": [
     {
       "start": "2026-09-08",
@@ -18,18 +18,6 @@
           ],
           "title": "Denver Broncos at Kansas City Chiefs",
           "url": "https://www.tvpassport.com/tv-listings/stations/abc-kmgh-denver-co-hd/5723/2026-09-14"
-        },
-        {
-          "network": "NBC",
-          "call": "KUSA",
-          "day": "2026-09-13",
-          "minute": 1095,
-          "teams": [
-            "Dallas Cowboys",
-            "New York Giants"
-          ],
-          "title": "Dallas Cowboys at New York Giants",
-          "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-09-13"
         },
         {
           "network": "FOX",
@@ -82,25 +70,18 @@
         {
           "network": "NBC",
           "call": "KUSA",
-          "day": "2026-09-09",
+          "day": "2026-09-13",
           "minute": 1095,
           "teams": [
-            "New England Patriots",
-            "Seattle Seahawks"
+            "Dallas Cowboys",
+            "New York Giants"
           ],
-          "title": "New England Patriots at Seattle Seahawks",
-          "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-09-09"
+          "title": "Dallas Cowboys at New York Giants",
+          "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-09-13"
         }
       ],
-      "successfulPages": 5,
+      "successfulPages": 4,
       "diagnostics": [
-        {
-          "call": "KUSA",
-          "day": "2026-09-14",
-          "status": 200,
-          "parsed": 0,
-          "via": "direct"
-        },
         {
           "call": "KMGH",
           "day": "2026-09-14",
@@ -109,6 +90,13 @@
           "via": "direct"
         },
         {
+          "call": "KUSA",
+          "day": "2026-09-14",
+          "status": 200,
+          "parsed": 0,
+          "via": "direct"
+        },
+        {
           "call": "KDVR",
           "day": "2026-09-14",
           "status": 200,
@@ -120,13 +108,6 @@
           "day": "2026-09-14",
           "status": 200,
           "parsed": 0,
-          "via": "direct"
-        },
-        {
-          "call": "KUSA",
-          "day": "2026-09-13",
-          "status": 200,
-          "parsed": 1,
           "via": "direct"
         },
         {
@@ -147,17 +128,36 @@
           "call": "KUSA",
           "day": "2026-09-09",
           "status": 200,
+          "parsed": 0,
+          "via": "direct"
+        },
+        {
+          "call": "KUSA",
+          "day": "2026-09-13",
+          "status": 200,
           "parsed": 1,
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-09-10T23:13:36.944Z"
+      "checkedAt": "2026-09-11T01:10:40.589Z"
     },
     {
       "start": "2026-09-15",
       "end": "2026-09-21",
       "signature": "35c3972f9a9edc5d4a15849726385e2bcb45466ee6ffd595c407652863683f05",
       "rows": [
+        {
+          "network": "NBC",
+          "call": "KUSA",
+          "day": "2026-09-20",
+          "minute": 1095,
+          "teams": [
+            "Indianapolis Colts",
+            "Kansas City Chiefs"
+          ],
+          "title": "Indianapolis Colts at Kansas City Chiefs",
+          "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-09-20"
+        },
         {
           "network": "FOX",
           "call": "KDVR",
@@ -181,18 +181,6 @@
           ],
           "title": "Washington Commanders at Dallas Cowboys",
           "url": "https://www.tvpassport.com/tv-listings/stations/fox-kdvr-denver-co-hd/6401/2026-09-20"
-        },
-        {
-          "network": "NBC",
-          "call": "KUSA",
-          "day": "2026-09-20",
-          "minute": 1095,
-          "teams": [
-            "Indianapolis Colts",
-            "Kansas City Chiefs"
-          ],
-          "title": "Indianapolis Colts at Kansas City Chiefs",
-          "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-09-20"
         },
         {
           "network": "ABC",
@@ -222,10 +210,10 @@
       "successfulPages": 4,
       "diagnostics": [
         {
-          "call": "KDVR",
+          "call": "KMGH",
           "day": "2026-09-20",
           "status": 200,
-          "parsed": 2,
+          "parsed": 0,
           "via": "direct"
         },
         {
@@ -236,10 +224,10 @@
           "via": "direct"
         },
         {
-          "call": "KMGH",
+          "call": "KDVR",
           "day": "2026-09-20",
           "status": 200,
-          "parsed": 0,
+          "parsed": 2,
           "via": "direct"
         },
         {
@@ -257,7 +245,7 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-09-10T23:13:37.556Z"
+      "checkedAt": "2026-09-11T01:10:41.509Z"
     }
   ]
 }
