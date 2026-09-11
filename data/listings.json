@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-09-11T01:10:41.510Z",
+  "generatedAt": "2026-09-11T06:04:00.603Z",
   "slates": [
     {
       "start": "2026-09-08",
@@ -18,6 +18,18 @@
           ],
           "title": "Denver Broncos at Kansas City Chiefs",
           "url": "https://www.tvpassport.com/tv-listings/stations/abc-kmgh-denver-co-hd/5723/2026-09-14"
+        },
+        {
+          "network": "NBC",
+          "call": "KUSA",
+          "day": "2026-09-13",
+          "minute": 1095,
+          "teams": [
+            "Dallas Cowboys",
+            "New York Giants"
+          ],
+          "title": "Dallas Cowboys at New York Giants",
+          "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-09-13"
         },
         {
           "network": "FOX",
@@ -66,18 +78,6 @@
           ],
           "title": "Arizona Cardinals at Los Angeles Chargers",
           "url": "https://www.tvpassport.com/tv-listings/stations/cbs-kcnc-denver-co/1566/2026-09-13"
-        },
-        {
-          "network": "NBC",
-          "call": "KUSA",
-          "day": "2026-09-13",
-          "minute": 1095,
-          "teams": [
-            "Dallas Cowboys",
-            "New York Giants"
-          ],
-          "title": "Dallas Cowboys at New York Giants",
-          "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-09-13"
         }
       ],
       "successfulPages": 4,
@@ -90,7 +90,7 @@
           "via": "direct"
         },
         {
-          "call": "KUSA",
+          "call": "KCNC",
           "day": "2026-09-14",
           "status": 200,
           "parsed": 0,
@@ -104,10 +104,17 @@
           "via": "direct"
         },
         {
-          "call": "KCNC",
+          "call": "KUSA",
           "day": "2026-09-14",
           "status": 200,
           "parsed": 0,
+          "via": "direct"
+        },
+        {
+          "call": "KUSA",
+          "day": "2026-09-13",
+          "status": 200,
+          "parsed": 1,
           "via": "direct"
         },
         {
@@ -130,34 +137,15 @@
           "status": 200,
           "parsed": 0,
           "via": "direct"
-        },
-        {
-          "call": "KUSA",
-          "day": "2026-09-13",
-          "status": 200,
-          "parsed": 1,
-          "via": "direct"
         }
       ],
-      "checkedAt": "2026-09-11T01:10:40.589Z"
+      "checkedAt": "2026-09-11T06:03:59.617Z"
     },
     {
       "start": "2026-09-15",
       "end": "2026-09-21",
       "signature": "35c3972f9a9edc5d4a15849726385e2bcb45466ee6ffd595c407652863683f05",
       "rows": [
-        {
-          "network": "NBC",
-          "call": "KUSA",
-          "day": "2026-09-20",
-          "minute": 1095,
-          "teams": [
-            "Indianapolis Colts",
-            "Kansas City Chiefs"
-          ],
-          "title": "Indianapolis Colts at Kansas City Chiefs",
-          "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-09-20"
-        },
         {
           "network": "FOX",
           "call": "KDVR",
@@ -181,6 +169,18 @@
           ],
           "title": "Washington Commanders at Dallas Cowboys",
           "url": "https://www.tvpassport.com/tv-listings/stations/fox-kdvr-denver-co-hd/6401/2026-09-20"
+        },
+        {
+          "network": "NBC",
+          "call": "KUSA",
+          "day": "2026-09-20",
+          "minute": 1095,
+          "teams": [
+            "Indianapolis Colts",
+            "Kansas City Chiefs"
+          ],
+          "title": "Indianapolis Colts at Kansas City Chiefs",
+          "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-09-20"
         },
         {
           "network": "ABC",
@@ -210,6 +210,13 @@
       "successfulPages": 4,
       "diagnostics": [
         {
+          "call": "KDVR",
+          "day": "2026-09-20",
+          "status": 200,
+          "parsed": 2,
+          "via": "direct"
+        },
+        {
           "call": "KMGH",
           "day": "2026-09-20",
           "status": 200,
@@ -221,13 +228,6 @@
           "day": "2026-09-20",
           "status": 200,
           "parsed": 1,
-          "via": "direct"
-        },
-        {
-          "call": "KDVR",
-          "day": "2026-09-20",
-          "status": 200,
-          "parsed": 2,
           "via": "direct"
         },
         {
@@ -245,7 +245,7 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-09-11T01:10:41.509Z"
+      "checkedAt": "2026-09-11T06:04:00.603Z"
     }
   ]
 }
