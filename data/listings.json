@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-09-12T21:41:45.354Z",
+  "generatedAt": "2026-09-12T23:26:34.004Z",
   "slates": [
     {
       "start": "2026-09-08",
@@ -83,6 +83,13 @@
       "successfulPages": 4,
       "diagnostics": [
         {
+          "call": "KMGH",
+          "day": "2026-09-14",
+          "status": 200,
+          "parsed": 1,
+          "via": "direct"
+        },
+        {
           "call": "KUSA",
           "day": "2026-09-14",
           "status": 200,
@@ -90,8 +97,8 @@
           "via": "direct"
         },
         {
-          "call": "KMGH",
-          "day": "2026-09-14",
+          "call": "KUSA",
+          "day": "2026-09-13",
           "status": 200,
           "parsed": 1,
           "via": "direct"
@@ -108,13 +115,6 @@
           "day": "2026-09-14",
           "status": 200,
           "parsed": 0,
-          "via": "direct"
-        },
-        {
-          "call": "KUSA",
-          "day": "2026-09-13",
-          "status": 200,
-          "parsed": 1,
           "via": "direct"
         },
         {
@@ -139,7 +139,7 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-09-12T21:41:44.787Z"
+      "checkedAt": "2026-09-12T23:26:33.327Z"
     },
     {
       "start": "2026-09-15",
@@ -245,7 +245,7 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-09-12T21:41:45.353Z"
+      "checkedAt": "2026-09-12T23:26:34.004Z"
     }
   ]
 }
