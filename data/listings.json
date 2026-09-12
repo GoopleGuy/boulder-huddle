@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-09-12T19:39:06.637Z",
+  "generatedAt": "2026-09-12T21:41:45.354Z",
   "slates": [
     {
       "start": "2026-09-08",
@@ -139,13 +139,25 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-09-12T19:39:05.930Z"
+      "checkedAt": "2026-09-12T21:41:44.787Z"
     },
     {
       "start": "2026-09-15",
       "end": "2026-09-21",
       "signature": "35c3972f9a9edc5d4a15849726385e2bcb45466ee6ffd595c407652863683f05",
       "rows": [
+        {
+          "network": "ABC",
+          "call": "KMGH",
+          "day": "2026-09-21",
+          "minute": 1080,
+          "teams": [
+            "New York Giants",
+            "Los Angeles Rams"
+          ],
+          "title": "New York Giants at Los Angeles Rams",
+          "url": "https://www.tvpassport.com/tv-listings/stations/abc-kmgh-denver-co-hd/5723/2026-09-21"
+        },
         {
           "network": "FOX",
           "call": "KDVR",
@@ -169,18 +181,6 @@
           ],
           "title": "Washington Commanders at Dallas Cowboys",
           "url": "https://www.tvpassport.com/tv-listings/stations/fox-kdvr-denver-co-hd/6401/2026-09-20"
-        },
-        {
-          "network": "ABC",
-          "call": "KMGH",
-          "day": "2026-09-21",
-          "minute": 1080,
-          "teams": [
-            "New York Giants",
-            "Los Angeles Rams"
-          ],
-          "title": "New York Giants at Los Angeles Rams",
-          "url": "https://www.tvpassport.com/tv-listings/stations/abc-kmgh-denver-co-hd/5723/2026-09-21"
         },
         {
           "network": "NBC",
@@ -217,17 +217,17 @@
           "via": "direct"
         },
         {
-          "call": "KDVR",
-          "day": "2026-09-20",
-          "status": 200,
-          "parsed": 2,
-          "via": "direct"
-        },
-        {
           "call": "KMGH",
           "day": "2026-09-21",
           "status": 200,
           "parsed": 1,
+          "via": "direct"
+        },
+        {
+          "call": "KDVR",
+          "day": "2026-09-20",
+          "status": 200,
+          "parsed": 2,
           "via": "direct"
         },
         {
@@ -245,7 +245,7 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-09-12T19:39:06.637Z"
+      "checkedAt": "2026-09-12T21:41:45.353Z"
     }
   ]
 }
