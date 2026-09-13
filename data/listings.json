@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-09-13T12:45:05.373Z",
+  "generatedAt": "2026-09-13T16:39:31.299Z",
   "slates": [
     {
       "start": "2026-09-08",
@@ -83,13 +83,6 @@
       "successfulPages": 4,
       "diagnostics": [
         {
-          "call": "KMGH",
-          "day": "2026-09-14",
-          "status": 200,
-          "parsed": 1,
-          "via": "direct"
-        },
-        {
           "call": "KUSA",
           "day": "2026-09-14",
           "status": 200,
@@ -97,14 +90,21 @@
           "via": "direct"
         },
         {
-          "call": "KDVR",
+          "call": "KMGH",
+          "day": "2026-09-14",
+          "status": 200,
+          "parsed": 1,
+          "via": "direct"
+        },
+        {
+          "call": "KCNC",
           "day": "2026-09-14",
           "status": 200,
           "parsed": 0,
           "via": "direct"
         },
         {
-          "call": "KCNC",
+          "call": "KDVR",
           "day": "2026-09-14",
           "status": 200,
           "parsed": 0,
@@ -139,37 +139,13 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-09-13T12:45:04.331Z"
+      "checkedAt": "2026-09-13T16:39:30.516Z"
     },
     {
       "start": "2026-09-15",
       "end": "2026-09-21",
       "signature": "35c3972f9a9edc5d4a15849726385e2bcb45466ee6ffd595c407652863683f05",
       "rows": [
-        {
-          "network": "FOX",
-          "call": "KDVR",
-          "day": "2026-09-20",
-          "minute": 660,
-          "teams": [
-            "Minnesota Vikings",
-            "Chicago Bears"
-          ],
-          "title": "Minnesota Vikings at Chicago Bears",
-          "url": "https://www.tvpassport.com/tv-listings/stations/fox-kdvr-denver-co-hd/6401/2026-09-20"
-        },
-        {
-          "network": "FOX",
-          "call": "KDVR",
-          "day": "2026-09-20",
-          "minute": 865,
-          "teams": [
-            "Washington Commanders",
-            "Dallas Cowboys"
-          ],
-          "title": "Washington Commanders at Dallas Cowboys",
-          "url": "https://www.tvpassport.com/tv-listings/stations/fox-kdvr-denver-co-hd/6401/2026-09-20"
-        },
         {
           "network": "NBC",
           "call": "KUSA",
@@ -195,6 +171,30 @@
           "url": "https://www.tvpassport.com/tv-listings/stations/abc-kmgh-denver-co-hd/5723/2026-09-21"
         },
         {
+          "network": "FOX",
+          "call": "KDVR",
+          "day": "2026-09-20",
+          "minute": 660,
+          "teams": [
+            "Minnesota Vikings",
+            "Chicago Bears"
+          ],
+          "title": "Minnesota Vikings at Chicago Bears",
+          "url": "https://www.tvpassport.com/tv-listings/stations/fox-kdvr-denver-co-hd/6401/2026-09-20"
+        },
+        {
+          "network": "FOX",
+          "call": "KDVR",
+          "day": "2026-09-20",
+          "minute": 865,
+          "teams": [
+            "Washington Commanders",
+            "Dallas Cowboys"
+          ],
+          "title": "Washington Commanders at Dallas Cowboys",
+          "url": "https://www.tvpassport.com/tv-listings/stations/fox-kdvr-denver-co-hd/6401/2026-09-20"
+        },
+        {
           "network": "CBS",
           "call": "KCNC",
           "day": "2026-09-20",
@@ -210,22 +210,8 @@
       "successfulPages": 4,
       "diagnostics": [
         {
-          "call": "KDVR",
-          "day": "2026-09-20",
-          "status": 200,
-          "parsed": 2,
-          "via": "direct"
-        },
-        {
           "call": "KUSA",
           "day": "2026-09-20",
-          "status": 200,
-          "parsed": 1,
-          "via": "direct"
-        },
-        {
-          "call": "KMGH",
-          "day": "2026-09-21",
           "status": 200,
           "parsed": 1,
           "via": "direct"
@@ -238,6 +224,20 @@
           "via": "direct"
         },
         {
+          "call": "KMGH",
+          "day": "2026-09-21",
+          "status": 200,
+          "parsed": 1,
+          "via": "direct"
+        },
+        {
+          "call": "KDVR",
+          "day": "2026-09-20",
+          "status": 200,
+          "parsed": 2,
+          "via": "direct"
+        },
+        {
           "call": "KCNC",
           "day": "2026-09-20",
           "status": 200,
@@ -245,7 +245,7 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-09-13T12:45:05.372Z"
+      "checkedAt": "2026-09-13T16:39:31.298Z"
     }
   ]
 }
