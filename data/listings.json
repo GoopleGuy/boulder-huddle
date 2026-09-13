@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-09-13T16:39:31.299Z",
+  "generatedAt": "2026-09-13T18:59:21.834Z",
   "slates": [
     {
       "start": "2026-09-08",
@@ -83,20 +83,6 @@
       "successfulPages": 4,
       "diagnostics": [
         {
-          "call": "KUSA",
-          "day": "2026-09-14",
-          "status": 200,
-          "parsed": 0,
-          "via": "direct"
-        },
-        {
-          "call": "KMGH",
-          "day": "2026-09-14",
-          "status": 200,
-          "parsed": 1,
-          "via": "direct"
-        },
-        {
           "call": "KCNC",
           "day": "2026-09-14",
           "status": 200,
@@ -108,6 +94,20 @@
           "day": "2026-09-14",
           "status": 200,
           "parsed": 0,
+          "via": "direct"
+        },
+        {
+          "call": "KUSA",
+          "day": "2026-09-14",
+          "status": 200,
+          "parsed": 0,
+          "via": "direct"
+        },
+        {
+          "call": "KMGH",
+          "day": "2026-09-14",
+          "status": 200,
+          "parsed": 1,
           "via": "direct"
         },
         {
@@ -139,7 +139,7 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-09-13T16:39:30.516Z"
+      "checkedAt": "2026-09-13T18:59:21.131Z"
     },
     {
       "start": "2026-09-15",
@@ -210,17 +210,17 @@
       "successfulPages": 4,
       "diagnostics": [
         {
-          "call": "KUSA",
-          "day": "2026-09-20",
-          "status": 200,
-          "parsed": 1,
-          "via": "direct"
-        },
-        {
           "call": "KMGH",
           "day": "2026-09-20",
           "status": 200,
           "parsed": 0,
+          "via": "direct"
+        },
+        {
+          "call": "KUSA",
+          "day": "2026-09-20",
+          "status": 200,
+          "parsed": 1,
           "via": "direct"
         },
         {
@@ -245,7 +245,7 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-09-13T16:39:31.298Z"
+      "checkedAt": "2026-09-13T18:59:21.833Z"
     }
   ]
 }
