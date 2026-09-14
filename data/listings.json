@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "generatedAt": "2026-09-13T23:36:31.740Z",
+  "generatedAt": "2026-09-14T01:44:08.975Z",
   "slates": [
     {
       "start": "2026-09-08",
       "end": "2026-09-14",
-      "signature": "d9aeb710c38e8e153fc9a15cb6804905f0e3ff0dc9ceef7a059e3414a08a42bc",
+      "signature": "55bd08477f6f9e5adafa809cbb1fda6d963da13fafb1e4933ffbc8d5b3642845",
       "rows": [
         {
           "network": "ABC",
@@ -83,13 +83,6 @@
       "successfulPages": 4,
       "diagnostics": [
         {
-          "call": "KMGH",
-          "day": "2026-09-14",
-          "status": 200,
-          "parsed": 1,
-          "via": "direct"
-        },
-        {
           "call": "KUSA",
           "day": "2026-09-14",
           "status": 200,
@@ -97,14 +90,21 @@
           "via": "direct"
         },
         {
-          "call": "KDVR",
+          "call": "KMGH",
+          "day": "2026-09-14",
+          "status": 200,
+          "parsed": 1,
+          "via": "direct"
+        },
+        {
+          "call": "KCNC",
           "day": "2026-09-14",
           "status": 200,
           "parsed": 0,
           "via": "direct"
         },
         {
-          "call": "KCNC",
+          "call": "KDVR",
           "day": "2026-09-14",
           "status": 200,
           "parsed": 0,
@@ -139,7 +139,7 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-09-13T23:36:31.082Z"
+      "checkedAt": "2026-09-14T01:44:08.121Z"
     },
     {
       "start": "2026-09-15",
@@ -218,6 +218,13 @@
         },
         {
           "call": "KMGH",
+          "day": "2026-09-20",
+          "status": 200,
+          "parsed": 0,
+          "via": "direct"
+        },
+        {
+          "call": "KMGH",
           "day": "2026-09-21",
           "status": 200,
           "parsed": 1,
@@ -231,13 +238,6 @@
           "via": "direct"
         },
         {
-          "call": "KMGH",
-          "day": "2026-09-20",
-          "status": 200,
-          "parsed": 0,
-          "via": "direct"
-        },
-        {
           "call": "KCNC",
           "day": "2026-09-20",
           "status": 200,
@@ -245,7 +245,7 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-09-13T23:36:31.740Z"
+      "checkedAt": "2026-09-14T01:44:08.975Z"
     }
   ]
 }
