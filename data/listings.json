@@ -1,86 +1,7 @@
 {
   "schema": 1,
-  "generatedAt": "2026-09-15T00:59:40.633Z",
+  "generatedAt": "2026-09-15T06:11:39.726Z",
   "slates": [
-    {
-      "start": "2026-09-08",
-      "end": "2026-09-14",
-      "signature": "55bd08477f6f9e5adafa809cbb1fda6d963da13fafb1e4933ffbc8d5b3642845",
-      "rows": [
-        {
-          "network": "ABC",
-          "call": "KMGH",
-          "day": "2026-09-14",
-          "minute": 1095,
-          "teams": [
-            "Denver Broncos",
-            "Kansas City Chiefs"
-          ],
-          "title": "Denver Broncos at Kansas City Chiefs",
-          "url": "https://www.tvpassport.com/tv-listings/stations/abc-kmgh-denver-co-hd/5723/2026-09-14"
-        }
-      ],
-      "successfulPages": 1,
-      "diagnostics": [
-        {
-          "call": "KUSA",
-          "day": "2026-09-14",
-          "status": 200,
-          "parsed": 0,
-          "via": "direct"
-        },
-        {
-          "call": "KMGH",
-          "day": "2026-09-14",
-          "status": 200,
-          "parsed": 1,
-          "via": "direct"
-        },
-        {
-          "call": "KDVR",
-          "day": "2026-09-14",
-          "status": 200,
-          "parsed": 0,
-          "via": "direct"
-        },
-        {
-          "call": "KCNC",
-          "day": "2026-09-14",
-          "status": 200,
-          "parsed": 0,
-          "via": "direct"
-        },
-        {
-          "call": "KUSA",
-          "day": "2026-09-13",
-          "status": 200,
-          "parsed": 0,
-          "via": "direct"
-        },
-        {
-          "call": "KDVR",
-          "day": "2026-09-13",
-          "status": 200,
-          "parsed": 0,
-          "via": "direct"
-        },
-        {
-          "call": "KCNC",
-          "day": "2026-09-13",
-          "status": 200,
-          "parsed": 0,
-          "via": "direct"
-        },
-        {
-          "call": "KUSA",
-          "day": "2026-09-09",
-          "status": 200,
-          "parsed": 0,
-          "via": "direct"
-        }
-      ],
-      "checkedAt": "2026-09-15T00:59:39.843Z"
-    },
     {
       "start": "2026-09-15",
       "end": "2026-09-21",
@@ -97,6 +18,30 @@
           ],
           "title": "New York Giants at Los Angeles Rams",
           "url": "https://www.tvpassport.com/tv-listings/stations/abc-kmgh-denver-co-hd/5723/2026-09-21"
+        },
+        {
+          "network": "CBS",
+          "call": "KCNC",
+          "day": "2026-09-20",
+          "minute": 840,
+          "teams": [
+            "Jacksonville Jaguars",
+            "Denver Broncos"
+          ],
+          "title": "Jacksonville Jaguars at Denver Broncos",
+          "url": "https://www.tvpassport.com/tv-listings/stations/cbs-kcnc-denver-co/1566/2026-09-20"
+        },
+        {
+          "network": "NBC",
+          "call": "KUSA",
+          "day": "2026-09-20",
+          "minute": 1095,
+          "teams": [
+            "Indianapolis Colts",
+            "Kansas City Chiefs"
+          ],
+          "title": "Indianapolis Colts at Kansas City Chiefs",
+          "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-09-20"
         },
         {
           "network": "FOX",
@@ -121,30 +66,6 @@
           ],
           "title": "Washington Commanders at Dallas Cowboys",
           "url": "https://www.tvpassport.com/tv-listings/stations/fox-kdvr-denver-co-hd/6401/2026-09-20"
-        },
-        {
-          "network": "NBC",
-          "call": "KUSA",
-          "day": "2026-09-20",
-          "minute": 1095,
-          "teams": [
-            "Indianapolis Colts",
-            "Kansas City Chiefs"
-          ],
-          "title": "Indianapolis Colts at Kansas City Chiefs",
-          "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-09-20"
-        },
-        {
-          "network": "CBS",
-          "call": "KCNC",
-          "day": "2026-09-20",
-          "minute": 840,
-          "teams": [
-            "Jacksonville Jaguars",
-            "Denver Broncos"
-          ],
-          "title": "Jacksonville Jaguars at Denver Broncos",
-          "url": "https://www.tvpassport.com/tv-listings/stations/cbs-kcnc-denver-co/1566/2026-09-20"
         }
       ],
       "successfulPages": 4,
@@ -152,20 +73,6 @@
         {
           "call": "KMGH",
           "day": "2026-09-21",
-          "status": 200,
-          "parsed": 1,
-          "via": "direct"
-        },
-        {
-          "call": "KDVR",
-          "day": "2026-09-20",
-          "status": 200,
-          "parsed": 2,
-          "via": "direct"
-        },
-        {
-          "call": "KUSA",
-          "day": "2026-09-20",
           "status": 200,
           "parsed": 1,
           "via": "direct"
@@ -183,9 +90,93 @@
           "status": 200,
           "parsed": 1,
           "via": "direct"
+        },
+        {
+          "call": "KUSA",
+          "day": "2026-09-20",
+          "status": 200,
+          "parsed": 1,
+          "via": "direct"
+        },
+        {
+          "call": "KDVR",
+          "day": "2026-09-20",
+          "status": 200,
+          "parsed": 2,
+          "via": "direct"
         }
       ],
-      "checkedAt": "2026-09-15T00:59:40.631Z"
+      "checkedAt": "2026-09-15T06:11:39.160Z"
+    },
+    {
+      "start": "2026-09-22",
+      "end": "2026-09-28",
+      "signature": "7ffc1c5ffd5689280f801457480cb6f217ce40d7f03bb90913942e74eab1e878",
+      "rows": [
+        {
+          "network": "ABC",
+          "call": "KMGH",
+          "day": "2026-09-28",
+          "minute": 1095,
+          "teams": [
+            "Philadelphia Eagles",
+            "Chicago Bears"
+          ],
+          "title": "Philadelphia Eagles at Chicago Bears",
+          "url": "https://www.tvpassport.com/tv-listings/stations/abc-kmgh-denver-co-hd/5723/2026-09-28"
+        },
+        {
+          "network": "NBC",
+          "call": "KUSA",
+          "day": "2026-09-27",
+          "minute": 1095,
+          "teams": [
+            "Los Angeles Rams",
+            "Denver Broncos"
+          ],
+          "title": "Los Angeles Rams at Denver Broncos",
+          "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-09-27"
+        }
+      ],
+      "successfulPages": 2,
+      "diagnostics": [
+        {
+          "call": "KMGH",
+          "day": "2026-09-28",
+          "status": 200,
+          "parsed": 1,
+          "via": "direct"
+        },
+        {
+          "call": "KUSA",
+          "day": "2026-09-27",
+          "status": 200,
+          "parsed": 1,
+          "via": "direct"
+        },
+        {
+          "call": "KDVR",
+          "day": "2026-09-27",
+          "status": 200,
+          "parsed": 0,
+          "via": "direct"
+        },
+        {
+          "call": "KMGH",
+          "day": "2026-09-27",
+          "status": 200,
+          "parsed": 0,
+          "via": "direct"
+        },
+        {
+          "call": "KCNC",
+          "day": "2026-09-27",
+          "status": 200,
+          "parsed": 0,
+          "via": "direct"
+        }
+      ],
+      "checkedAt": "2026-09-15T06:11:39.726Z"
     }
   ]
 }
