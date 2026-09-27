@@ -1,5 +1,6 @@
+import {fetchSchedule} from '../src/schedule.js';
 import {buildPushPayload} from '@block65/webcrypto-web-push';
-import {normalizeScoreboard,mergeVerification,slateRange,access,kickoff,DEFAULT_SERVICES} from '../src/core.js';
+import {mergeVerification,slateRange,access,kickoff,DEFAULT_SERVICES} from '../src/core.js';
 import {fetchLocalListings,localReport} from './local-listings.js';
 import {selectPublishedListings} from './published-listings.js';
 const FIVE=300000,HOUR=3600000;
@@ -11,12 +12,7 @@ export function validStart(start){if(!/^\d{4}-\d{2}-\d{2}$/.test(start||''))retu
 export async function getGuide(env,start,fetcher=fetch){
  const key='guide-keyless:'+start,cached=await getCache(env,key);if(cached)return cached;
  const end=new Date(start+'T12:00Z');end.setUTCDate(end.getUTCDate()+6);
- const dates=`${start.replaceAll('-','')}-${end.toISOString().slice(0,10).replaceAll('-','')}`;
- const options={headers:{'Accept':'application/json','User-Agent':'BoulderHuddle/1.0'},signal:AbortSignal.timeout(15000)};
- let response=await fetcher(`https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=${dates}&limit=100`,options);
- if(!response.ok)response=await fetcher(`https://site.web.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=${dates}&limit=100`,{...options,signal:AbortSignal.timeout(15000)});
- if(!response.ok)throw new Error('Schedule provider unavailable ('+response.status+')');const raw=await response.json();if(!Array.isArray(raw.events))throw new Error('Invalid schedule response');
- let games=normalizeScoreboard(raw),verificationMessage='';
+ let games=await fetchSchedule({start,end:end.toISOString().slice(0,10)},fetcher),verificationMessage='';
  const signature=await hash(JSON.stringify(games.map(g=>[g.id,g.date,g.networks])));
  let listings=null;
  if(env.LISTINGS_URL){try{

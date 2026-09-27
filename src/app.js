@@ -1,7 +1,8 @@
+import {fetchSchedule} from './schedule.js';
 import './style.css';
 import {TEAMS,normalizeFavorites,favoriteTeams,SERVICE_GROUPS,SERVICE_LABELS} from './preferences.js';
 import { createIcons, CalendarDays, MapPin, ArrowUpRight, ChevronLeft, ChevronRight, Bell, BellRing, Radio, Tv, Smartphone, Check, RefreshCw, Settings2, Download, X, Search, ExternalLink, Info, ArrowRight, CircleHelp, WifiOff, Zap } from 'lucide';
-import {DEFAULT_SERVICES,STATIONS,slateRange,normalizeScoreboard,mergeVerification,access,mountain,kickoff,localDate,calendar,safeUrl} from './core.js';
+import {DEFAULT_SERVICES,STATIONS,slateRange,mergeVerification,access,mountain,kickoff,localDate,calendar,safeUrl} from './core.js';
 import {registerGuideTools} from './agent-tools.js';
 const icons={CalendarDays,MapPin,ArrowUpRight,ChevronLeft,ChevronRight,Bell,BellRing,Radio,Tv,Smartphone,Check,RefreshCw,Settings2,Download,X,Search,ExternalLink,Info,ArrowRight,CircleHelp,WifiOff,Zap};
 const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -44,9 +45,7 @@ function renderGames(){
 function renderFreshness(){const pending=games.filter(g=>access(g,services).kind==='pending').length;const state=dataState==='cached'?'Saved schedule · offline or live feed unavailable':dataState==='snapshot'?'Bundled Sep 9 snapshot · not live':dataState==='error'?'Live schedule unavailable':loading?'Refreshing schedule…':`Schedule updated ${checked?mountain(checked,{hour:'numeric',minute:'2-digit'}):'—'} MT`;$('#freshness').innerHTML=`<span>${icon(dataState==='cached'?'wifi-off':'refresh-cw')} ${esc(state)}${pending?` <span class="pending-count">· ${pending} access checks pending</span>`:''}</span><button id="refresh" class="text-button" ${loading?'disabled':''}>Refresh</button>${verificationError?`<p>${esc(verificationError)}</p>`:''}`;$('#refresh').onclick=()=>load();paintIcons();}
 async function json(url,options={},timeout=20000){const response=await fetch(url,{...options,signal:AbortSignal.timeout(timeout)});if(!response.ok)throw new Error(`Request failed (${response.status})`);return response.json();}
 async function load(){const current=++sequence;loading=true;verificationError='';renderFreshness();const range=slateRange(new Date(),offset),cacheKey='huddle.slate.'+range.start;try{
- const endpoint=`https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=${range.start.replaceAll('-','')}-${range.end.replaceAll('-','')}&limit=100`;
- if(api){try{const preliminary=normalizeScoreboard(await json(endpoint));if(current!==sequence)return;games=preliminary;checked=new Date().toISOString();dataState='live';verificationError='Checking current Denver broadcasts and streaming rights…';renderGames();renderSpotlight();}catch{}}
- const result=api?await json(`${api}/guide?start=${range.start}`,{},195000):{games:normalizeScoreboard(await json(endpoint)),checkedAt:new Date().toISOString()};
+ const result=api?await json(`${api}/guide?start=${range.start}`,{},195000):{games:await fetchSchedule(range),checkedAt:new Date().toISOString()};
  if(current!==sequence)return;games=result.games;checked=result.checkedAt;dataState='live';verificationError=result.verificationMessage||(!api?'Connect the guide service in Settings for live Denver assignment checks and background reminders.':'');write(cacheKey,{games,checked});
  }catch(e){if(current!==sequence)return;const cache=read(cacheKey,null);if(cache){games=cache.games;checked=cache.checked;dataState='cached';}else{try{const snapshot=await json('./snapshot.json');if(snapshot.start===range.start){games=snapshot.games;checked=snapshot.checkedAt;dataState='snapshot';}else{games=[];dataState='error';}}catch{games=[];dataState='error';}}verificationError='Live refresh failed. Previously retrieved listings may have changed; local access is not newly verified.';}
  finally{if(current===sequence){loading=false;renderGames();renderSpotlight();}}

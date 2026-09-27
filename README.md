@@ -38,6 +38,12 @@ For another Cloudflare account, run npx wrangler login, create a D1 database and
 
 The service stores push subscriptions, hashed management tokens, saved event IDs, preferences and delivery records. Abandoned subscriptions expire after 90 days. This personal service caps subscriptions at 100 devices and validates origins, request sizes and push endpoints. Fonts optionally load from Google Fonts; logos use the schedule feed's URLs.
 
+## Schedule fetching
+
+The updater, Worker and standalone browser guide share `src/schedule.js`. It requests individual ESPN scoreboard dates with at most three requests in flight, using the web API first and the alternate host on failure. A boundary day is included before filtering by America/Denver kickoff date; event IDs are deduplicated and sorted consistently for feed signatures. Every required date must succeed with a valid events array. Failures include the endpoint, date, HTTP status when available and a short response excerpt.
+
+The updater writes both slates to a temporary file and renames it only after both have completed and current-slate listing verification has passed. A failed refresh preserves the prior file and timestamp. Run `npm test`, `npm run build`, then `node scripts/update-listings.js` to validate a correction. Deploy the Worker separately with `npm run worker:deploy` after Cloudflare authentication; the GitHub Pages workflow does not deploy the Worker.
+
 ## Validation and limitations
 
 Tests cover Mountain Time/daylight saving, regional access, stale evidence, exact station matching, pregame windows, published-feed expiry, push endpoint validation, reminder timing and calendar exports. Physical Android delivery must be checked on the user's device. Data providers can block requests or change their page format; source failures remain visible and are not treated as verified access.
