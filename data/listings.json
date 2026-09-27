@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-09-27T16:21:45.163Z",
+  "generatedAt": "2026-09-27T18:28:54.620Z",
   "slates": [
     {
       "start": "2026-09-22",
@@ -72,16 +72,16 @@
       "diagnostics": [
         {
           "call": "KMGH",
-          "day": "2026-09-27",
+          "day": "2026-09-28",
           "status": 200,
-          "parsed": 0,
+          "parsed": 1,
           "via": "direct"
         },
         {
           "call": "KMGH",
-          "day": "2026-09-28",
+          "day": "2026-09-27",
           "status": 200,
-          "parsed": 1,
+          "parsed": 0,
           "via": "direct"
         },
         {
@@ -106,7 +106,7 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-09-27T16:21:44.423Z"
+      "checkedAt": "2026-09-27T18:28:53.984Z"
     },
     {
       "start": "2026-09-29",
@@ -160,6 +160,13 @@
           "via": "direct"
         },
         {
+          "call": "KMGH",
+          "day": "2026-10-04",
+          "status": 200,
+          "parsed": 0,
+          "via": "direct"
+        },
+        {
           "call": "KUSA",
           "day": "2026-10-04",
           "status": 200,
@@ -174,13 +181,6 @@
           "via": "direct"
         },
         {
-          "call": "KMGH",
-          "day": "2026-10-04",
-          "status": 200,
-          "parsed": 0,
-          "via": "direct"
-        },
-        {
           "call": "KCNC",
           "day": "2026-10-04",
           "status": 200,
@@ -188,7 +188,7 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-09-27T16:21:45.163Z"
+      "checkedAt": "2026-09-27T18:28:54.619Z"
     }
   ]
 }
