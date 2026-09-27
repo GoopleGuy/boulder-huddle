@@ -50,6 +50,10 @@ The updater, Worker and standalone browser guide share `src/schedule.js`. It req
 
 The updater writes both slates to a temporary file and renames it only after both have completed and current-slate listing verification has passed. A failed refresh preserves the prior file and timestamp. Run `npm test`, `npm run build`, then `node scripts/update-listings.js` to validate a correction. Deploy the Worker separately with `npm run worker:deploy` after Cloudflare authentication; the GitHub Pages workflow does not deploy the Worker.
 
+## Refresh resilience
+
+The Worker refreshes the published feed every five minutes, with the configured raw GitHub URL as a fallback and a one-minute retry after failures. It retains the last valid feed and positive listing evidence for each matching schedule. A temporary source failure or empty scrape does not overwrite still-valid evidence. Original `checkedAt` timestamps remain unchanged, and the existing two-hour limit and exact schedule signature still apply. Guide caches cannot outlive their evidence; unconfirmed results are retried after one minute.
+
 ## Validation and limitations
 
 Tests cover Mountain Time/daylight saving, regional access, stale evidence, exact station matching, pregame windows, published-feed expiry, push endpoint validation, reminder timing and calendar exports. Physical Android delivery must be checked on the user's device. Data providers can block requests or change their page format; source failures remain visible and are not treated as verified access.
