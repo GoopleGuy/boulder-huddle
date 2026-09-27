@@ -38,6 +38,12 @@ For another Cloudflare account, run npx wrangler login, create a D1 database and
 
 The service stores push subscriptions, hashed management tokens, saved event IDs, preferences and delivery records. Abandoned subscriptions expire after 90 days. This personal service caps subscriptions at 100 devices and validates origins, request sizes and push endpoints. Fonts optionally load from Google Fonts; logos use the schedule feed's URLs.
 
+## Viewing methods
+
+Each game lists every eligible method from the selected services, including multiple TV/streaming providers, NFL+ phone/tablet access, and RedZone look-ins. The main badge and filters summarize the game; they do not limit the list to one method. Details, favorites, calendar exports and reminder summaries use the same access calculation.
+
+NFL+ and NFL+ Premium include verified local regular-season/postseason games on phones and tablets, without TV casting, following [NFL's live-game policy](https://support.nfl.com/hc/en-us/articles/35869738454164-What-NFL-games-are-available-LIVE-with-NFL). A fresh matched local station listing supports this eligibility; stale or unknown local assignments and RedZone coverage alone do not. Explicit verified mobile evidence remains supported for other games. Primetime/exclusive exceptions are not newly inferred from network names. RedZone remains labeled as look-ins, not a full game.
+
 ## Schedule fetching
 
 The updater, Worker and standalone browser guide share `src/schedule.js`. It requests individual ESPN scoreboard dates with at most three requests in flight, using the web API first and the alternate host on failure. A boundary day is included before filtering by America/Denver kickoff date; event IDs are deduplicated and sorted consistently for feed signatures. Every required date must succeed with a valid events array. Failures include the endpoint, date, HTTP status when available and a short response excerpt.
