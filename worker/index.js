@@ -5,30 +5,56 @@ import {fetchLocalListings,localReport} from './local-listings.js';
 import {selectPublishedListings} from './published-listings.js';
 const FIVE=300000,HOUR=3600000;
 const hash=async s=>Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s)))).map(b=>b.toString(16).padStart(2,'0')).join('');
-async function getCache(env,key){const row=await env.DB.prepare('SELECT payload, expires FROM cache WHERE key=?').bind(key).first();return row&&row.expires>Date.now()?JSON.parse(row.payload):null;}
+async function getCache(env,key,allowExpired=false){const row=await env.DB.prepare('SELECT payload, expires FROM cache WHERE key=?').bind(key).first();return row&&(allowExpired||row.expires>Date.now())?JSON.parse(row.payload):null;}
 async function putCache(env,key,value,ttl){await env.DB.prepare('INSERT INTO cache(key,payload,expires) VALUES(?,?,?) ON CONFLICT(key) DO UPDATE SET payload=excluded.payload,expires=excluded.expires').bind(key,JSON.stringify(value),Date.now()+ttl).run();}
 async function lock(env,key,ttl){const r=await env.DB.prepare("INSERT INTO cache(key,payload,expires) VALUES(?,'null',?) ON CONFLICT(key) DO UPDATE SET expires=excluded.expires WHERE cache.expires<?").bind(key,Date.now()+ttl,Date.now()).run();return r.meta.changes===1;}
 export function validStart(start){if(!/^\d{4}-\d{2}-\d{2}$/.test(start||''))return false;const d=new Date(start+'T12:00Z');return Number.isFinite(+d)&&d.toISOString().slice(0,10)===start&&Math.abs(+d-Date.now())<220*86400000;}
 export async function getGuide(env,start,fetcher=fetch){
- const key='guide-keyless:'+start,cached=await getCache(env,key);if(cached)return cached;
+ const key='guide-evidence:'+start,cached=await getCache(env,key);if(cached)return cached;
  const end=new Date(start+'T12:00Z');end.setUTCDate(end.getUTCDate()+6);
  let games=await fetchSchedule({start,end:end.toISOString().slice(0,10)},fetcher),verificationMessage='';
  const signature=await hash(JSON.stringify(games.map(g=>[g.id,g.date,g.networks])));
- let listings=null;
- if(env.LISTINGS_URL){try{
-  let feed=await getCache(env,'published-listings');
-  if(!feed){const feedUrl=new URL(env.LISTINGS_URL);feedUrl.searchParams.set('refresh',String(Math.floor(Date.now()/FIVE)));const r=await fetcher(feedUrl.href,{headers:{Accept:'application/vnd.github.raw+json','User-Agent':'BoulderHuddle/1.0'},signal:AbortSignal.timeout(15000)});if(r.ok){feed=await r.json();await putCache(env,'published-listings',feed,FIVE);}}
-  listings=selectPublishedListings(feed,signature);
- }catch{}}
+ // Refresh cadence is separate from evidence validity. Keep last-known data
+ // through transient fetch failures, but never extend its original checkedAt.
  const listingKey='keyless-local:'+signature;
- if(!listings)listings=await getCache(env,listingKey);
- if(!listings){listings=await fetchLocalListings(games,fetcher);await putCache(env,listingKey,listings,30*60000);}
+ const validListings=value=>selectPublishedListings({schema:1,slates:[{...value,signature}]},signature);
+ let listings=validListings(await getCache(env,listingKey,true));
+ if(!listings?.rows.length)listings=null;
+ if(env.LISTINGS_URL){
+  let feed=await getCache(env,'published-listings',true);
+  if(!await getCache(env,'published-listings-refresh')){
+   let refreshed=false;
+   for(const source of [env.LISTINGS_URL,env.LISTINGS_FALLBACK_URL].filter(Boolean)){
+    try{
+     const feedUrl=new URL(source);feedUrl.searchParams.set('refresh',String(Math.floor(Date.now()/FIVE)));
+     const response=await fetcher(feedUrl.href,{headers:{Accept:'application/vnd.github.raw+json','User-Agent':'BoulderHuddle/1.0'},signal:AbortSignal.timeout(15000)});
+     if(!response.ok)throw new Error('HTTP '+response.status);
+     const candidate=await response.json();
+     if(candidate?.schema!==1||!Array.isArray(candidate.slates))throw new Error('Invalid listings feed');
+     feed=candidate;await putCache(env,'published-listings',feed,2*HOUR);refreshed=true;break;
+    }catch(error){console.warn('Listings refresh failed:',source,error.message);}
+   }
+   await putCache(env,'published-listings-refresh',true,refreshed?FIVE:60000);
+  }
+  const published=selectPublishedListings(feed,signature);
+  if(published?.rows.length&&(!listings||Date.parse(published.checkedAt)>Date.parse(listings.checkedAt)))listings=published;
+ }
+ if(!listings&&!await getCache(env,'local-listings-retry:'+signature)){
+  const candidate=validListings(await fetchLocalListings(games,fetcher));
+  if(candidate?.rows.length)listings=candidate;
+  else await putCache(env,'local-listings-retry:'+signature,true,60000);
+ }
+ if(listings){
+  await putCache(env,listingKey,listings,Math.max(0,Date.parse(listings.checkedAt)+2*HOUR-Date.now()));
+ }else listings={rows:[],checkedAt:new Date().toISOString()};
  const local=localReport(games,listings.rows,listings.checkedAt);
  games=mergeVerification(games,local);
  const localCount=local.games.length;
  if(localCount)verificationMessage=`Denver channel assignments checked for ${localCount} games. Listings refresh about every 30 minutes; results older than two hours become unconfirmed. NFL+ mobile and unusual streaming rights require the linked official listings.`;
  else if(!verificationMessage)verificationMessage='Denver station listings are not yet available for this slate. Unconfirmed assignments remain pending.';
- const result={games,checkedAt:new Date().toISOString(),verificationMessage};await putCache(env,key,result,FIVE);return result;
+ const result={games,checkedAt:new Date().toISOString(),verificationMessage};
+ const ttl=localCount?Math.max(0,Math.min(FIVE,Date.parse(listings.checkedAt)+2*HOUR-Date.now())):60000;
+ await putCache(env,key,result,ttl);return result;
 }
 export function validateSubscription(s){
  try{const u=new URL(s.endpoint);if(u.protocol!=='https:'||u.username||u.password||u.port)return false;
