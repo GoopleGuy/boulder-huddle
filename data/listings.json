@@ -1,117 +1,11 @@
 {
   "schema": 1,
-  "generatedAt": "2026-09-15T20:16:31.121Z",
+  "generatedAt": "2026-09-27T16:21:45.163Z",
   "slates": [
-    {
-      "start": "2026-09-15",
-      "end": "2026-09-21",
-      "signature": "35c3972f9a9edc5d4a15849726385e2bcb45466ee6ffd595c407652863683f05",
-      "rows": [
-        {
-          "network": "ABC",
-          "call": "KMGH",
-          "day": "2026-09-21",
-          "minute": 1095,
-          "teams": [
-            "New York Giants",
-            "Los Angeles Rams"
-          ],
-          "title": "New York Giants at Los Angeles Rams",
-          "url": "https://www.tvpassport.com/tv-listings/stations/abc-kmgh-denver-co-hd/5723/2026-09-21"
-        },
-        {
-          "network": "FOX",
-          "call": "KDVR",
-          "day": "2026-09-20",
-          "minute": 660,
-          "teams": [
-            "Minnesota Vikings",
-            "Chicago Bears"
-          ],
-          "title": "Minnesota Vikings at Chicago Bears",
-          "url": "https://www.tvpassport.com/tv-listings/stations/fox-kdvr-denver-co-hd/6401/2026-09-20"
-        },
-        {
-          "network": "FOX",
-          "call": "KDVR",
-          "day": "2026-09-20",
-          "minute": 865,
-          "teams": [
-            "Washington Commanders",
-            "Dallas Cowboys"
-          ],
-          "title": "Washington Commanders at Dallas Cowboys",
-          "url": "https://www.tvpassport.com/tv-listings/stations/fox-kdvr-denver-co-hd/6401/2026-09-20"
-        },
-        {
-          "network": "NBC",
-          "call": "KUSA",
-          "day": "2026-09-20",
-          "minute": 1095,
-          "teams": [
-            "Indianapolis Colts",
-            "Kansas City Chiefs"
-          ],
-          "title": "Indianapolis Colts at Kansas City Chiefs",
-          "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-09-20"
-        },
-        {
-          "network": "CBS",
-          "call": "KCNC",
-          "day": "2026-09-20",
-          "minute": 840,
-          "teams": [
-            "Jacksonville Jaguars",
-            "Denver Broncos"
-          ],
-          "title": "Jacksonville Jaguars at Denver Broncos",
-          "url": "https://www.tvpassport.com/tv-listings/stations/cbs-kcnc-denver-co/1566/2026-09-20"
-        }
-      ],
-      "successfulPages": 4,
-      "diagnostics": [
-        {
-          "call": "KMGH",
-          "day": "2026-09-21",
-          "status": 200,
-          "parsed": 1,
-          "via": "direct"
-        },
-        {
-          "call": "KMGH",
-          "day": "2026-09-20",
-          "status": 200,
-          "parsed": 0,
-          "via": "direct"
-        },
-        {
-          "call": "KDVR",
-          "day": "2026-09-20",
-          "status": 200,
-          "parsed": 2,
-          "via": "direct"
-        },
-        {
-          "call": "KUSA",
-          "day": "2026-09-20",
-          "status": 200,
-          "parsed": 1,
-          "via": "direct"
-        },
-        {
-          "call": "KCNC",
-          "day": "2026-09-20",
-          "status": 200,
-          "parsed": 1,
-          "via": "direct"
-        }
-      ],
-      "checkedAt": "2026-09-15T20:16:30.422Z"
-    },
     {
       "start": "2026-09-22",
       "end": "2026-09-28",
-      "signature": "7ffc1c5ffd5689280f801457480cb6f217ce40d7f03bb90913942e74eab1e878",
+      "signature": "ed1e129a5dffc1bed5a47c879b78d959a3e05053dd39a5ccae31ebc7596c3908",
       "rows": [
         {
           "network": "ABC",
@@ -126,6 +20,18 @@
           "url": "https://www.tvpassport.com/tv-listings/stations/abc-kmgh-denver-co-hd/5723/2026-09-28"
         },
         {
+          "network": "FOX",
+          "call": "KDVR",
+          "day": "2026-09-27",
+          "minute": 660,
+          "teams": [
+            "Los Angeles Chargers",
+            "Buffalo Bills"
+          ],
+          "title": "Los Angeles Chargers at Buffalo Bills",
+          "url": "https://www.tvpassport.com/tv-listings/stations/fox-kdvr-denver-co-hd/6401/2026-09-27"
+        },
+        {
           "network": "NBC",
           "call": "KUSA",
           "day": "2026-09-27",
@@ -136,9 +42,33 @@
           ],
           "title": "Los Angeles Rams at Denver Broncos",
           "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-09-27"
+        },
+        {
+          "network": "CBS",
+          "call": "KCNC",
+          "day": "2026-09-27",
+          "minute": 660,
+          "teams": [
+            "Kansas City Chiefs",
+            "Miami Dolphins"
+          ],
+          "title": "Kansas City Chiefs at Miami Dolphins",
+          "url": "https://www.tvpassport.com/tv-listings/stations/cbs-kcnc-denver-co/1566/2026-09-27"
+        },
+        {
+          "network": "CBS",
+          "call": "KCNC",
+          "day": "2026-09-27",
+          "minute": 865,
+          "teams": [
+            "Baltimore Ravens",
+            "Dallas Cowboys"
+          ],
+          "title": "Baltimore Ravens vs. Dallas Cowboys",
+          "url": "https://www.tvpassport.com/tv-listings/stations/cbs-kcnc-denver-co/1566/2026-09-27"
         }
       ],
-      "successfulPages": 2,
+      "successfulPages": 4,
       "diagnostics": [
         {
           "call": "KMGH",
@@ -148,15 +78,15 @@
           "via": "direct"
         },
         {
-          "call": "KDVR",
-          "day": "2026-09-27",
+          "call": "KMGH",
+          "day": "2026-09-28",
           "status": 200,
-          "parsed": 0,
+          "parsed": 1,
           "via": "direct"
         },
         {
-          "call": "KMGH",
-          "day": "2026-09-28",
+          "call": "KDVR",
+          "day": "2026-09-27",
           "status": 200,
           "parsed": 1,
           "via": "direct"
@@ -172,11 +102,93 @@
           "call": "KCNC",
           "day": "2026-09-27",
           "status": 200,
-          "parsed": 0,
+          "parsed": 2,
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-09-15T20:16:31.120Z"
+      "checkedAt": "2026-09-27T16:21:44.423Z"
+    },
+    {
+      "start": "2026-09-29",
+      "end": "2026-10-05",
+      "signature": "41b7b2ea356f08fb249c43d70f7ff2b1c584a1a00db99bc047342b78afb24671",
+      "rows": [
+        {
+          "network": "FOX",
+          "call": "KDVR",
+          "day": "2026-10-04",
+          "minute": 660,
+          "teams": [
+            "Dallas Cowboys",
+            "Houston Texans"
+          ],
+          "title": "Dallas Cowboys at Houston Texans",
+          "url": "https://www.tvpassport.com/tv-listings/stations/fox-kdvr-denver-co-hd/6401/2026-10-04"
+        },
+        {
+          "network": "NBC",
+          "call": "KUSA",
+          "day": "2026-10-04",
+          "minute": 1095,
+          "teams": [
+            "Detroit Lions",
+            "Carolina Panthers"
+          ],
+          "title": "Detroit Lions at Carolina Panthers",
+          "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-10-04"
+        },
+        {
+          "network": "CBS",
+          "call": "KCNC",
+          "day": "2026-10-04",
+          "minute": 865,
+          "teams": [
+            "Denver Broncos",
+            "San Francisco 49ers"
+          ],
+          "title": "Denver Broncos at San Francisco 49ers",
+          "url": "https://www.tvpassport.com/tv-listings/stations/cbs-kcnc-denver-co/1566/2026-10-04"
+        }
+      ],
+      "successfulPages": 3,
+      "diagnostics": [
+        {
+          "call": "KDVR",
+          "day": "2026-10-04",
+          "status": 200,
+          "parsed": 1,
+          "via": "direct"
+        },
+        {
+          "call": "KUSA",
+          "day": "2026-10-04",
+          "status": 200,
+          "parsed": 1,
+          "via": "direct"
+        },
+        {
+          "call": "KMGH",
+          "day": "2026-10-05",
+          "status": 200,
+          "parsed": 0,
+          "via": "direct"
+        },
+        {
+          "call": "KMGH",
+          "day": "2026-10-04",
+          "status": 200,
+          "parsed": 0,
+          "via": "direct"
+        },
+        {
+          "call": "KCNC",
+          "day": "2026-10-04",
+          "status": 200,
+          "parsed": 1,
+          "via": "direct"
+        }
+      ],
+      "checkedAt": "2026-09-27T16:21:45.163Z"
     }
   ]
 }
