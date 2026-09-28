@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-09-28T19:42:22.331Z",
+  "generatedAt": "2026-09-28T23:58:02.742Z",
   "slates": [
     {
       "start": "2026-09-22",
@@ -8,16 +8,16 @@
       "signature": "ed1e129a5dffc1bed5a47c879b78d959a3e05053dd39a5ccae31ebc7596c3908",
       "rows": [
         {
-          "network": "ABC",
-          "call": "KMGH",
-          "day": "2026-09-28",
+          "network": "NBC",
+          "call": "KUSA",
+          "day": "2026-09-27",
           "minute": 1095,
           "teams": [
-            "Philadelphia Eagles",
-            "Chicago Bears"
+            "Los Angeles Rams",
+            "Denver Broncos"
           ],
-          "title": "Philadelphia Eagles at Chicago Bears",
-          "url": "https://www.tvpassport.com/tv-listings/stations/abc-kmgh-denver-co-hd/5723/2026-09-28"
+          "title": "Los Angeles Rams at Denver Broncos",
+          "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-09-27"
         },
         {
           "network": "FOX",
@@ -30,6 +30,18 @@
           ],
           "title": "Los Angeles Chargers at Buffalo Bills",
           "url": "https://www.tvpassport.com/tv-listings/stations/fox-kdvr-denver-co-hd/6401/2026-09-27"
+        },
+        {
+          "network": "ABC",
+          "call": "KMGH",
+          "day": "2026-09-28",
+          "minute": 1095,
+          "teams": [
+            "Philadelphia Eagles",
+            "Chicago Bears"
+          ],
+          "title": "Philadelphia Eagles at Chicago Bears",
+          "url": "https://www.tvpassport.com/tv-listings/stations/abc-kmgh-denver-co-hd/5723/2026-09-28"
         },
         {
           "network": "CBS",
@@ -54,32 +66,13 @@
           ],
           "title": "Baltimore Ravens vs. Dallas Cowboys",
           "url": "https://www.tvpassport.com/tv-listings/stations/cbs-kcnc-denver-co/1566/2026-09-27"
-        },
-        {
-          "network": "NBC",
-          "call": "KUSA",
-          "day": "2026-09-27",
-          "minute": 1095,
-          "teams": [
-            "Los Angeles Rams",
-            "Denver Broncos"
-          ],
-          "title": "Los Angeles Rams at Denver Broncos",
-          "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-09-27"
         }
       ],
       "successfulPages": 4,
       "diagnostics": [
         {
-          "call": "KMGH",
+          "call": "KUSA",
           "day": "2026-09-27",
-          "status": 200,
-          "parsed": 0,
-          "via": "direct"
-        },
-        {
-          "call": "KMGH",
-          "day": "2026-09-28",
           "status": 200,
           "parsed": 1,
           "via": "direct"
@@ -92,39 +85,34 @@
           "via": "direct"
         },
         {
+          "call": "KMGH",
+          "day": "2026-09-28",
+          "status": 200,
+          "parsed": 1,
+          "via": "direct"
+        },
+        {
+          "call": "KMGH",
+          "day": "2026-09-27",
+          "status": 200,
+          "parsed": 0,
+          "via": "direct"
+        },
+        {
           "call": "KCNC",
           "day": "2026-09-27",
           "status": 200,
           "parsed": 2,
           "via": "direct"
-        },
-        {
-          "call": "KUSA",
-          "day": "2026-09-27",
-          "status": 200,
-          "parsed": 1,
-          "via": "direct"
         }
       ],
-      "checkedAt": "2026-09-28T19:42:21.653Z"
+      "checkedAt": "2026-09-28T23:58:01.375Z"
     },
     {
       "start": "2026-09-29",
       "end": "2026-10-05",
       "signature": "41b7b2ea356f08fb249c43d70f7ff2b1c584a1a00db99bc047342b78afb24671",
       "rows": [
-        {
-          "network": "NBC",
-          "call": "KUSA",
-          "day": "2026-10-04",
-          "minute": 1095,
-          "teams": [
-            "Detroit Lions",
-            "Carolina Panthers"
-          ],
-          "title": "Detroit Lions at Carolina Panthers",
-          "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-10-04"
-        },
         {
           "network": "FOX",
           "call": "KDVR",
@@ -136,6 +124,18 @@
           ],
           "title": "Dallas Cowboys at Houston Texans",
           "url": "https://www.tvpassport.com/tv-listings/stations/fox-kdvr-denver-co-hd/6401/2026-10-04"
+        },
+        {
+          "network": "NBC",
+          "call": "KUSA",
+          "day": "2026-10-04",
+          "minute": 1095,
+          "teams": [
+            "Detroit Lions",
+            "Carolina Panthers"
+          ],
+          "title": "Detroit Lions at Carolina Panthers",
+          "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-10-04"
         },
         {
           "network": "CBS",
@@ -153,20 +153,6 @@
       "successfulPages": 3,
       "diagnostics": [
         {
-          "call": "KUSA",
-          "day": "2026-10-04",
-          "status": 200,
-          "parsed": 1,
-          "via": "direct"
-        },
-        {
-          "call": "KMGH",
-          "day": "2026-10-05",
-          "status": 200,
-          "parsed": 0,
-          "via": "direct"
-        },
-        {
           "call": "KDVR",
           "day": "2026-10-04",
           "status": 200,
@@ -181,6 +167,20 @@
           "via": "direct"
         },
         {
+          "call": "KUSA",
+          "day": "2026-10-04",
+          "status": 200,
+          "parsed": 1,
+          "via": "direct"
+        },
+        {
+          "call": "KMGH",
+          "day": "2026-10-05",
+          "status": 200,
+          "parsed": 0,
+          "via": "direct"
+        },
+        {
           "call": "KCNC",
           "day": "2026-10-04",
           "status": 200,
@@ -188,7 +188,7 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-09-28T19:42:22.331Z"
+      "checkedAt": "2026-09-28T23:58:02.741Z"
     }
   ]
 }
