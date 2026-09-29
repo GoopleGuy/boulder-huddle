@@ -1,36 +1,12 @@
 {
   "schema": 1,
-  "generatedAt": "2026-09-28T23:58:02.742Z",
+  "generatedAt": "2026-09-29T05:48:59.121Z",
   "slates": [
     {
       "start": "2026-09-22",
       "end": "2026-09-28",
       "signature": "ed1e129a5dffc1bed5a47c879b78d959a3e05053dd39a5ccae31ebc7596c3908",
       "rows": [
-        {
-          "network": "NBC",
-          "call": "KUSA",
-          "day": "2026-09-27",
-          "minute": 1095,
-          "teams": [
-            "Los Angeles Rams",
-            "Denver Broncos"
-          ],
-          "title": "Los Angeles Rams at Denver Broncos",
-          "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-09-27"
-        },
-        {
-          "network": "FOX",
-          "call": "KDVR",
-          "day": "2026-09-27",
-          "minute": 660,
-          "teams": [
-            "Los Angeles Chargers",
-            "Buffalo Bills"
-          ],
-          "title": "Los Angeles Chargers at Buffalo Bills",
-          "url": "https://www.tvpassport.com/tv-listings/stations/fox-kdvr-denver-co-hd/6401/2026-09-27"
-        },
         {
           "network": "ABC",
           "call": "KMGH",
@@ -42,48 +18,10 @@
           ],
           "title": "Philadelphia Eagles at Chicago Bears",
           "url": "https://www.tvpassport.com/tv-listings/stations/abc-kmgh-denver-co-hd/5723/2026-09-28"
-        },
-        {
-          "network": "CBS",
-          "call": "KCNC",
-          "day": "2026-09-27",
-          "minute": 660,
-          "teams": [
-            "Kansas City Chiefs",
-            "Miami Dolphins"
-          ],
-          "title": "Kansas City Chiefs at Miami Dolphins",
-          "url": "https://www.tvpassport.com/tv-listings/stations/cbs-kcnc-denver-co/1566/2026-09-27"
-        },
-        {
-          "network": "CBS",
-          "call": "KCNC",
-          "day": "2026-09-27",
-          "minute": 865,
-          "teams": [
-            "Baltimore Ravens",
-            "Dallas Cowboys"
-          ],
-          "title": "Baltimore Ravens vs. Dallas Cowboys",
-          "url": "https://www.tvpassport.com/tv-listings/stations/cbs-kcnc-denver-co/1566/2026-09-27"
         }
       ],
-      "successfulPages": 4,
+      "successfulPages": 1,
       "diagnostics": [
-        {
-          "call": "KUSA",
-          "day": "2026-09-27",
-          "status": 200,
-          "parsed": 1,
-          "via": "direct"
-        },
-        {
-          "call": "KDVR",
-          "day": "2026-09-27",
-          "status": 200,
-          "parsed": 1,
-          "via": "direct"
-        },
         {
           "call": "KMGH",
           "day": "2026-09-28",
@@ -99,14 +37,28 @@
           "via": "direct"
         },
         {
+          "call": "KDVR",
+          "day": "2026-09-27",
+          "status": 200,
+          "parsed": 0,
+          "via": "direct"
+        },
+        {
+          "call": "KUSA",
+          "day": "2026-09-27",
+          "status": 200,
+          "parsed": 0,
+          "via": "direct"
+        },
+        {
           "call": "KCNC",
           "day": "2026-09-27",
           "status": 200,
-          "parsed": 2,
+          "parsed": 0,
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-09-28T23:58:01.375Z"
+      "checkedAt": "2026-09-29T05:48:58.474Z"
     },
     {
       "start": "2026-09-29",
@@ -153,17 +105,17 @@
       "successfulPages": 3,
       "diagnostics": [
         {
+          "call": "KMGH",
+          "day": "2026-10-05",
+          "status": 200,
+          "parsed": 0,
+          "via": "direct"
+        },
+        {
           "call": "KDVR",
           "day": "2026-10-04",
           "status": 200,
           "parsed": 1,
-          "via": "direct"
-        },
-        {
-          "call": "KMGH",
-          "day": "2026-10-04",
-          "status": 200,
-          "parsed": 0,
           "via": "direct"
         },
         {
@@ -175,7 +127,7 @@
         },
         {
           "call": "KMGH",
-          "day": "2026-10-05",
+          "day": "2026-10-04",
           "status": 200,
           "parsed": 0,
           "via": "direct"
@@ -188,7 +140,7 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-09-28T23:58:02.741Z"
+      "checkedAt": "2026-09-29T05:48:59.120Z"
     }
   ]
 }
