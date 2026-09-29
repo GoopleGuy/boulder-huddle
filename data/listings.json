@@ -1,24 +1,12 @@
 {
   "schema": 1,
-  "generatedAt": "2026-09-29T12:59:59.150Z",
+  "generatedAt": "2026-09-29T18:39:51.495Z",
   "slates": [
     {
       "start": "2026-09-29",
       "end": "2026-10-05",
       "signature": "41b7b2ea356f08fb249c43d70f7ff2b1c584a1a00db99bc047342b78afb24671",
       "rows": [
-        {
-          "network": "FOX",
-          "call": "KDVR",
-          "day": "2026-10-04",
-          "minute": 660,
-          "teams": [
-            "Dallas Cowboys",
-            "Houston Texans"
-          ],
-          "title": "Dallas Cowboys at Houston Texans",
-          "url": "https://www.tvpassport.com/tv-listings/stations/fox-kdvr-denver-co-hd/6401/2026-10-04"
-        },
         {
           "network": "NBC",
           "call": "KUSA",
@@ -30,6 +18,18 @@
           ],
           "title": "Detroit Lions at Carolina Panthers",
           "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-10-04"
+        },
+        {
+          "network": "FOX",
+          "call": "KDVR",
+          "day": "2026-10-04",
+          "minute": 660,
+          "teams": [
+            "Dallas Cowboys",
+            "Houston Texans"
+          ],
+          "title": "Dallas Cowboys at Houston Texans",
+          "url": "https://www.tvpassport.com/tv-listings/stations/fox-kdvr-denver-co-hd/6401/2026-10-04"
         },
         {
           "network": "CBS",
@@ -73,14 +73,14 @@
           "via": "direct"
         },
         {
-          "call": "KDVR",
+          "call": "KUSA",
           "day": "2026-10-04",
           "status": 200,
           "parsed": 1,
           "via": "direct"
         },
         {
-          "call": "KUSA",
+          "call": "KDVR",
           "day": "2026-10-04",
           "status": 200,
           "parsed": 1,
@@ -94,12 +94,12 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-09-29T12:59:58.531Z"
+      "checkedAt": "2026-09-29T18:39:50.761Z"
     },
     {
       "start": "2026-10-06",
       "end": "2026-10-12",
-      "signature": "2f4021d7c376b88d5cc1645a4c3b1636aee03763873790860c47f5916c11ac1e",
+      "signature": "268e0bb9b89efac096c52fbd8014ec9ab3e08064259a76cf347f54f7580821f2",
       "rows": [
         {
           "network": "NBC",
@@ -141,17 +141,17 @@
       "successfulPages": 3,
       "diagnostics": [
         {
-          "call": "KDVR",
-          "day": "2026-10-11",
-          "status": 200,
-          "parsed": 0,
-          "via": "direct"
-        },
-        {
           "call": "KUSA",
           "day": "2026-10-11",
           "status": 200,
           "parsed": 1,
+          "via": "direct"
+        },
+        {
+          "call": "KMGH",
+          "day": "2026-10-11",
+          "status": 200,
+          "parsed": 0,
           "via": "direct"
         },
         {
@@ -162,7 +162,7 @@
           "via": "direct"
         },
         {
-          "call": "KMGH",
+          "call": "KDVR",
           "day": "2026-10-11",
           "status": 200,
           "parsed": 0,
@@ -176,7 +176,7 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-09-29T12:59:59.149Z"
+      "checkedAt": "2026-09-29T18:39:51.494Z"
     }
   ]
 }
