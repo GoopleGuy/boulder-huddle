@@ -1,36 +1,12 @@
 {
   "schema": 1,
-  "generatedAt": "2026-09-30T07:30:41.432Z",
+  "generatedAt": "2026-09-30T14:15:28.498Z",
   "slates": [
     {
       "start": "2026-09-29",
       "end": "2026-10-05",
       "signature": "41b7b2ea356f08fb249c43d70f7ff2b1c584a1a00db99bc047342b78afb24671",
       "rows": [
-        {
-          "network": "CBS",
-          "call": "KCNC",
-          "day": "2026-10-04",
-          "minute": 660,
-          "teams": [
-            "New England Patriots",
-            "Buffalo Bills"
-          ],
-          "title": "New England Patriots at Buffalo Bills",
-          "url": "https://www.tvpassport.com/tv-listings/stations/cbs-kcnc-denver-co/1566/2026-10-04"
-        },
-        {
-          "network": "CBS",
-          "call": "KCNC",
-          "day": "2026-10-04",
-          "minute": 865,
-          "teams": [
-            "Denver Broncos",
-            "San Francisco 49ers"
-          ],
-          "title": "Denver Broncos at San Francisco 49ers",
-          "url": "https://www.tvpassport.com/tv-listings/stations/cbs-kcnc-denver-co/1566/2026-10-04"
-        },
         {
           "network": "NBC",
           "call": "KUSA",
@@ -54,6 +30,30 @@
           ],
           "title": "Dallas Cowboys at Houston Texans",
           "url": "https://www.tvpassport.com/tv-listings/stations/fox-kdvr-denver-co-hd/6401/2026-10-04"
+        },
+        {
+          "network": "CBS",
+          "call": "KCNC",
+          "day": "2026-10-04",
+          "minute": 660,
+          "teams": [
+            "New England Patriots",
+            "Buffalo Bills"
+          ],
+          "title": "New England Patriots at Buffalo Bills",
+          "url": "https://www.tvpassport.com/tv-listings/stations/cbs-kcnc-denver-co/1566/2026-10-04"
+        },
+        {
+          "network": "CBS",
+          "call": "KCNC",
+          "day": "2026-10-04",
+          "minute": 865,
+          "teams": [
+            "Denver Broncos",
+            "San Francisco 49ers"
+          ],
+          "title": "Denver Broncos at San Francisco 49ers",
+          "url": "https://www.tvpassport.com/tv-listings/stations/cbs-kcnc-denver-co/1566/2026-10-04"
         }
       ],
       "successfulPages": 3,
@@ -73,13 +73,6 @@
           "via": "direct"
         },
         {
-          "call": "KCNC",
-          "day": "2026-10-04",
-          "status": 200,
-          "parsed": 2,
-          "via": "direct"
-        },
-        {
           "call": "KUSA",
           "day": "2026-10-04",
           "status": 200,
@@ -92,27 +85,22 @@
           "status": 200,
           "parsed": 1,
           "via": "direct"
+        },
+        {
+          "call": "KCNC",
+          "day": "2026-10-04",
+          "status": 200,
+          "parsed": 2,
+          "via": "direct"
         }
       ],
-      "checkedAt": "2026-09-30T07:30:40.898Z"
+      "checkedAt": "2026-09-30T14:15:27.793Z"
     },
     {
       "start": "2026-10-06",
       "end": "2026-10-12",
       "signature": "268e0bb9b89efac096c52fbd8014ec9ab3e08064259a76cf347f54f7580821f2",
       "rows": [
-        {
-          "network": "NBC",
-          "call": "KUSA",
-          "day": "2026-10-11",
-          "minute": 1095,
-          "teams": [
-            "Baltimore Ravens",
-            "Atlanta Falcons"
-          ],
-          "title": "Baltimore Ravens at Atlanta Falcons",
-          "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-10-11"
-        },
         {
           "network": "ABC",
           "call": "KMGH",
@@ -124,6 +112,18 @@
           ],
           "title": "Buffalo Bills at Los Angeles Rams",
           "url": "https://www.tvpassport.com/tv-listings/stations/abc-kmgh-denver-co-hd/5723/2026-10-12"
+        },
+        {
+          "network": "NBC",
+          "call": "KUSA",
+          "day": "2026-10-11",
+          "minute": 1095,
+          "teams": [
+            "Baltimore Ravens",
+            "Atlanta Falcons"
+          ],
+          "title": "Baltimore Ravens at Atlanta Falcons",
+          "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-10-11"
         },
         {
           "network": "CBS",
@@ -149,9 +149,9 @@
         },
         {
           "call": "KMGH",
-          "day": "2026-10-11",
+          "day": "2026-10-12",
           "status": 200,
-          "parsed": 0,
+          "parsed": 1,
           "via": "direct"
         },
         {
@@ -163,9 +163,9 @@
         },
         {
           "call": "KMGH",
-          "day": "2026-10-12",
+          "day": "2026-10-11",
           "status": 200,
-          "parsed": 1,
+          "parsed": 0,
           "via": "direct"
         },
         {
@@ -176,7 +176,7 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-09-30T07:30:41.431Z"
+      "checkedAt": "2026-09-30T14:15:28.497Z"
     }
   ]
 }
