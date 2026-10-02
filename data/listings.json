@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-10-02T13:54:44.493Z",
+  "generatedAt": "2026-10-02T19:22:07.951Z",
   "slates": [
     {
       "start": "2026-09-29",
@@ -60,14 +60,14 @@
       "diagnostics": [
         {
           "call": "KMGH",
-          "day": "2026-10-05",
+          "day": "2026-10-04",
           "status": 200,
           "parsed": 0,
           "via": "direct"
         },
         {
           "call": "KMGH",
-          "day": "2026-10-04",
+          "day": "2026-10-05",
           "status": 200,
           "parsed": 0,
           "via": "direct"
@@ -94,25 +94,13 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-10-02T13:54:43.962Z"
+      "checkedAt": "2026-10-02T19:22:07.312Z"
     },
     {
       "start": "2026-10-06",
       "end": "2026-10-12",
       "signature": "268e0bb9b89efac096c52fbd8014ec9ab3e08064259a76cf347f54f7580821f2",
       "rows": [
-        {
-          "network": "ABC",
-          "call": "KMGH",
-          "day": "2026-10-12",
-          "minute": 1095,
-          "teams": [
-            "Buffalo Bills",
-            "Los Angeles Rams"
-          ],
-          "title": "Buffalo Bills at Los Angeles Rams",
-          "url": "https://www.tvpassport.com/tv-listings/stations/abc-kmgh-denver-co-hd/5723/2026-10-12"
-        },
         {
           "network": "NBC",
           "call": "KUSA",
@@ -124,6 +112,18 @@
           ],
           "title": "Baltimore Ravens at Atlanta Falcons",
           "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-10-11"
+        },
+        {
+          "network": "ABC",
+          "call": "KMGH",
+          "day": "2026-10-12",
+          "minute": 1095,
+          "teams": [
+            "Buffalo Bills",
+            "Los Angeles Rams"
+          ],
+          "title": "Buffalo Bills at Los Angeles Rams",
+          "url": "https://www.tvpassport.com/tv-listings/stations/abc-kmgh-denver-co-hd/5723/2026-10-12"
         },
         {
           "network": "CBS",
@@ -141,7 +141,21 @@
       "successfulPages": 3,
       "diagnostics": [
         {
+          "call": "KUSA",
+          "day": "2026-10-11",
+          "status": 200,
+          "parsed": 1,
+          "via": "direct"
+        },
+        {
           "call": "KMGH",
+          "day": "2026-10-11",
+          "status": 200,
+          "parsed": 0,
+          "via": "direct"
+        },
+        {
+          "call": "KDVR",
           "day": "2026-10-11",
           "status": 200,
           "parsed": 0,
@@ -155,20 +169,6 @@
           "via": "direct"
         },
         {
-          "call": "KDVR",
-          "day": "2026-10-11",
-          "status": 200,
-          "parsed": 0,
-          "via": "direct"
-        },
-        {
-          "call": "KUSA",
-          "day": "2026-10-11",
-          "status": 200,
-          "parsed": 1,
-          "via": "direct"
-        },
-        {
           "call": "KCNC",
           "day": "2026-10-11",
           "status": 200,
@@ -176,7 +176,7 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-10-02T13:54:44.492Z"
+      "checkedAt": "2026-10-02T19:22:07.950Z"
     }
   ]
 }
