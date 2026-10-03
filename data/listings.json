@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-10-03T08:34:39.875Z",
+  "generatedAt": "2026-10-03T13:56:36.420Z",
   "slates": [
     {
       "start": "2026-09-29",
@@ -94,7 +94,7 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-10-03T08:34:39.189Z"
+      "checkedAt": "2026-10-03T13:56:35.702Z"
     },
     {
       "start": "2026-10-06",
@@ -148,6 +148,13 @@
           "via": "direct"
         },
         {
+          "call": "KDVR",
+          "day": "2026-10-11",
+          "status": 200,
+          "parsed": 0,
+          "via": "direct"
+        },
+        {
           "call": "KUSA",
           "day": "2026-10-11",
           "status": 200,
@@ -162,13 +169,6 @@
           "via": "direct"
         },
         {
-          "call": "KDVR",
-          "day": "2026-10-11",
-          "status": 200,
-          "parsed": 0,
-          "via": "direct"
-        },
-        {
           "call": "KCNC",
           "day": "2026-10-11",
           "status": 200,
@@ -176,7 +176,7 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-10-03T08:34:39.874Z"
+      "checkedAt": "2026-10-03T13:56:36.420Z"
     }
   ]
 }
