@@ -1,24 +1,12 @@
 {
   "schema": 1,
-  "generatedAt": "2026-10-04T17:04:08.021Z",
+  "generatedAt": "2026-10-04T20:12:46.842Z",
   "slates": [
     {
       "start": "2026-09-29",
       "end": "2026-10-05",
       "signature": "41b7b2ea356f08fb249c43d70f7ff2b1c584a1a00db99bc047342b78afb24671",
       "rows": [
-        {
-          "network": "NBC",
-          "call": "KUSA",
-          "day": "2026-10-04",
-          "minute": 1095,
-          "teams": [
-            "Detroit Lions",
-            "Carolina Panthers"
-          ],
-          "title": "Detroit Lions at Carolina Panthers",
-          "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-10-04"
-        },
         {
           "network": "FOX",
           "call": "KDVR",
@@ -30,6 +18,18 @@
           ],
           "title": "Dallas Cowboys at Houston Texans",
           "url": "https://www.tvpassport.com/tv-listings/stations/fox-kdvr-denver-co-hd/6401/2026-10-04"
+        },
+        {
+          "network": "NBC",
+          "call": "KUSA",
+          "day": "2026-10-04",
+          "minute": 1095,
+          "teams": [
+            "Detroit Lions",
+            "Carolina Panthers"
+          ],
+          "title": "Detroit Lions at Carolina Panthers",
+          "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-10-04"
         },
         {
           "network": "CBS",
@@ -59,10 +59,10 @@
       "successfulPages": 3,
       "diagnostics": [
         {
-          "call": "KMGH",
+          "call": "KDVR",
           "day": "2026-10-04",
           "status": 200,
-          "parsed": 0,
+          "parsed": 1,
           "via": "direct"
         },
         {
@@ -80,10 +80,10 @@
           "via": "direct"
         },
         {
-          "call": "KDVR",
+          "call": "KMGH",
           "day": "2026-10-04",
           "status": 200,
-          "parsed": 1,
+          "parsed": 0,
           "via": "direct"
         },
         {
@@ -94,7 +94,7 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-10-04T17:04:07.334Z"
+      "checkedAt": "2026-10-04T20:12:46.235Z"
     },
     {
       "start": "2026-10-06",
@@ -166,16 +166,16 @@
       "diagnostics": [
         {
           "call": "KMGH",
-          "day": "2026-10-11",
+          "day": "2026-10-12",
           "status": 200,
-          "parsed": 0,
+          "parsed": 1,
           "via": "direct"
         },
         {
           "call": "KMGH",
-          "day": "2026-10-12",
+          "day": "2026-10-11",
           "status": 200,
-          "parsed": 1,
+          "parsed": 0,
           "via": "direct"
         },
         {
@@ -200,7 +200,7 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-10-04T17:04:08.020Z"
+      "checkedAt": "2026-10-04T20:12:46.842Z"
     }
   ]
 }
