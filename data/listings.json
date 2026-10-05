@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "generatedAt": "2026-10-05T09:10:57.563Z",
+  "generatedAt": "2026-10-05T18:31:59.482Z",
   "slates": [
     {
       "start": "2026-09-29",
       "end": "2026-10-05",
-      "signature": "41b7b2ea356f08fb249c43d70f7ff2b1c584a1a00db99bc047342b78afb24671",
+      "signature": "0ab90e4b9bdf7d5a8685367e4ce6760bda35e5bb83729c39250dbf61147ffca6",
       "rows": [
         {
           "network": "NBC",
@@ -59,13 +59,6 @@
       "successfulPages": 3,
       "diagnostics": [
         {
-          "call": "KUSA",
-          "day": "2026-10-04",
-          "status": 200,
-          "parsed": 1,
-          "via": "direct"
-        },
-        {
           "call": "KMGH",
           "day": "2026-10-04",
           "status": 200,
@@ -77,6 +70,13 @@
           "day": "2026-10-05",
           "status": 200,
           "parsed": 0,
+          "via": "direct"
+        },
+        {
+          "call": "KUSA",
+          "day": "2026-10-04",
+          "status": 200,
+          "parsed": 1,
           "via": "direct"
         },
         {
@@ -94,25 +94,13 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-10-05T09:10:56.849Z"
+      "checkedAt": "2026-10-05T18:31:58.718Z"
     },
     {
       "start": "2026-10-06",
       "end": "2026-10-12",
-      "signature": "268e0bb9b89efac096c52fbd8014ec9ab3e08064259a76cf347f54f7580821f2",
+      "signature": "aef6aff8fa6edc9437040f74d41065d42ab195e37b42e790d0dac1d3ac3f2847",
       "rows": [
-        {
-          "network": "NBC",
-          "call": "KUSA",
-          "day": "2026-10-11",
-          "minute": 1095,
-          "teams": [
-            "Baltimore Ravens",
-            "Atlanta Falcons"
-          ],
-          "title": "Baltimore Ravens at Atlanta Falcons",
-          "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-10-11"
-        },
         {
           "network": "ABC",
           "call": "KMGH",
@@ -124,6 +112,18 @@
           ],
           "title": "Buffalo Bills at Los Angeles Rams",
           "url": "https://www.tvpassport.com/tv-listings/stations/abc-kmgh-denver-co-hd/5723/2026-10-12"
+        },
+        {
+          "network": "NBC",
+          "call": "KUSA",
+          "day": "2026-10-11",
+          "minute": 1095,
+          "teams": [
+            "Baltimore Ravens",
+            "Atlanta Falcons"
+          ],
+          "title": "Baltimore Ravens at Atlanta Falcons",
+          "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-10-11"
         },
         {
           "network": "FOX",
@@ -166,21 +166,14 @@
       "diagnostics": [
         {
           "call": "KMGH",
-          "day": "2026-10-11",
-          "status": 200,
-          "parsed": 0,
-          "via": "direct"
-        },
-        {
-          "call": "KUSA",
-          "day": "2026-10-11",
+          "day": "2026-10-12",
           "status": 200,
           "parsed": 1,
           "via": "direct"
         },
         {
-          "call": "KMGH",
-          "day": "2026-10-12",
+          "call": "KUSA",
+          "day": "2026-10-11",
           "status": 200,
           "parsed": 1,
           "via": "direct"
@@ -193,6 +186,13 @@
           "via": "direct"
         },
         {
+          "call": "KMGH",
+          "day": "2026-10-11",
+          "status": 200,
+          "parsed": 0,
+          "via": "direct"
+        },
+        {
           "call": "KCNC",
           "day": "2026-10-11",
           "status": 200,
@@ -200,7 +200,7 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-10-05T09:10:57.563Z"
+      "checkedAt": "2026-10-05T18:31:59.482Z"
     }
   ]
 }
