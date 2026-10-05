@@ -1,12 +1,36 @@
 {
   "schema": 1,
-  "generatedAt": "2026-10-05T02:05:30.177Z",
+  "generatedAt": "2026-10-05T09:10:57.563Z",
   "slates": [
     {
       "start": "2026-09-29",
       "end": "2026-10-05",
       "signature": "41b7b2ea356f08fb249c43d70f7ff2b1c584a1a00db99bc047342b78afb24671",
       "rows": [
+        {
+          "network": "NBC",
+          "call": "KUSA",
+          "day": "2026-10-04",
+          "minute": 1095,
+          "teams": [
+            "Detroit Lions",
+            "Carolina Panthers"
+          ],
+          "title": "Detroit Lions at Carolina Panthers",
+          "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-10-04"
+        },
+        {
+          "network": "FOX",
+          "call": "KDVR",
+          "day": "2026-10-04",
+          "minute": 660,
+          "teams": [
+            "Dallas Cowboys",
+            "Houston Texans"
+          ],
+          "title": "Dallas Cowboys at Houston Texans",
+          "url": "https://www.tvpassport.com/tv-listings/stations/fox-kdvr-denver-co-hd/6401/2026-10-04"
+        },
         {
           "network": "CBS",
           "call": "KCNC",
@@ -30,34 +54,24 @@
           ],
           "title": "Denver Broncos at San Francisco 49ers",
           "url": "https://www.tvpassport.com/tv-listings/stations/cbs-kcnc-denver-co/1566/2026-10-04"
-        },
-        {
-          "network": "FOX",
-          "call": "KDVR",
-          "day": "2026-10-04",
-          "minute": 660,
-          "teams": [
-            "Dallas Cowboys",
-            "Houston Texans"
-          ],
-          "title": "Dallas Cowboys at Houston Texans",
-          "url": "https://www.tvpassport.com/tv-listings/stations/fox-kdvr-denver-co-hd/6401/2026-10-04"
-        },
-        {
-          "network": "NBC",
-          "call": "KUSA",
-          "day": "2026-10-04",
-          "minute": 1095,
-          "teams": [
-            "Detroit Lions",
-            "Carolina Panthers"
-          ],
-          "title": "Detroit Lions at Carolina Panthers",
-          "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-10-04"
         }
       ],
       "successfulPages": 3,
       "diagnostics": [
+        {
+          "call": "KUSA",
+          "day": "2026-10-04",
+          "status": 200,
+          "parsed": 1,
+          "via": "direct"
+        },
+        {
+          "call": "KMGH",
+          "day": "2026-10-04",
+          "status": 200,
+          "parsed": 0,
+          "via": "direct"
+        },
         {
           "call": "KMGH",
           "day": "2026-10-05",
@@ -66,10 +80,10 @@
           "via": "direct"
         },
         {
-          "call": "KMGH",
+          "call": "KDVR",
           "day": "2026-10-04",
           "status": 200,
-          "parsed": 0,
+          "parsed": 1,
           "via": "direct"
         },
         {
@@ -78,29 +92,39 @@
           "status": 200,
           "parsed": 2,
           "via": "direct"
-        },
-        {
-          "call": "KDVR",
-          "day": "2026-10-04",
-          "status": 200,
-          "parsed": 1,
-          "via": "direct"
-        },
-        {
-          "call": "KUSA",
-          "day": "2026-10-04",
-          "status": 200,
-          "parsed": 1,
-          "via": "direct"
         }
       ],
-      "checkedAt": "2026-10-05T02:05:29.573Z"
+      "checkedAt": "2026-10-05T09:10:56.849Z"
     },
     {
       "start": "2026-10-06",
       "end": "2026-10-12",
       "signature": "268e0bb9b89efac096c52fbd8014ec9ab3e08064259a76cf347f54f7580821f2",
       "rows": [
+        {
+          "network": "NBC",
+          "call": "KUSA",
+          "day": "2026-10-11",
+          "minute": 1095,
+          "teams": [
+            "Baltimore Ravens",
+            "Atlanta Falcons"
+          ],
+          "title": "Baltimore Ravens at Atlanta Falcons",
+          "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-10-11"
+        },
+        {
+          "network": "ABC",
+          "call": "KMGH",
+          "day": "2026-10-12",
+          "minute": 1095,
+          "teams": [
+            "Buffalo Bills",
+            "Los Angeles Rams"
+          ],
+          "title": "Buffalo Bills at Los Angeles Rams",
+          "url": "https://www.tvpassport.com/tv-listings/stations/abc-kmgh-denver-co-hd/5723/2026-10-12"
+        },
         {
           "network": "FOX",
           "call": "KDVR",
@@ -126,30 +150,6 @@
           "url": "https://www.tvpassport.com/tv-listings/stations/fox-kdvr-denver-co-hd/6401/2026-10-11"
         },
         {
-          "network": "ABC",
-          "call": "KMGH",
-          "day": "2026-10-12",
-          "minute": 1095,
-          "teams": [
-            "Buffalo Bills",
-            "Los Angeles Rams"
-          ],
-          "title": "Buffalo Bills at Los Angeles Rams",
-          "url": "https://www.tvpassport.com/tv-listings/stations/abc-kmgh-denver-co-hd/5723/2026-10-12"
-        },
-        {
-          "network": "NBC",
-          "call": "KUSA",
-          "day": "2026-10-11",
-          "minute": 1095,
-          "teams": [
-            "Baltimore Ravens",
-            "Atlanta Falcons"
-          ],
-          "title": "Baltimore Ravens at Atlanta Falcons",
-          "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-10-11"
-        },
-        {
           "network": "CBS",
           "call": "KCNC",
           "day": "2026-10-11",
@@ -165,24 +165,10 @@
       "successfulPages": 4,
       "diagnostics": [
         {
-          "call": "KDVR",
-          "day": "2026-10-11",
-          "status": 200,
-          "parsed": 2,
-          "via": "direct"
-        },
-        {
           "call": "KMGH",
           "day": "2026-10-11",
           "status": 200,
           "parsed": 0,
-          "via": "direct"
-        },
-        {
-          "call": "KMGH",
-          "day": "2026-10-12",
-          "status": 200,
-          "parsed": 1,
           "via": "direct"
         },
         {
@@ -193,6 +179,20 @@
           "via": "direct"
         },
         {
+          "call": "KMGH",
+          "day": "2026-10-12",
+          "status": 200,
+          "parsed": 1,
+          "via": "direct"
+        },
+        {
+          "call": "KDVR",
+          "day": "2026-10-11",
+          "status": 200,
+          "parsed": 2,
+          "via": "direct"
+        },
+        {
           "call": "KCNC",
           "day": "2026-10-11",
           "status": 200,
@@ -200,7 +200,7 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-10-05T02:05:30.176Z"
+      "checkedAt": "2026-10-05T09:10:57.563Z"
     }
   ]
 }
