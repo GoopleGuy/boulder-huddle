@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-10-06T06:53:34.585Z",
+  "generatedAt": "2026-10-06T14:14:37.335Z",
   "slates": [
     {
       "start": "2026-10-06",
@@ -106,13 +106,25 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-10-06T06:53:33.828Z"
+      "checkedAt": "2026-10-06T14:14:36.598Z"
     },
     {
       "start": "2026-10-13",
       "end": "2026-10-19",
       "signature": "2681a219fc167324b1cdc22554ffc73aa34750b8f184f1a9210e949d7c209cf1",
       "rows": [
+        {
+          "network": "NBC",
+          "call": "KUSA",
+          "day": "2026-10-18",
+          "minute": 1095,
+          "teams": [
+            "Dallas Cowboys",
+            "Green Bay Packers"
+          ],
+          "title": "Dallas Cowboys at Green Bay Packers",
+          "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-10-18"
+        },
         {
           "network": "ABC",
           "call": "KMGH",
@@ -136,18 +148,6 @@
           ],
           "title": "Washington Commanders at San Francisco 49ers",
           "url": "https://www.tvpassport.com/tv-listings/stations/abc-kmgh-denver-co-hd/5723/2026-10-19"
-        },
-        {
-          "network": "NBC",
-          "call": "KUSA",
-          "day": "2026-10-18",
-          "minute": 1095,
-          "teams": [
-            "Dallas Cowboys",
-            "Green Bay Packers"
-          ],
-          "title": "Dallas Cowboys at Green Bay Packers",
-          "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-10-18"
         }
       ],
       "successfulPages": 3,
@@ -160,6 +160,13 @@
           "via": "direct"
         },
         {
+          "call": "KUSA",
+          "day": "2026-10-18",
+          "status": 200,
+          "parsed": 1,
+          "via": "direct"
+        },
+        {
           "call": "KMGH",
           "day": "2026-10-15",
           "status": 200,
@@ -169,13 +176,6 @@
         {
           "call": "KMGH",
           "day": "2026-10-19",
-          "status": 200,
-          "parsed": 1,
-          "via": "direct"
-        },
-        {
-          "call": "KUSA",
-          "day": "2026-10-18",
           "status": 200,
           "parsed": 1,
           "via": "direct"
@@ -202,7 +202,7 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-10-06T06:53:34.584Z"
+      "checkedAt": "2026-10-06T14:14:37.334Z"
     }
   ]
 }
