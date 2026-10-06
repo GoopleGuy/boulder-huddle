@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-10-06T14:14:37.335Z",
+  "generatedAt": "2026-10-06T19:35:57.505Z",
   "slates": [
     {
       "start": "2026-10-06",
@@ -106,7 +106,7 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-10-06T14:14:36.598Z"
+      "checkedAt": "2026-10-06T19:35:56.540Z"
     },
     {
       "start": "2026-10-13",
@@ -153,17 +153,17 @@
       "successfulPages": 3,
       "diagnostics": [
         {
-          "call": "KCNC",
-          "day": "2026-10-18",
-          "status": 200,
-          "parsed": 0,
-          "via": "direct"
-        },
-        {
           "call": "KUSA",
           "day": "2026-10-18",
           "status": 200,
           "parsed": 1,
+          "via": "direct"
+        },
+        {
+          "call": "KCNC",
+          "day": "2026-10-18",
+          "status": 200,
+          "parsed": 0,
           "via": "direct"
         },
         {
@@ -202,7 +202,7 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-10-06T14:14:37.334Z"
+      "checkedAt": "2026-10-06T19:35:57.502Z"
     }
   ]
 }
