@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-10-08T09:04:14.283Z",
+  "generatedAt": "2026-10-08T16:33:29.875Z",
   "slates": [
     {
       "start": "2026-10-06",
@@ -18,6 +18,18 @@
           ],
           "title": "Buffalo Bills at Los Angeles Rams",
           "url": "https://www.tvpassport.com/tv-listings/stations/abc-kmgh-denver-co-hd/5723/2026-10-12"
+        },
+        {
+          "network": "NBC",
+          "call": "KUSA",
+          "day": "2026-10-11",
+          "minute": 1095,
+          "teams": [
+            "Baltimore Ravens",
+            "Atlanta Falcons"
+          ],
+          "title": "Baltimore Ravens at Atlanta Falcons",
+          "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-10-11"
         },
         {
           "network": "FOX",
@@ -44,18 +56,6 @@
           "url": "https://www.tvpassport.com/tv-listings/stations/fox-kdvr-denver-co-hd/6401/2026-10-11"
         },
         {
-          "network": "NBC",
-          "call": "KUSA",
-          "day": "2026-10-11",
-          "minute": 1095,
-          "teams": [
-            "Baltimore Ravens",
-            "Atlanta Falcons"
-          ],
-          "title": "Baltimore Ravens at Atlanta Falcons",
-          "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-10-11"
-        },
-        {
           "network": "CBS",
           "call": "KCNC",
           "day": "2026-10-11",
@@ -72,14 +72,21 @@
       "diagnostics": [
         {
           "call": "KMGH",
+          "day": "2026-10-12",
+          "status": 200,
+          "parsed": 1,
+          "via": "direct"
+        },
+        {
+          "call": "KMGH",
           "day": "2026-10-11",
           "status": 200,
           "parsed": 0,
           "via": "direct"
         },
         {
-          "call": "KMGH",
-          "day": "2026-10-12",
+          "call": "KUSA",
+          "day": "2026-10-11",
           "status": 200,
           "parsed": 1,
           "via": "direct"
@@ -92,13 +99,6 @@
           "via": "direct"
         },
         {
-          "call": "KUSA",
-          "day": "2026-10-11",
-          "status": 200,
-          "parsed": 1,
-          "via": "direct"
-        },
-        {
           "call": "KCNC",
           "day": "2026-10-11",
           "status": 200,
@@ -106,7 +106,7 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-10-08T09:04:13.434Z"
+      "checkedAt": "2026-10-08T16:33:29.044Z"
     },
     {
       "start": "2026-10-13",
@@ -114,16 +114,16 @@
       "signature": "2681a219fc167324b1cdc22554ffc73aa34750b8f184f1a9210e949d7c209cf1",
       "rows": [
         {
-          "network": "ABC",
-          "call": "KMGH",
-          "day": "2026-10-15",
-          "minute": 1080,
+          "network": "NBC",
+          "call": "KUSA",
+          "day": "2026-10-18",
+          "minute": 1095,
           "teams": [
-            "Seattle Seahawks",
-            "Denver Broncos"
+            "Dallas Cowboys",
+            "Green Bay Packers"
           ],
-          "title": "Seattle Seahawks at Denver Broncos",
-          "url": "https://www.tvpassport.com/tv-listings/stations/abc-kmgh-denver-co-hd/5723/2026-10-15"
+          "title": "Dallas Cowboys at Green Bay Packers",
+          "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-10-18"
         },
         {
           "network": "CBS",
@@ -162,23 +162,23 @@
           "url": "https://www.tvpassport.com/tv-listings/stations/abc-kmgh-denver-co-hd/5723/2026-10-19"
         },
         {
-          "network": "NBC",
-          "call": "KUSA",
-          "day": "2026-10-18",
-          "minute": 1095,
+          "network": "ABC",
+          "call": "KMGH",
+          "day": "2026-10-15",
+          "minute": 1080,
           "teams": [
-            "Dallas Cowboys",
-            "Green Bay Packers"
+            "Seattle Seahawks",
+            "Denver Broncos"
           ],
-          "title": "Dallas Cowboys at Green Bay Packers",
-          "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-10-18"
+          "title": "Seattle Seahawks at Denver Broncos",
+          "url": "https://www.tvpassport.com/tv-listings/stations/abc-kmgh-denver-co-hd/5723/2026-10-15"
         }
       ],
       "successfulPages": 4,
       "diagnostics": [
         {
-          "call": "KMGH",
-          "day": "2026-10-15",
+          "call": "KUSA",
+          "day": "2026-10-18",
           "status": 200,
           "parsed": 1,
           "via": "direct"
@@ -198,8 +198,8 @@
           "via": "direct"
         },
         {
-          "call": "KUSA",
-          "day": "2026-10-18",
+          "call": "KMGH",
+          "day": "2026-10-15",
           "status": 200,
           "parsed": 1,
           "via": "direct"
@@ -226,7 +226,7 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-10-08T09:04:14.282Z"
+      "checkedAt": "2026-10-08T16:33:29.873Z"
     }
   ]
 }
