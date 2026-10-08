@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-10-08T16:33:29.875Z",
+  "generatedAt": "2026-10-08T21:33:09.651Z",
   "slates": [
     {
       "start": "2026-10-06",
@@ -72,16 +72,16 @@
       "diagnostics": [
         {
           "call": "KMGH",
-          "day": "2026-10-12",
+          "day": "2026-10-11",
           "status": 200,
-          "parsed": 1,
+          "parsed": 0,
           "via": "direct"
         },
         {
           "call": "KMGH",
-          "day": "2026-10-11",
+          "day": "2026-10-12",
           "status": 200,
-          "parsed": 0,
+          "parsed": 1,
           "via": "direct"
         },
         {
@@ -106,7 +106,7 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-10-08T16:33:29.044Z"
+      "checkedAt": "2026-10-08T21:33:08.764Z"
     },
     {
       "start": "2026-10-13",
@@ -152,18 +152,6 @@
         {
           "network": "ABC",
           "call": "KMGH",
-          "day": "2026-10-19",
-          "minute": 1095,
-          "teams": [
-            "Washington Commanders",
-            "San Francisco 49ers"
-          ],
-          "title": "Washington Commanders at San Francisco 49ers",
-          "url": "https://www.tvpassport.com/tv-listings/stations/abc-kmgh-denver-co-hd/5723/2026-10-19"
-        },
-        {
-          "network": "ABC",
-          "call": "KMGH",
           "day": "2026-10-15",
           "minute": 1080,
           "teams": [
@@ -172,6 +160,18 @@
           ],
           "title": "Seattle Seahawks at Denver Broncos",
           "url": "https://www.tvpassport.com/tv-listings/stations/abc-kmgh-denver-co-hd/5723/2026-10-15"
+        },
+        {
+          "network": "ABC",
+          "call": "KMGH",
+          "day": "2026-10-19",
+          "minute": 1095,
+          "teams": [
+            "Washington Commanders",
+            "San Francisco 49ers"
+          ],
+          "title": "Washington Commanders at San Francisco 49ers",
+          "url": "https://www.tvpassport.com/tv-listings/stations/abc-kmgh-denver-co-hd/5723/2026-10-19"
         }
       ],
       "successfulPages": 4,
@@ -192,14 +192,14 @@
         },
         {
           "call": "KMGH",
-          "day": "2026-10-19",
+          "day": "2026-10-15",
           "status": 200,
           "parsed": 1,
           "via": "direct"
         },
         {
           "call": "KMGH",
-          "day": "2026-10-15",
+          "day": "2026-10-19",
           "status": 200,
           "parsed": 1,
           "via": "direct"
@@ -226,7 +226,7 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-10-08T16:33:29.873Z"
+      "checkedAt": "2026-10-08T21:33:09.650Z"
     }
   ]
 }
