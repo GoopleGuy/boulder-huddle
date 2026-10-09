@@ -1,24 +1,12 @@
 {
   "schema": 1,
-  "generatedAt": "2026-10-09T15:20:25.225Z",
+  "generatedAt": "2026-10-09T20:20:35.876Z",
   "slates": [
     {
       "start": "2026-10-06",
       "end": "2026-10-12",
       "signature": "aef6aff8fa6edc9437040f74d41065d42ab195e37b42e790d0dac1d3ac3f2847",
       "rows": [
-        {
-          "network": "ABC",
-          "call": "KMGH",
-          "day": "2026-10-12",
-          "minute": 1095,
-          "teams": [
-            "Buffalo Bills",
-            "Los Angeles Rams"
-          ],
-          "title": "Buffalo Bills at Los Angeles Rams",
-          "url": "https://www.tvpassport.com/tv-listings/stations/abc-kmgh-denver-co-hd/5723/2026-10-12"
-        },
         {
           "network": "NBC",
           "call": "KUSA",
@@ -30,6 +18,18 @@
           ],
           "title": "Baltimore Ravens at Atlanta Falcons",
           "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-10-11"
+        },
+        {
+          "network": "ABC",
+          "call": "KMGH",
+          "day": "2026-10-12",
+          "minute": 1095,
+          "teams": [
+            "Buffalo Bills",
+            "Los Angeles Rams"
+          ],
+          "title": "Buffalo Bills at Los Angeles Rams",
+          "url": "https://www.tvpassport.com/tv-listings/stations/abc-kmgh-denver-co-hd/5723/2026-10-12"
         },
         {
           "network": "FOX",
@@ -71,8 +71,8 @@
       "successfulPages": 4,
       "diagnostics": [
         {
-          "call": "KMGH",
-          "day": "2026-10-12",
+          "call": "KUSA",
+          "day": "2026-10-11",
           "status": 200,
           "parsed": 1,
           "via": "direct"
@@ -85,8 +85,8 @@
           "via": "direct"
         },
         {
-          "call": "KUSA",
-          "day": "2026-10-11",
+          "call": "KMGH",
+          "day": "2026-10-12",
           "status": 200,
           "parsed": 1,
           "via": "direct"
@@ -106,7 +106,7 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-10-09T15:20:24.484Z"
+      "checkedAt": "2026-10-09T20:20:35.040Z"
     },
     {
       "start": "2026-10-13",
@@ -124,18 +124,6 @@
           ],
           "title": "Dallas Cowboys at Green Bay Packers",
           "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-10-18"
-        },
-        {
-          "network": "ABC",
-          "call": "KMGH",
-          "day": "2026-10-19",
-          "minute": 1095,
-          "teams": [
-            "Washington Commanders",
-            "San Francisco 49ers"
-          ],
-          "title": "Washington Commanders at San Francisco 49ers",
-          "url": "https://www.tvpassport.com/tv-listings/stations/abc-kmgh-denver-co-hd/5723/2026-10-19"
         },
         {
           "network": "CBS",
@@ -172,6 +160,18 @@
           ],
           "title": "Seattle Seahawks at Denver Broncos",
           "url": "https://www.tvpassport.com/tv-listings/stations/abc-kmgh-denver-co-hd/5723/2026-10-15"
+        },
+        {
+          "network": "ABC",
+          "call": "KMGH",
+          "day": "2026-10-19",
+          "minute": 1095,
+          "teams": [
+            "Washington Commanders",
+            "San Francisco 49ers"
+          ],
+          "title": "Washington Commanders at San Francisco 49ers",
+          "url": "https://www.tvpassport.com/tv-listings/stations/abc-kmgh-denver-co-hd/5723/2026-10-19"
         }
       ],
       "successfulPages": 4,
@@ -179,13 +179,6 @@
         {
           "call": "KUSA",
           "day": "2026-10-18",
-          "status": 200,
-          "parsed": 1,
-          "via": "direct"
-        },
-        {
-          "call": "KMGH",
-          "day": "2026-10-19",
           "status": 200,
           "parsed": 1,
           "via": "direct"
@@ -200,6 +193,13 @@
         {
           "call": "KMGH",
           "day": "2026-10-15",
+          "status": 200,
+          "parsed": 1,
+          "via": "direct"
+        },
+        {
+          "call": "KMGH",
+          "day": "2026-10-19",
           "status": 200,
           "parsed": 1,
           "via": "direct"
@@ -226,7 +226,7 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-10-09T15:20:25.224Z"
+      "checkedAt": "2026-10-09T20:20:35.875Z"
     }
   ]
 }
