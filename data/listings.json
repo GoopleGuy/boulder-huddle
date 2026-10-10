@@ -1,24 +1,12 @@
 {
   "schema": 1,
-  "generatedAt": "2026-10-09T20:20:35.876Z",
+  "generatedAt": "2026-10-10T00:20:44.776Z",
   "slates": [
     {
       "start": "2026-10-06",
       "end": "2026-10-12",
       "signature": "aef6aff8fa6edc9437040f74d41065d42ab195e37b42e790d0dac1d3ac3f2847",
       "rows": [
-        {
-          "network": "NBC",
-          "call": "KUSA",
-          "day": "2026-10-11",
-          "minute": 1095,
-          "teams": [
-            "Baltimore Ravens",
-            "Atlanta Falcons"
-          ],
-          "title": "Baltimore Ravens at Atlanta Falcons",
-          "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-10-11"
-        },
         {
           "network": "ABC",
           "call": "KMGH",
@@ -30,6 +18,18 @@
           ],
           "title": "Buffalo Bills at Los Angeles Rams",
           "url": "https://www.tvpassport.com/tv-listings/stations/abc-kmgh-denver-co-hd/5723/2026-10-12"
+        },
+        {
+          "network": "NBC",
+          "call": "KUSA",
+          "day": "2026-10-11",
+          "minute": 1095,
+          "teams": [
+            "Baltimore Ravens",
+            "Atlanta Falcons"
+          ],
+          "title": "Baltimore Ravens at Atlanta Falcons",
+          "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-10-11"
         },
         {
           "network": "FOX",
@@ -71,13 +71,6 @@
       "successfulPages": 4,
       "diagnostics": [
         {
-          "call": "KUSA",
-          "day": "2026-10-11",
-          "status": 200,
-          "parsed": 1,
-          "via": "direct"
-        },
-        {
           "call": "KMGH",
           "day": "2026-10-11",
           "status": 200,
@@ -87,6 +80,13 @@
         {
           "call": "KMGH",
           "day": "2026-10-12",
+          "status": 200,
+          "parsed": 1,
+          "via": "direct"
+        },
+        {
+          "call": "KUSA",
+          "day": "2026-10-11",
           "status": 200,
           "parsed": 1,
           "via": "direct"
@@ -106,25 +106,13 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-10-09T20:20:35.040Z"
+      "checkedAt": "2026-10-10T00:20:43.996Z"
     },
     {
       "start": "2026-10-13",
       "end": "2026-10-19",
       "signature": "2681a219fc167324b1cdc22554ffc73aa34750b8f184f1a9210e949d7c209cf1",
       "rows": [
-        {
-          "network": "NBC",
-          "call": "KUSA",
-          "day": "2026-10-18",
-          "minute": 1095,
-          "teams": [
-            "Dallas Cowboys",
-            "Green Bay Packers"
-          ],
-          "title": "Dallas Cowboys at Green Bay Packers",
-          "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-10-18"
-        },
         {
           "network": "CBS",
           "call": "KCNC",
@@ -148,6 +136,18 @@
           ],
           "title": "Los Angeles Chargers at Kansas City Chiefs",
           "url": "https://www.tvpassport.com/tv-listings/stations/cbs-kcnc-denver-co/1566/2026-10-18"
+        },
+        {
+          "network": "NBC",
+          "call": "KUSA",
+          "day": "2026-10-18",
+          "minute": 1095,
+          "teams": [
+            "Dallas Cowboys",
+            "Green Bay Packers"
+          ],
+          "title": "Dallas Cowboys at Green Bay Packers",
+          "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-10-18"
         },
         {
           "network": "ABC",
@@ -177,17 +177,17 @@
       "successfulPages": 4,
       "diagnostics": [
         {
-          "call": "KUSA",
-          "day": "2026-10-18",
-          "status": 200,
-          "parsed": 1,
-          "via": "direct"
-        },
-        {
           "call": "KCNC",
           "day": "2026-10-18",
           "status": 200,
           "parsed": 2,
+          "via": "direct"
+        },
+        {
+          "call": "KUSA",
+          "day": "2026-10-18",
+          "status": 200,
+          "parsed": 1,
           "via": "direct"
         },
         {
@@ -226,7 +226,7 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-10-09T20:20:35.875Z"
+      "checkedAt": "2026-10-10T00:20:44.775Z"
     }
   ]
 }
