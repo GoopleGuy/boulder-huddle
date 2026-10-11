@@ -1,12 +1,24 @@
 {
   "schema": 1,
-  "generatedAt": "2026-10-11T07:16:02.716Z",
+  "generatedAt": "2026-10-11T14:10:29.709Z",
   "slates": [
     {
       "start": "2026-10-06",
       "end": "2026-10-12",
       "signature": "aef6aff8fa6edc9437040f74d41065d42ab195e37b42e790d0dac1d3ac3f2847",
       "rows": [
+        {
+          "network": "ABC",
+          "call": "KMGH",
+          "day": "2026-10-12",
+          "minute": 1095,
+          "teams": [
+            "Buffalo Bills",
+            "Los Angeles Rams"
+          ],
+          "title": "Buffalo Bills at Los Angeles Rams",
+          "url": "https://www.tvpassport.com/tv-listings/stations/abc-kmgh-denver-co-hd/5723/2026-10-12"
+        },
         {
           "network": "NBC",
           "call": "KUSA",
@@ -44,18 +56,6 @@
           "url": "https://www.tvpassport.com/tv-listings/stations/fox-kdvr-denver-co-hd/6401/2026-10-11"
         },
         {
-          "network": "ABC",
-          "call": "KMGH",
-          "day": "2026-10-12",
-          "minute": 1095,
-          "teams": [
-            "Buffalo Bills",
-            "Los Angeles Rams"
-          ],
-          "title": "Buffalo Bills at Los Angeles Rams",
-          "url": "https://www.tvpassport.com/tv-listings/stations/abc-kmgh-denver-co-hd/5723/2026-10-12"
-        },
-        {
           "network": "CBS",
           "call": "KCNC",
           "day": "2026-10-11",
@@ -71,6 +71,20 @@
       "successfulPages": 4,
       "diagnostics": [
         {
+          "call": "KMGH",
+          "day": "2026-10-11",
+          "status": 200,
+          "parsed": 0,
+          "via": "direct"
+        },
+        {
+          "call": "KMGH",
+          "day": "2026-10-12",
+          "status": 200,
+          "parsed": 1,
+          "via": "direct"
+        },
+        {
           "call": "KUSA",
           "day": "2026-10-11",
           "status": 200,
@@ -85,20 +99,6 @@
           "via": "direct"
         },
         {
-          "call": "KMGH",
-          "day": "2026-10-12",
-          "status": 200,
-          "parsed": 1,
-          "via": "direct"
-        },
-        {
-          "call": "KMGH",
-          "day": "2026-10-11",
-          "status": 200,
-          "parsed": 0,
-          "via": "direct"
-        },
-        {
           "call": "KCNC",
           "day": "2026-10-11",
           "status": 200,
@@ -106,7 +106,7 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-10-11T07:16:01.260Z"
+      "checkedAt": "2026-10-11T14:10:28.884Z"
     },
     {
       "start": "2026-10-13",
@@ -226,7 +226,7 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-10-11T07:16:02.715Z"
+      "checkedAt": "2026-10-11T14:10:29.707Z"
     }
   ]
 }
