@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-10-13T09:29:41.138Z",
+  "generatedAt": "2026-10-13T17:09:24.857Z",
   "slates": [
     {
       "start": "2026-10-13",
@@ -18,30 +18,6 @@
           ],
           "title": "Washington Commanders at San Francisco 49ers",
           "url": "https://www.tvpassport.com/tv-listings/stations/abc-kmgh-denver-co-hd/5723/2026-10-19"
-        },
-        {
-          "network": "NBC",
-          "call": "KUSA",
-          "day": "2026-10-18",
-          "minute": 1095,
-          "teams": [
-            "Dallas Cowboys",
-            "Green Bay Packers"
-          ],
-          "title": "Dallas Cowboys at Green Bay Packers",
-          "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-10-18"
-        },
-        {
-          "network": "ABC",
-          "call": "KMGH",
-          "day": "2026-10-15",
-          "minute": 1080,
-          "teams": [
-            "Seattle Seahawks",
-            "Denver Broncos"
-          ],
-          "title": "Seattle Seahawks at Denver Broncos",
-          "url": "https://www.tvpassport.com/tv-listings/stations/abc-kmgh-denver-co-hd/5723/2026-10-15"
         },
         {
           "network": "CBS",
@@ -66,6 +42,30 @@
           ],
           "title": "Los Angeles Chargers at Kansas City Chiefs",
           "url": "https://www.tvpassport.com/tv-listings/stations/cbs-kcnc-denver-co/1566/2026-10-18"
+        },
+        {
+          "network": "ABC",
+          "call": "KMGH",
+          "day": "2026-10-15",
+          "minute": 1080,
+          "teams": [
+            "Seattle Seahawks",
+            "Denver Broncos"
+          ],
+          "title": "Seattle Seahawks at Denver Broncos",
+          "url": "https://www.tvpassport.com/tv-listings/stations/abc-kmgh-denver-co-hd/5723/2026-10-15"
+        },
+        {
+          "network": "NBC",
+          "call": "KUSA",
+          "day": "2026-10-18",
+          "minute": 1095,
+          "teams": [
+            "Dallas Cowboys",
+            "Green Bay Packers"
+          ],
+          "title": "Dallas Cowboys at Green Bay Packers",
+          "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-10-18"
         }
       ],
       "successfulPages": 4,
@@ -73,6 +73,20 @@
         {
           "call": "KMGH",
           "day": "2026-10-19",
+          "status": 200,
+          "parsed": 1,
+          "via": "direct"
+        },
+        {
+          "call": "KCNC",
+          "day": "2026-10-18",
+          "status": 200,
+          "parsed": 2,
+          "via": "direct"
+        },
+        {
+          "call": "KMGH",
+          "day": "2026-10-15",
           "status": 200,
           "parsed": 1,
           "via": "direct"
@@ -89,20 +103,6 @@
           "day": "2026-10-15",
           "status": 200,
           "parsed": 0,
-          "via": "direct"
-        },
-        {
-          "call": "KMGH",
-          "day": "2026-10-15",
-          "status": 200,
-          "parsed": 1,
-          "via": "direct"
-        },
-        {
-          "call": "KCNC",
-          "day": "2026-10-18",
-          "status": 200,
-          "parsed": 2,
           "via": "direct"
         },
         {
@@ -120,7 +120,7 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-10-13T09:29:40.492Z"
+      "checkedAt": "2026-10-13T17:09:24.149Z"
     },
     {
       "start": "2026-10-20",
@@ -202,7 +202,7 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-10-13T09:29:41.137Z"
+      "checkedAt": "2026-10-13T17:09:24.856Z"
     }
   ]
 }
