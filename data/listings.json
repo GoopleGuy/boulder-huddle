@@ -1,24 +1,12 @@
 {
   "schema": 1,
-  "generatedAt": "2026-10-14T12:04:39.926Z",
+  "generatedAt": "2026-10-14T17:16:55.876Z",
   "slates": [
     {
       "start": "2026-10-13",
       "end": "2026-10-19",
       "signature": "2681a219fc167324b1cdc22554ffc73aa34750b8f184f1a9210e949d7c209cf1",
       "rows": [
-        {
-          "network": "ABC",
-          "call": "KMGH",
-          "day": "2026-10-19",
-          "minute": 1095,
-          "teams": [
-            "Washington Commanders",
-            "San Francisco 49ers"
-          ],
-          "title": "Washington Commanders at San Francisco 49ers",
-          "url": "https://www.tvpassport.com/tv-listings/stations/abc-kmgh-denver-co-hd/5723/2026-10-19"
-        },
         {
           "network": "NBC",
           "call": "KUSA",
@@ -34,14 +22,14 @@
         {
           "network": "ABC",
           "call": "KMGH",
-          "day": "2026-10-15",
-          "minute": 1080,
+          "day": "2026-10-19",
+          "minute": 1095,
           "teams": [
-            "Seattle Seahawks",
-            "Denver Broncos"
+            "Washington Commanders",
+            "San Francisco 49ers"
           ],
-          "title": "Seattle Seahawks at Denver Broncos",
-          "url": "https://www.tvpassport.com/tv-listings/stations/abc-kmgh-denver-co-hd/5723/2026-10-15"
+          "title": "Washington Commanders at San Francisco 49ers",
+          "url": "https://www.tvpassport.com/tv-listings/stations/abc-kmgh-denver-co-hd/5723/2026-10-19"
         },
         {
           "network": "CBS",
@@ -66,17 +54,22 @@
           ],
           "title": "Los Angeles Chargers at Kansas City Chiefs",
           "url": "https://www.tvpassport.com/tv-listings/stations/cbs-kcnc-denver-co/1566/2026-10-18"
+        },
+        {
+          "network": "ABC",
+          "call": "KMGH",
+          "day": "2026-10-15",
+          "minute": 1080,
+          "teams": [
+            "Seattle Seahawks",
+            "Denver Broncos"
+          ],
+          "title": "Seattle Seahawks at Denver Broncos",
+          "url": "https://www.tvpassport.com/tv-listings/stations/abc-kmgh-denver-co-hd/5723/2026-10-15"
         }
       ],
       "successfulPages": 4,
       "diagnostics": [
-        {
-          "call": "KMGH",
-          "day": "2026-10-19",
-          "status": 200,
-          "parsed": 1,
-          "via": "direct"
-        },
         {
           "call": "KUSA",
           "day": "2026-10-18",
@@ -86,7 +79,7 @@
         },
         {
           "call": "KMGH",
-          "day": "2026-10-15",
+          "day": "2026-10-19",
           "status": 200,
           "parsed": 1,
           "via": "direct"
@@ -96,6 +89,13 @@
           "day": "2026-10-18",
           "status": 200,
           "parsed": 2,
+          "via": "direct"
+        },
+        {
+          "call": "KMGH",
+          "day": "2026-10-15",
+          "status": 200,
+          "parsed": 1,
           "via": "direct"
         },
         {
@@ -120,25 +120,13 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-10-14T12:04:39.199Z"
+      "checkedAt": "2026-10-14T17:16:55.362Z"
     },
     {
       "start": "2026-10-20",
       "end": "2026-10-26",
       "signature": "8887ed40a7c8e22a76efc6abb373cfd975f1f5eb3cee44dae71c312a863da46c",
       "rows": [
-        {
-          "network": "ABC",
-          "call": "KMGH",
-          "day": "2026-10-26",
-          "minute": 1095,
-          "teams": [
-            "Dallas Cowboys",
-            "Philadelphia Eagles"
-          ],
-          "title": "Dallas Cowboys at Philadelphia Eagles",
-          "url": "https://www.tvpassport.com/tv-listings/stations/abc-kmgh-denver-co-hd/5723/2026-10-26"
-        },
         {
           "network": "NBC",
           "call": "KUSA",
@@ -150,6 +138,18 @@
           ],
           "title": "Kansas City Chiefs at Seattle Seahawks",
           "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-10-25"
+        },
+        {
+          "network": "ABC",
+          "call": "KMGH",
+          "day": "2026-10-26",
+          "minute": 1095,
+          "teams": [
+            "Dallas Cowboys",
+            "Philadelphia Eagles"
+          ],
+          "title": "Dallas Cowboys at Philadelphia Eagles",
+          "url": "https://www.tvpassport.com/tv-listings/stations/abc-kmgh-denver-co-hd/5723/2026-10-26"
         },
         {
           "network": "CBS",
@@ -167,20 +167,6 @@
       "successfulPages": 3,
       "diagnostics": [
         {
-          "call": "KMGH",
-          "day": "2026-10-26",
-          "status": 200,
-          "parsed": 1,
-          "via": "direct"
-        },
-        {
-          "call": "KMGH",
-          "day": "2026-10-25",
-          "status": 200,
-          "parsed": 0,
-          "via": "direct"
-        },
-        {
           "call": "KDVR",
           "day": "2026-10-25",
           "status": 200,
@@ -195,6 +181,20 @@
           "via": "direct"
         },
         {
+          "call": "KMGH",
+          "day": "2026-10-25",
+          "status": 200,
+          "parsed": 0,
+          "via": "direct"
+        },
+        {
+          "call": "KMGH",
+          "day": "2026-10-26",
+          "status": 200,
+          "parsed": 1,
+          "via": "direct"
+        },
+        {
           "call": "KCNC",
           "day": "2026-10-25",
           "status": 200,
@@ -202,7 +202,7 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-10-14T12:04:39.925Z"
+      "checkedAt": "2026-10-14T17:16:55.875Z"
     }
   ]
 }
