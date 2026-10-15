@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-10-14T23:57:13.750Z",
+  "generatedAt": "2026-10-15T04:47:54.828Z",
   "slates": [
     {
       "start": "2026-10-13",
@@ -120,13 +120,37 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-10-14T23:57:13.027Z"
+      "checkedAt": "2026-10-15T04:47:54.131Z"
     },
     {
       "start": "2026-10-20",
       "end": "2026-10-26",
       "signature": "8887ed40a7c8e22a76efc6abb373cfd975f1f5eb3cee44dae71c312a863da46c",
       "rows": [
+        {
+          "network": "NBC",
+          "call": "KUSA",
+          "day": "2026-10-25",
+          "minute": 1095,
+          "teams": [
+            "Kansas City Chiefs",
+            "Seattle Seahawks"
+          ],
+          "title": "Kansas City Chiefs at Seattle Seahawks",
+          "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-10-25"
+        },
+        {
+          "network": "ABC",
+          "call": "KMGH",
+          "day": "2026-10-26",
+          "minute": 1095,
+          "teams": [
+            "Dallas Cowboys",
+            "Philadelphia Eagles"
+          ],
+          "title": "Dallas Cowboys at Philadelphia Eagles",
+          "url": "https://www.tvpassport.com/tv-listings/stations/abc-kmgh-denver-co-hd/5723/2026-10-26"
+        },
         {
           "network": "FOX",
           "call": "KDVR",
@@ -152,30 +176,6 @@
           "url": "https://www.tvpassport.com/tv-listings/stations/fox-kdvr-denver-co-hd/6401/2026-10-25"
         },
         {
-          "network": "ABC",
-          "call": "KMGH",
-          "day": "2026-10-26",
-          "minute": 1095,
-          "teams": [
-            "Dallas Cowboys",
-            "Philadelphia Eagles"
-          ],
-          "title": "Dallas Cowboys at Philadelphia Eagles",
-          "url": "https://www.tvpassport.com/tv-listings/stations/abc-kmgh-denver-co-hd/5723/2026-10-26"
-        },
-        {
-          "network": "NBC",
-          "call": "KUSA",
-          "day": "2026-10-25",
-          "minute": 1095,
-          "teams": [
-            "Kansas City Chiefs",
-            "Seattle Seahawks"
-          ],
-          "title": "Kansas City Chiefs at Seattle Seahawks",
-          "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-10-25"
-        },
-        {
           "network": "CBS",
           "call": "KCNC",
           "day": "2026-10-25",
@@ -198,10 +198,10 @@
           "via": "direct"
         },
         {
-          "call": "KDVR",
+          "call": "KUSA",
           "day": "2026-10-25",
           "status": 200,
-          "parsed": 2,
+          "parsed": 1,
           "via": "direct"
         },
         {
@@ -212,10 +212,10 @@
           "via": "direct"
         },
         {
-          "call": "KUSA",
+          "call": "KDVR",
           "day": "2026-10-25",
           "status": 200,
-          "parsed": 1,
+          "parsed": 2,
           "via": "direct"
         },
         {
@@ -226,7 +226,7 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-10-14T23:57:13.750Z"
+      "checkedAt": "2026-10-15T04:47:54.827Z"
     }
   ]
 }
