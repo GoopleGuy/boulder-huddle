@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-10-17T05:02:16.301Z",
+  "generatedAt": "2026-10-17T09:27:00.702Z",
   "slates": [
     {
       "start": "2026-10-13",
@@ -18,18 +18,6 @@
           ],
           "title": "Washington Commanders at San Francisco 49ers",
           "url": "https://www.tvpassport.com/tv-listings/stations/abc-kmgh-denver-co-hd/5723/2026-10-19"
-        },
-        {
-          "network": "NBC",
-          "call": "KUSA",
-          "day": "2026-10-18",
-          "minute": 1095,
-          "teams": [
-            "Dallas Cowboys",
-            "Green Bay Packers"
-          ],
-          "title": "Dallas Cowboys at Green Bay Packers",
-          "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-10-18"
         },
         {
           "network": "CBS",
@@ -54,6 +42,18 @@
           ],
           "title": "Los Angeles Chargers at Kansas City Chiefs",
           "url": "https://www.tvpassport.com/tv-listings/stations/cbs-kcnc-denver-co/1566/2026-10-18"
+        },
+        {
+          "network": "NBC",
+          "call": "KUSA",
+          "day": "2026-10-18",
+          "minute": 1095,
+          "teams": [
+            "Dallas Cowboys",
+            "Green Bay Packers"
+          ],
+          "title": "Dallas Cowboys at Green Bay Packers",
+          "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-10-18"
         }
       ],
       "successfulPages": 3,
@@ -66,17 +66,17 @@
           "via": "direct"
         },
         {
-          "call": "KUSA",
-          "day": "2026-10-18",
-          "status": 200,
-          "parsed": 1,
-          "via": "direct"
-        },
-        {
           "call": "KCNC",
           "day": "2026-10-18",
           "status": 200,
           "parsed": 2,
+          "via": "direct"
+        },
+        {
+          "call": "KUSA",
+          "day": "2026-10-18",
+          "status": 200,
+          "parsed": 1,
           "via": "direct"
         },
         {
@@ -108,7 +108,7 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-10-17T05:02:15.619Z"
+      "checkedAt": "2026-10-17T09:26:59.882Z"
     },
     {
       "start": "2026-10-20",
@@ -126,18 +126,6 @@
           ],
           "title": "Dallas Cowboys at Philadelphia Eagles",
           "url": "https://www.tvpassport.com/tv-listings/stations/abc-kmgh-denver-co-hd/5723/2026-10-26"
-        },
-        {
-          "network": "NBC",
-          "call": "KUSA",
-          "day": "2026-10-25",
-          "minute": 1095,
-          "teams": [
-            "Kansas City Chiefs",
-            "Seattle Seahawks"
-          ],
-          "title": "Kansas City Chiefs at Seattle Seahawks",
-          "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-10-25"
         },
         {
           "network": "FOX",
@@ -164,6 +152,18 @@
           "url": "https://www.tvpassport.com/tv-listings/stations/fox-kdvr-denver-co-hd/6401/2026-10-25"
         },
         {
+          "network": "NBC",
+          "call": "KUSA",
+          "day": "2026-10-25",
+          "minute": 1095,
+          "teams": [
+            "Kansas City Chiefs",
+            "Seattle Seahawks"
+          ],
+          "title": "Kansas City Chiefs at Seattle Seahawks",
+          "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-10-25"
+        },
+        {
           "network": "CBS",
           "call": "KCNC",
           "day": "2026-10-25",
@@ -180,21 +180,7 @@
       "diagnostics": [
         {
           "call": "KMGH",
-          "day": "2026-10-25",
-          "status": 200,
-          "parsed": 0,
-          "via": "direct"
-        },
-        {
-          "call": "KMGH",
           "day": "2026-10-26",
-          "status": 200,
-          "parsed": 1,
-          "via": "direct"
-        },
-        {
-          "call": "KUSA",
-          "day": "2026-10-25",
           "status": 200,
           "parsed": 1,
           "via": "direct"
@@ -207,6 +193,20 @@
           "via": "direct"
         },
         {
+          "call": "KMGH",
+          "day": "2026-10-25",
+          "status": 200,
+          "parsed": 0,
+          "via": "direct"
+        },
+        {
+          "call": "KUSA",
+          "day": "2026-10-25",
+          "status": 200,
+          "parsed": 1,
+          "via": "direct"
+        },
+        {
           "call": "KCNC",
           "day": "2026-10-25",
           "status": 200,
@@ -214,7 +214,7 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-10-17T05:02:16.300Z"
+      "checkedAt": "2026-10-17T09:27:00.698Z"
     }
   ]
 }
