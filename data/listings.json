@@ -1,12 +1,24 @@
 {
   "schema": 1,
-  "generatedAt": "2026-10-17T09:27:00.702Z",
+  "generatedAt": "2026-10-17T13:15:34.968Z",
   "slates": [
     {
       "start": "2026-10-13",
       "end": "2026-10-19",
       "signature": "2681a219fc167324b1cdc22554ffc73aa34750b8f184f1a9210e949d7c209cf1",
       "rows": [
+        {
+          "network": "NBC",
+          "call": "KUSA",
+          "day": "2026-10-18",
+          "minute": 1095,
+          "teams": [
+            "Dallas Cowboys",
+            "Green Bay Packers"
+          ],
+          "title": "Dallas Cowboys at Green Bay Packers",
+          "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-10-18"
+        },
         {
           "network": "ABC",
           "call": "KMGH",
@@ -42,22 +54,17 @@
           ],
           "title": "Los Angeles Chargers at Kansas City Chiefs",
           "url": "https://www.tvpassport.com/tv-listings/stations/cbs-kcnc-denver-co/1566/2026-10-18"
-        },
-        {
-          "network": "NBC",
-          "call": "KUSA",
-          "day": "2026-10-18",
-          "minute": 1095,
-          "teams": [
-            "Dallas Cowboys",
-            "Green Bay Packers"
-          ],
-          "title": "Dallas Cowboys at Green Bay Packers",
-          "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-10-18"
         }
       ],
       "successfulPages": 3,
       "diagnostics": [
+        {
+          "call": "KUSA",
+          "day": "2026-10-18",
+          "status": 200,
+          "parsed": 1,
+          "via": "direct"
+        },
         {
           "call": "KMGH",
           "day": "2026-10-19",
@@ -70,13 +77,6 @@
           "day": "2026-10-18",
           "status": 200,
           "parsed": 2,
-          "via": "direct"
-        },
-        {
-          "call": "KUSA",
-          "day": "2026-10-18",
-          "status": 200,
-          "parsed": 1,
           "via": "direct"
         },
         {
@@ -108,7 +108,7 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-10-17T09:26:59.882Z"
+      "checkedAt": "2026-10-17T13:15:34.444Z"
     },
     {
       "start": "2026-10-20",
@@ -186,17 +186,17 @@
           "via": "direct"
         },
         {
-          "call": "KDVR",
-          "day": "2026-10-25",
-          "status": 200,
-          "parsed": 2,
-          "via": "direct"
-        },
-        {
           "call": "KMGH",
           "day": "2026-10-25",
           "status": 200,
           "parsed": 0,
+          "via": "direct"
+        },
+        {
+          "call": "KDVR",
+          "day": "2026-10-25",
+          "status": 200,
+          "parsed": 2,
           "via": "direct"
         },
         {
@@ -214,7 +214,7 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-10-17T09:27:00.698Z"
+      "checkedAt": "2026-10-17T13:15:34.968Z"
     }
   ]
 }
