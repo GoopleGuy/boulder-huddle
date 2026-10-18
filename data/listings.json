@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-10-18T18:09:52.229Z",
+  "generatedAt": "2026-10-18T20:50:30.018Z",
   "slates": [
     {
       "start": "2026-10-13",
@@ -108,37 +108,13 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-10-18T18:09:51.592Z"
+      "checkedAt": "2026-10-18T20:50:29.431Z"
     },
     {
       "start": "2026-10-20",
       "end": "2026-10-26",
       "signature": "8887ed40a7c8e22a76efc6abb373cfd975f1f5eb3cee44dae71c312a863da46c",
       "rows": [
-        {
-          "network": "FOX",
-          "call": "KDVR",
-          "day": "2026-10-25",
-          "minute": 660,
-          "teams": [
-            "San Francisco 49ers",
-            "Atlanta Falcons"
-          ],
-          "title": "San Francisco 49ers at Atlanta Falcons",
-          "url": "https://www.tvpassport.com/tv-listings/stations/fox-kdvr-denver-co-hd/6401/2026-10-25"
-        },
-        {
-          "network": "FOX",
-          "call": "KDVR",
-          "day": "2026-10-25",
-          "minute": 865,
-          "teams": [
-            "Green Bay Packers",
-            "Detroit Lions"
-          ],
-          "title": "Green Bay Packers at Detroit Lions",
-          "url": "https://www.tvpassport.com/tv-listings/stations/fox-kdvr-denver-co-hd/6401/2026-10-25"
-        },
         {
           "network": "ABC",
           "call": "KMGH",
@@ -164,6 +140,30 @@
           "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-10-25"
         },
         {
+          "network": "FOX",
+          "call": "KDVR",
+          "day": "2026-10-25",
+          "minute": 660,
+          "teams": [
+            "San Francisco 49ers",
+            "Atlanta Falcons"
+          ],
+          "title": "San Francisco 49ers at Atlanta Falcons",
+          "url": "https://www.tvpassport.com/tv-listings/stations/fox-kdvr-denver-co-hd/6401/2026-10-25"
+        },
+        {
+          "network": "FOX",
+          "call": "KDVR",
+          "day": "2026-10-25",
+          "minute": 865,
+          "teams": [
+            "Green Bay Packers",
+            "Detroit Lions"
+          ],
+          "title": "Green Bay Packers at Detroit Lions",
+          "url": "https://www.tvpassport.com/tv-listings/stations/fox-kdvr-denver-co-hd/6401/2026-10-25"
+        },
+        {
           "network": "CBS",
           "call": "KCNC",
           "day": "2026-10-25",
@@ -180,20 +180,6 @@
       "diagnostics": [
         {
           "call": "KMGH",
-          "day": "2026-10-25",
-          "status": 200,
-          "parsed": 0,
-          "via": "direct"
-        },
-        {
-          "call": "KDVR",
-          "day": "2026-10-25",
-          "status": 200,
-          "parsed": 2,
-          "via": "direct"
-        },
-        {
-          "call": "KMGH",
           "day": "2026-10-26",
           "status": 200,
           "parsed": 1,
@@ -207,6 +193,20 @@
           "via": "direct"
         },
         {
+          "call": "KDVR",
+          "day": "2026-10-25",
+          "status": 200,
+          "parsed": 2,
+          "via": "direct"
+        },
+        {
+          "call": "KMGH",
+          "day": "2026-10-25",
+          "status": 200,
+          "parsed": 0,
+          "via": "direct"
+        },
+        {
           "call": "KCNC",
           "day": "2026-10-25",
           "status": 200,
@@ -214,7 +214,7 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-10-18T18:09:52.228Z"
+      "checkedAt": "2026-10-18T20:50:30.017Z"
     }
   ]
 }
