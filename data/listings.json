@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-10-18T23:18:14.174Z",
+  "generatedAt": "2026-10-19T01:48:10.351Z",
   "slates": [
     {
       "start": "2026-10-13",
@@ -80,14 +80,14 @@
           "via": "direct"
         },
         {
-          "call": "KUSA",
+          "call": "KMGH",
           "day": "2026-10-15",
           "status": 200,
           "parsed": 0,
           "via": "direct"
         },
         {
-          "call": "KMGH",
+          "call": "KUSA",
           "day": "2026-10-15",
           "status": 200,
           "parsed": 0,
@@ -108,7 +108,7 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-10-18T23:18:13.771Z"
+      "checkedAt": "2026-10-19T01:48:09.959Z"
     },
     {
       "start": "2026-10-20",
@@ -187,6 +187,13 @@
         },
         {
           "call": "KMGH",
+          "day": "2026-10-25",
+          "status": 200,
+          "parsed": 0,
+          "via": "direct"
+        },
+        {
+          "call": "KMGH",
           "day": "2026-10-26",
           "status": 200,
           "parsed": 1,
@@ -200,13 +207,6 @@
           "via": "direct"
         },
         {
-          "call": "KMGH",
-          "day": "2026-10-25",
-          "status": 200,
-          "parsed": 0,
-          "via": "direct"
-        },
-        {
           "call": "KCNC",
           "day": "2026-10-25",
           "status": 200,
@@ -214,7 +214,7 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-10-18T23:18:14.174Z"
+      "checkedAt": "2026-10-19T01:48:10.350Z"
     }
   ]
 }
