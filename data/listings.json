@@ -1,12 +1,24 @@
 {
   "schema": 1,
-  "generatedAt": "2026-10-20T19:19:45.554Z",
+  "generatedAt": "2026-10-20T22:43:01.510Z",
   "slates": [
     {
       "start": "2026-10-20",
       "end": "2026-10-26",
       "signature": "8887ed40a7c8e22a76efc6abb373cfd975f1f5eb3cee44dae71c312a863da46c",
       "rows": [
+        {
+          "network": "ABC",
+          "call": "KMGH",
+          "day": "2026-10-26",
+          "minute": 1095,
+          "teams": [
+            "Dallas Cowboys",
+            "Philadelphia Eagles"
+          ],
+          "title": "Dallas Cowboys at Philadelphia Eagles",
+          "url": "https://www.tvpassport.com/tv-listings/stations/abc-kmgh-denver-co-hd/5723/2026-10-26"
+        },
         {
           "network": "NBC",
           "call": "KUSA",
@@ -20,16 +32,16 @@
           "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-10-25"
         },
         {
-          "network": "ABC",
-          "call": "KMGH",
-          "day": "2026-10-26",
-          "minute": 1095,
+          "network": "CBS",
+          "call": "KCNC",
+          "day": "2026-10-25",
+          "minute": 840,
           "teams": [
-            "Dallas Cowboys",
-            "Philadelphia Eagles"
+            "Denver Broncos",
+            "Arizona Cardinals"
           ],
-          "title": "Dallas Cowboys at Philadelphia Eagles",
-          "url": "https://www.tvpassport.com/tv-listings/stations/abc-kmgh-denver-co-hd/5723/2026-10-26"
+          "title": "Denver Broncos at Arizona Cardinals",
+          "url": "https://www.tvpassport.com/tv-listings/stations/cbs-kcnc-denver-co/1566/2026-10-25"
         },
         {
           "network": "FOX",
@@ -54,27 +66,15 @@
           ],
           "title": "Green Bay Packers at Detroit Lions",
           "url": "https://www.tvpassport.com/tv-listings/stations/fox-kdvr-denver-co-hd/6401/2026-10-25"
-        },
-        {
-          "network": "CBS",
-          "call": "KCNC",
-          "day": "2026-10-25",
-          "minute": 840,
-          "teams": [
-            "Denver Broncos",
-            "Arizona Cardinals"
-          ],
-          "title": "Denver Broncos at Arizona Cardinals",
-          "url": "https://www.tvpassport.com/tv-listings/stations/cbs-kcnc-denver-co/1566/2026-10-25"
         }
       ],
       "successfulPages": 4,
       "diagnostics": [
         {
-          "call": "KUSA",
+          "call": "KMGH",
           "day": "2026-10-25",
           "status": 200,
-          "parsed": 1,
+          "parsed": 0,
           "via": "direct"
         },
         {
@@ -85,17 +85,10 @@
           "via": "direct"
         },
         {
-          "call": "KDVR",
+          "call": "KUSA",
           "day": "2026-10-25",
           "status": 200,
-          "parsed": 2,
-          "via": "direct"
-        },
-        {
-          "call": "KMGH",
-          "day": "2026-10-25",
-          "status": 200,
-          "parsed": 0,
+          "parsed": 1,
           "via": "direct"
         },
         {
@@ -104,9 +97,16 @@
           "status": 200,
           "parsed": 1,
           "via": "direct"
+        },
+        {
+          "call": "KDVR",
+          "day": "2026-10-25",
+          "status": 200,
+          "parsed": 2,
+          "via": "direct"
         }
       ],
-      "checkedAt": "2026-10-20T19:19:44.992Z"
+      "checkedAt": "2026-10-20T22:43:00.860Z"
     },
     {
       "start": "2026-10-27",
@@ -129,13 +129,6 @@
       "successfulPages": 1,
       "diagnostics": [
         {
-          "call": "KDVR",
-          "day": "2026-11-01",
-          "status": 200,
-          "parsed": 0,
-          "via": "direct"
-        },
-        {
           "call": "KUSA",
           "day": "2026-11-01",
           "status": 200,
@@ -144,14 +137,21 @@
         },
         {
           "call": "KMGH",
-          "day": "2026-11-01",
+          "day": "2026-11-02",
           "status": 200,
           "parsed": 0,
           "via": "direct"
         },
         {
           "call": "KMGH",
-          "day": "2026-11-02",
+          "day": "2026-11-01",
+          "status": 200,
+          "parsed": 0,
+          "via": "direct"
+        },
+        {
+          "call": "KDVR",
+          "day": "2026-11-01",
           "status": 200,
           "parsed": 0,
           "via": "direct"
@@ -164,7 +164,7 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-10-20T19:19:45.554Z"
+      "checkedAt": "2026-10-20T22:43:01.510Z"
     }
   ]
 }
