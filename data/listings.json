@@ -1,79 +1,7 @@
 {
   "schema": 1,
-  "generatedAt": "2026-10-20T04:57:17.542Z",
+  "generatedAt": "2026-10-20T10:07:38.892Z",
   "slates": [
-    {
-      "start": "2026-10-13",
-      "end": "2026-10-19",
-      "signature": "2681a219fc167324b1cdc22554ffc73aa34750b8f184f1a9210e949d7c209cf1",
-      "rows": [
-        {
-          "network": "ABC",
-          "call": "KMGH",
-          "day": "2026-10-19",
-          "minute": 1095,
-          "teams": [
-            "Washington Commanders",
-            "San Francisco 49ers"
-          ],
-          "title": "Washington Commanders at San Francisco 49ers",
-          "url": "https://www.tvpassport.com/tv-listings/stations/abc-kmgh-denver-co-hd/5723/2026-10-19"
-        }
-      ],
-      "successfulPages": 1,
-      "diagnostics": [
-        {
-          "call": "KMGH",
-          "day": "2026-10-19",
-          "status": 200,
-          "parsed": 1,
-          "via": "direct"
-        },
-        {
-          "call": "KMGH",
-          "day": "2026-10-15",
-          "status": 200,
-          "parsed": 0,
-          "via": "direct"
-        },
-        {
-          "call": "KUSA",
-          "day": "2026-10-18",
-          "status": 200,
-          "parsed": 0,
-          "via": "direct"
-        },
-        {
-          "call": "KCNC",
-          "day": "2026-10-18",
-          "status": 200,
-          "parsed": 0,
-          "via": "direct"
-        },
-        {
-          "call": "KUSA",
-          "day": "2026-10-15",
-          "status": 200,
-          "parsed": 0,
-          "via": "direct"
-        },
-        {
-          "call": "KDVR",
-          "day": "2026-10-15",
-          "status": 200,
-          "parsed": 0,
-          "via": "direct"
-        },
-        {
-          "call": "KCNC",
-          "day": "2026-10-15",
-          "status": 200,
-          "parsed": 0,
-          "via": "direct"
-        }
-      ],
-      "checkedAt": "2026-10-20T04:57:16.899Z"
-    },
     {
       "start": "2026-10-20",
       "end": "2026-10-26",
@@ -150,17 +78,17 @@
           "via": "direct"
         },
         {
-          "call": "KUSA",
-          "day": "2026-10-25",
-          "status": 200,
-          "parsed": 1,
-          "via": "direct"
-        },
-        {
           "call": "KMGH",
           "day": "2026-10-25",
           "status": 200,
           "parsed": 0,
+          "via": "direct"
+        },
+        {
+          "call": "KUSA",
+          "day": "2026-10-25",
+          "status": 200,
+          "parsed": 1,
           "via": "direct"
         },
         {
@@ -178,7 +106,65 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-10-20T04:57:17.542Z"
+      "checkedAt": "2026-10-20T10:07:38.340Z"
+    },
+    {
+      "start": "2026-10-27",
+      "end": "2026-11-02",
+      "signature": "7cbfbd293c9fdd80507ade08446199968cb174def5cc656f62409a121574c656",
+      "rows": [
+        {
+          "network": "NBC",
+          "call": "KUSA",
+          "day": "2026-11-01",
+          "minute": 1095,
+          "teams": [
+            "Philadelphia Eagles",
+            "Washington Commanders"
+          ],
+          "title": "Philadelphia Eagles at Washington Commanders",
+          "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-11-01"
+        }
+      ],
+      "successfulPages": 1,
+      "diagnostics": [
+        {
+          "call": "KMGH",
+          "day": "2026-11-01",
+          "status": 200,
+          "parsed": 0,
+          "via": "direct"
+        },
+        {
+          "call": "KMGH",
+          "day": "2026-11-02",
+          "status": 200,
+          "parsed": 0,
+          "via": "direct"
+        },
+        {
+          "call": "KUSA",
+          "day": "2026-11-01",
+          "status": 200,
+          "parsed": 1,
+          "via": "direct"
+        },
+        {
+          "call": "KDVR",
+          "day": "2026-11-01",
+          "status": 200,
+          "parsed": 0,
+          "via": "direct"
+        },
+        {
+          "call": "KCNC",
+          "day": "2026-11-01",
+          "status": 200,
+          "parsed": 0,
+          "via": "direct"
+        }
+      ],
+      "checkedAt": "2026-10-20T10:07:38.891Z"
     }
   ]
 }
