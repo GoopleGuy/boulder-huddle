@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-10-20T22:43:01.510Z",
+  "generatedAt": "2026-10-21T01:02:01.785Z",
   "slates": [
     {
       "start": "2026-10-20",
@@ -32,18 +32,6 @@
           "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-10-25"
         },
         {
-          "network": "CBS",
-          "call": "KCNC",
-          "day": "2026-10-25",
-          "minute": 840,
-          "teams": [
-            "Denver Broncos",
-            "Arizona Cardinals"
-          ],
-          "title": "Denver Broncos at Arizona Cardinals",
-          "url": "https://www.tvpassport.com/tv-listings/stations/cbs-kcnc-denver-co/1566/2026-10-25"
-        },
-        {
           "network": "FOX",
           "call": "KDVR",
           "day": "2026-10-25",
@@ -66,6 +54,18 @@
           ],
           "title": "Green Bay Packers at Detroit Lions",
           "url": "https://www.tvpassport.com/tv-listings/stations/fox-kdvr-denver-co-hd/6401/2026-10-25"
+        },
+        {
+          "network": "CBS",
+          "call": "KCNC",
+          "day": "2026-10-25",
+          "minute": 840,
+          "teams": [
+            "Denver Broncos",
+            "Arizona Cardinals"
+          ],
+          "title": "Denver Broncos at Arizona Cardinals",
+          "url": "https://www.tvpassport.com/tv-listings/stations/cbs-kcnc-denver-co/1566/2026-10-25"
         }
       ],
       "successfulPages": 4,
@@ -92,21 +92,21 @@
           "via": "direct"
         },
         {
-          "call": "KCNC",
-          "day": "2026-10-25",
-          "status": 200,
-          "parsed": 1,
-          "via": "direct"
-        },
-        {
           "call": "KDVR",
           "day": "2026-10-25",
           "status": 200,
           "parsed": 2,
           "via": "direct"
+        },
+        {
+          "call": "KCNC",
+          "day": "2026-10-25",
+          "status": 200,
+          "parsed": 1,
+          "via": "direct"
         }
       ],
-      "checkedAt": "2026-10-20T22:43:00.860Z"
+      "checkedAt": "2026-10-21T01:02:00.924Z"
     },
     {
       "start": "2026-10-27",
@@ -137,13 +137,6 @@
         },
         {
           "call": "KMGH",
-          "day": "2026-11-02",
-          "status": 200,
-          "parsed": 0,
-          "via": "direct"
-        },
-        {
-          "call": "KMGH",
           "day": "2026-11-01",
           "status": 200,
           "parsed": 0,
@@ -157,6 +150,13 @@
           "via": "direct"
         },
         {
+          "call": "KMGH",
+          "day": "2026-11-02",
+          "status": 200,
+          "parsed": 0,
+          "via": "direct"
+        },
+        {
           "call": "KCNC",
           "day": "2026-11-01",
           "status": 200,
@@ -164,7 +164,7 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-10-20T22:43:01.510Z"
+      "checkedAt": "2026-10-21T01:02:01.785Z"
     }
   ]
 }
