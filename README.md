@@ -18,7 +18,9 @@ It does not independently interpret every changing streaming entitlement or NFL+
 
 ## Run locally
 
-Use Node.js 22.12 or newer. Run npm ci, npm test, npm run build, and npm run preview. Run node scripts/update-listings.js to check current and next-week channel listings; that script needs no packages or private keys.
+Use Node.js 22.23.4 (the version in `.nvmrc`; `nvm install && nvm use`). Patched Node.js 24.22.1+ within 24.x and 26.12.1+ within 26.x are also accepted. Older releases are rejected during npm installation. These minimums include the [October 21, 2026 security fixes](https://nodejs.org/en/blog/vulnerability/october-2026-security-releases). Run npm ci, npm test, npm run build, and npm run preview. Run node scripts/update-listings.js to check current and next-week channel listings; that script needs no packages or private keys.
+
+Node.js runs the build, tests, listing updater and Wrangler CLI. The deployed companion service runs on Cloudflare Workers, not a user-managed Node.js runtime; changing the Node pin does not upgrade Cloudflare's runtime.
 
 ## GitHub deployment
 
