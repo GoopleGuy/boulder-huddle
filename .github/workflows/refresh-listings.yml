@@ -13,10 +13,11 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 8
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-node@v7.1.0
         with:
-          node-version: 22
+          node-version-file: .nvmrc
+          package-manager-cache: false
       - name: Check current and upcoming Denver listings
         run: node scripts/update-listings.js
       - name: Publish timestamped channel data
