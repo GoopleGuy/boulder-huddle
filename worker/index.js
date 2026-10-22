@@ -1,8 +1,9 @@
 import {fetchSchedule} from '../src/schedule.js';
 import {buildPushPayload} from '@block65/webcrypto-web-push';
-import {mergeVerification,slateRange,access,kickoff,DEFAULT_SERVICES} from '../src/core.js';
+import {mergeVerification,slateRange,access,kickoff,DEFAULT_SERVICES,unavailableGame} from '../src/core.js';
 import {fetchLocalListings,localReport} from './local-listings.js';
-import {selectPublishedListings} from './published-listings.js';
+import {selectPublishedListings,mergeListingEvidence} from './published-listings.js';
+import {reconcileGuide,savedGuide,confirmationSummary} from '../src/guide-state.js';
 const FIVE=300000,HOUR=3600000;
 const hash=async s=>Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s)))).map(b=>b.toString(16).padStart(2,'0')).join('');
 async function getCache(env,key,allowExpired=false){const row=await env.DB.prepare('SELECT payload, expires FROM cache WHERE key=?').bind(key).first();return row&&(allowExpired||row.expires>Date.now())?JSON.parse(row.payload):null;}
@@ -10,14 +11,21 @@ async function putCache(env,key,value,ttl){await env.DB.prepare('INSERT INTO cac
 async function lock(env,key,ttl){const r=await env.DB.prepare("INSERT INTO cache(key,payload,expires) VALUES(?,'null',?) ON CONFLICT(key) DO UPDATE SET expires=excluded.expires WHERE cache.expires<?").bind(key,Date.now()+ttl,Date.now()).run();return r.meta.changes===1;}
 export function validStart(start){if(!/^\d{4}-\d{2}-\d{2}$/.test(start||''))return false;const d=new Date(start+'T12:00Z');return Number.isFinite(+d)&&d.toISOString().slice(0,10)===start&&Math.abs(+d-Date.now())<220*86400000;}
 export async function getGuide(env,start,fetcher=fetch){
- const key='guide-evidence:'+start,cached=await getCache(env,key);if(cached)return cached;
+ const key='guide-evidence-v2:'+start,cached=await getCache(env,key);if(cached)return cached;
+ const savedKey='guide-saved:'+start;
+ const previous=await getCache(env,savedKey,true)||await getCache(env,'guide-evidence:'+start,true);
+ const savedTtl=90*24*HOUR; // Independent of refresh TTL and cron's expired-cache cleanup.
+ const fallback=async reason=>{const result=savedGuide(previous,reason);await putCache(env,savedKey,result,savedTtl);await putCache(env,key,result,60000);return result;};
  const end=new Date(start+'T12:00Z');end.setUTCDate(end.getUTCDate()+6);
- let games=await fetchSchedule({start,end:end.toISOString().slice(0,10)},fetcher),verificationMessage='';
+ let games;
+ try{games=await fetchSchedule({start,end:end.toISOString().slice(0,10)},fetcher);}
+ catch(error){if(previous?.games?.length)return fallback('Live schedule refresh failed.');throw error;}
+ if(!games.length&&previous?.games?.length)return fallback('The schedule feed returned no games.');
  const signature=await hash(JSON.stringify(games.map(g=>[g.id,g.date,g.networks])));
  // Refresh cadence is separate from evidence validity. Keep last-known data
  // through transient fetch failures, but never extend its original checkedAt.
  const listingKey='keyless-local:'+signature;
- const validListings=value=>selectPublishedListings({schema:1,slates:[{...value,signature}]},signature);
+ const validListings=value=>selectPublishedListings({schema:1,slates:[{...value,signature}]},signature,Date.now(),{allowStale:true});
  let listings=validListings(await getCache(env,listingKey,true));
  if(!listings?.rows.length)listings=null;
  if(env.LISTINGS_URL){
@@ -36,24 +44,28 @@ export async function getGuide(env,start,fetcher=fetch){
    }
    await putCache(env,'published-listings-refresh',true,refreshed?FIVE:60000);
   }
-  const published=selectPublishedListings(feed,signature);
-  if(published?.rows.length&&(!listings||Date.parse(published.checkedAt)>Date.parse(listings.checkedAt)))listings=published;
+  const published=selectPublishedListings(feed,signature,Date.now(),{allowStale:true});
+  if(published?.rows.length)listings=mergeListingEvidence(listings,published);
  }
- if(!listings&&!await getCache(env,'local-listings-retry:'+signature)){
+ if((!listings||listings.rows.some(row=>Date.now()-Date.parse(row.checkedAt||listings.checkedAt)>=2*HOUR))&&!await getCache(env,'local-listings-retry:'+signature)){
   const candidate=validListings(await fetchLocalListings(games,fetcher));
-  if(candidate?.rows.length)listings=candidate;
+  if(candidate?.rows.length)listings=mergeListingEvidence(listings,candidate);
   else await putCache(env,'local-listings-retry:'+signature,true,60000);
  }
  if(listings){
-  await putCache(env,listingKey,listings,Math.max(0,Date.parse(listings.checkedAt)+2*HOUR-Date.now()));
+  await putCache(env,listingKey,listings,savedTtl);
  }else listings={rows:[],checkedAt:new Date().toISOString()};
  const local=localReport(games,listings.rows,listings.checkedAt);
- games=mergeVerification(games,local);
- const localCount=local.games.length;
- if(localCount)verificationMessage=`Denver channel assignments checked for ${localCount} games. Listings refresh about every 30 minutes; results older than two hours become unconfirmed. NFL+ mobile and unusual streaming rights require the linked official listings.`;
- else if(!verificationMessage)verificationMessage='Denver station listings are not yet available for this slate. Unconfirmed assignments remain pending.';
- const result={games,checkedAt:new Date().toISOString(),verificationMessage};
- const ttl=localCount?Math.max(0,Math.min(FIVE,Date.parse(listings.checkedAt)+2*HOUR-Date.now())):60000;
+ games=mergeVerification(games,local,Date.now(),{allowStale:true});
+ const result=reconcileGuide({games,checkedAt:new Date(Date.now()).toISOString(),scheduleState:'current'},previous);
+ const summary=confirmationSummary(result.games);
+ result.lastConfirmedAt=summary.lastConfirmedAt;
+ result.verificationMessage=summary.retained?
+  `${summary.retained} game assignments use the last confirmed listings, with their original check times. Refreshes continue; saved assignments are not newly verified. Check the linked sources before kickoff.`:
+  summary.confirmed?`Denver channel assignments confirmed for ${summary.confirmed} games. The last confirmed assignments stay available if a refresh fails. Check the linked official listings before kickoff.`:
+  'Denver station listings have not yet confirmed assignments for this slate.';
+ await putCache(env,savedKey,result,savedTtl);
+ const ttl=summary.retained||!summary.confirmed?60000:Math.max(1,Math.min(FIVE,Date.parse(summary.lastConfirmedAt)+2*HOUR-Date.now()));
  await putCache(env,key,result,ttl);return result;
 }
 export function validateSubscription(s){
@@ -100,12 +112,14 @@ export default {
  },
  async scheduled(controller,env,ctx){ctx.waitUntil(runReminders(env));}
 };
-export function reminderDue(game,now){const delta=Date.parse(game.date)-now;return !game.timeTbd&&game.state!=='post'&&delta>0&&delta<=15*60000;}
+export function reminderDue(game,now){const delta=Date.parse(game.date)-now;return !game.timeTbd&&!unavailableGame(game)&&game.state!=='post'&&delta>0&&delta<=15*60000;}
 export async function runReminders(env){
  const now=Date.now();if(!(await lock(env,'cron-lock',4*60000)))return;
  await env.DB.batch([env.DB.prepare('DELETE FROM delivered WHERE created<?').bind(now-14*86400000),env.DB.prepare('DELETE FROM fingerprints WHERE updated<?').bind(now-14*86400000),env.DB.prepare('DELETE FROM cache WHERE expires<?').bind(now-HOUR),env.DB.prepare('DELETE FROM rate_limits WHERE expires<?').bind(now),env.DB.prepare('DELETE FROM subscriptions WHERE updated<?').bind(now-90*86400000)]);
  // Refresh the current week's schedule even without open browser sessions.
  let guide;try{guide=await getGuide(env,slateRange().start);}catch(error){console.error('Scheduled refresh failed:',error.message);return;}
+ // A saved schedule is useful for viewing, but cannot justify a live kickoff alert.
+ if(guide.scheduleState==='saved')return;
  if(!env.VAPID_PRIVATE_KEY||!env.VAPID_PUBLIC_KEY)return;
  const {results}=await env.DB.prepare('SELECT id,payload FROM subscriptions').all();
  for(const row of results){const data=JSON.parse(row.payload);if(!validateSubscription(data.subscription))continue;
