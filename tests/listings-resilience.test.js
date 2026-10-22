@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {getGuide} from '../worker/index.js';
-import {normalizeScoreboard} from '../src/core.js';
+import {normalizeScoreboard,access} from '../src/core.js';
 
 const start='2026-09-22';
 const event={id:'1',date:'2026-09-27T17:00Z',season:{year:2026,type:2},competitions:[{competitors:[{homeAway:'home',team:{displayName:'Home'}},{homeAway:'away',team:{displayName:'Away'}}],broadcasts:[{names:['CBS']}]}]};
@@ -18,7 +18,7 @@ function setup(t){
  const state={feed,raw,fail:null,backup:false,feedCalls:0,scrapeCalls:0};
  const fetcher=async url=>{
   const parsed=new URL(url);
-  if(parsed.hostname.endsWith('espn.com'))return Response.json(parsed.searchParams.get('dates')==='20260927'?state.raw:{events:[]});
+  if(parsed.hostname.endsWith('espn.com')){if(state.scheduleFail)throw new Error('schedule timeout');return Response.json(parsed.searchParams.get('dates')==='20260927'?state.raw:{events:[]});}
   if(parsed.hostname==='feed.example'||parsed.hostname==='backup.example'){
    state.feedCalls++;
    if(parsed.hostname==='backup.example'&&state.backup)return Response.json(feed);
@@ -54,10 +54,11 @@ test('empty or malformed replacement feed cannot wipe out retained valid per-sch
  const guide=await getGuide(f.env,start,f.fetcher);
  assert.equal(guide.games[0].local,'yes');assert.equal(guide.games[0].verifiedAt,f.checkedAt);
 });
-test('expired evidence is not extended by failed refreshes or by the guide cache',async t=>{
+test('aging retains confirmed assignments without extending the evidence timestamp',async t=>{
  const f=setup(t);await getGuide(f.env,start,f.fetcher);f.state.fail='http';
  f.advance(119*60000);const almost=await getGuide(f.env,start,f.fetcher);assert.equal(almost.games[0].local,'yes');
- f.advance(60000);const expired=await getGuide(f.env,start,f.fetcher);assert.equal(expired.games[0].local,'unknown');assert.equal(expired.games[0].verifiedAt,null);
+ f.advance(60000);const expired=await getGuide(f.env,start,f.fetcher);assert.equal(expired.games[0].local,'yes');assert.equal(expired.games[0].verifiedAt,f.checkedAt);
+ assert.equal(access(expired.games[0]).kind,'full');assert.equal(access(expired.games[0]).verificationState,'last-confirmed');assert.match(expired.verificationMessage,/not newly verified/);
  assert.ok(f.state.scrapeCalls>0);
 });
 test('a changed kickoff rejects the retained feed and previous schedule evidence',async t=>{
@@ -73,4 +74,81 @@ test('fresh feed refresh replaces evidence with the new original check time',asy
  const f=setup(t);await getGuide(f.env,start,f.fetcher);f.advance(6*60000);
  const next=new Date(Date.now()).toISOString();f.state.feed.slates[0].checkedAt=next;
  const guide=await getGuide(f.env,start,f.fetcher);assert.equal(guide.games[0].verifiedAt,next);
+});
+
+test('one-day and multi-day failures survive ordinary expired-cache cleanup',async t=>{
+ const f=setup(t);await getGuide(f.env,start,f.fetcher);f.state.fail='http';
+ for(const days of [1,3]){
+  f.advance(days*24*3600000);
+  for(const [key,row] of f.rows)if(row.expires<Date.now()-3600000)f.rows.delete(key);
+  const guide=await getGuide(f.env,start,f.fetcher);
+  assert.equal(guide.games[0].verifiedAt,f.checkedAt);assert.equal(access(guide.games[0]).kind,'full');
+  assert.match(access(guide.games[0]).detail,/Last confirmed.*not newly verified/);
+ }
+});
+test('schedule outage and empty response preserve the original saved schedule timestamp',async t=>{
+ const f=setup(t),original=await getGuide(f.env,start,f.fetcher);f.advance(24*3600000);f.state.scheduleFail=true;
+ let guide=await getGuide(f.env,start,f.fetcher);
+ assert.equal(guide.scheduleState,'saved');assert.equal(guide.checkedAt,original.checkedAt);assert.equal(guide.games[0].verifiedAt,f.checkedAt);
+ f.state.scheduleFail=false;f.state.raw={events:[]};f.advance(61000);
+ guide=await getGuide(f.env,start,f.fetcher);assert.equal(guide.games.length,1);assert.equal(guide.scheduleState,'saved');assert.equal(guide.checkedAt,original.checkedAt);assert.match(guide.verificationMessage,/returned no games/);
+});
+test('a changed or removed game does not erase unaffected game confirmations',async t=>{
+ const f=setup(t);const second={...event,id:'2',date:'2026-09-27T20:25Z'};f.state.raw={events:[event,second]};f.state.feed.slates[0].signature=signature(f.state.raw);
+ const original=await getGuide(f.env,start,f.fetcher);assert.equal(original.games[0].local,'yes');
+ f.advance(6*60000);f.state.fail='http';f.state.raw={events:[event,{...second,date:'2026-09-27T21:00Z'}]};
+ let guide=await getGuide(f.env,start,f.fetcher);assert.equal(guide.games[0].local,'yes');assert.equal(guide.games[1].local,'unknown');
+ f.advance(6*60000);f.state.raw={events:[second]};guide=await getGuide(f.env,start,f.fetcher);assert.deepEqual(guide.games.map(g=>g.id),['2']);
+});
+test('a newer competing assignment replaces old local access, and older feeds cannot restore it',async t=>{
+ const f=setup(t);const other={...event,id:'2',competitions:[{...event.competitions[0],competitors:[{homeAway:'home',team:{displayName:'Other Home'}},{homeAway:'away',team:{displayName:'Other Away'}}]}]};
+ f.state.raw={events:[event,other]};f.state.feed.slates[0].signature=signature(f.state.raw);
+ await getGuide(f.env,start,f.fetcher);f.advance(6*60000);
+ f.state.feed.slates[0].checkedAt=new Date(Date.now()).toISOString();f.state.feed.slates[0].rows[0].teams=['Other Home','Other Away'];
+ let guide=await getGuide(f.env,start,f.fetcher);assert.equal(guide.games[0].local,'no');assert.equal(guide.games[1].local,'yes');
+ f.advance(6*60000);f.state.feed.slates[0].checkedAt=f.checkedAt;f.state.feed.slates[0].rows[0].teams=['Home','Away'];
+ guide=await getGuide(f.env,start,f.fetcher);assert.equal(guide.games[0].local,'no');
+});
+test('partial new listings keep the missing game original confirmation',async t=>{
+ const f=setup(t);const second={...event,id:'2',date:'2026-09-27T20:25Z',competitions:[{...event.competitions[0],competitors:[{homeAway:'home',team:{displayName:'Other Home'}},{homeAway:'away',team:{displayName:'Other Away'}}]}]};
+ f.state.raw={events:[event,second]};f.state.feed.slates[0].signature=signature(f.state.raw);
+ f.state.feed.slates[0].rows.push({...f.state.feed.slates[0].rows[0],minute:865,teams:['Other Home','Other Away']});
+ await getGuide(f.env,start,f.fetcher);f.advance(6*60000);
+ f.state.feed.slates[0].checkedAt=new Date(Date.now()).toISOString();f.state.feed.slates[0].rows.pop();
+ const guide=await getGuide(f.env,start,f.fetcher);assert.equal(guide.games[1].local,'yes');assert.equal(guide.games[1].verifiedAt,f.checkedAt);assert.notEqual(guide.games[0].verifiedAt,f.checkedAt);
+});
+test('cancellation and postponement invalidate access even with matching listing data',async t=>{
+ const f=setup(t);await getGuide(f.env,start,f.fetcher);
+ for(const name of ['STATUS_CANCELED','STATUS_POSTPONED','STATUS_SUSPENDED']){
+  f.advance(6*60000);f.state.raw={events:[{...event,status:{type:{state:'pre',name,shortDetail:name}}}]};
+  const guide=await getGuide(f.env,start,f.fetcher);assert.equal(guide.games[0].local,'unknown');assert.equal(guide.games[0].verifiedAt,null);assert.deepEqual(access(guide.games[0]).options,[]);
+ }
+});
+test('new row evidence is selected even when the feed keeps a conservative old slate timestamp',async t=>{
+ const f=setup(t);await getGuide(f.env,start,f.fetcher);f.advance(3*3600000);
+ const newTime=new Date(Date.now()).toISOString();f.state.feed.slates[0].rows[0].checkedAt=newTime;
+ const guide=await getGuide(f.env,start,f.fetcher);assert.equal(guide.games[0].verifiedAt,newTime);assert.equal(access(guide.games[0]).verificationState,'fresh');
+});
+test('newer evidence for one game is applied even if another cached row is newer still',async t=>{
+ const f=setup(t);const second={...event,id:'2',date:'2026-09-27T20:25Z',competitions:[{...event.competitions[0],competitors:[{homeAway:'home',team:{displayName:'Other Home'}},{homeAway:'away',team:{displayName:'Other Away'}}]}]};
+ f.state.raw={events:[event,second]};f.state.feed.slates[0].signature=signature(f.state.raw);
+ const newer=f.checkedAt,older=new Date(Date.now()-3600000).toISOString(),middle=new Date(Date.now()-1800000).toISOString();
+ f.state.feed.slates[0].rows[0].checkedAt=newer;
+ f.state.feed.slates[0].rows.push({...f.state.feed.slates[0].rows[0],minute:865,teams:['Other Home','Other Away'],checkedAt:older});
+ await getGuide(f.env,start,f.fetcher);f.advance(6*60000);
+ f.state.feed.slates[0].rows[0].checkedAt=older;f.state.feed.slates[0].rows[1].checkedAt=middle;
+ const guide=await getGuide(f.env,start,f.fetcher);
+ assert.equal(guide.games[0].verifiedAt,newer);assert.equal(guide.games[1].verifiedAt,middle);
+});
+test('a newer competing assignment wins even when an unrelated cached game has a later timestamp',async t=>{
+ const f=setup(t);
+ const atSlot=(id,home,away)=>({...event,id,date:'2026-09-27T20:25Z',competitions:[{...event.competitions[0],competitors:[{homeAway:'home',team:{displayName:home}},{homeAway:'away',team:{displayName:away}}]}]});
+ f.state.raw={events:[event,atSlot('2','B Home','B Away'),atSlot('3','C Home','C Away')]};f.state.feed.slates[0].signature=signature(f.state.raw);
+ const stamp=minute=>new Date(Date.now()-minute*60000).toISOString();
+ const latest=stamp(30),old=stamp(60),middle=stamp(40);
+ f.state.feed.slates[0].rows[0].checkedAt=latest;
+ f.state.feed.slates[0].rows.push({...f.state.feed.slates[0].rows[0],minute:865,teams:['B Home','B Away'],checkedAt:old});
+ let guide=await getGuide(f.env,start,f.fetcher);assert.deepEqual(guide.games.map(g=>g.local),['yes','yes','no']);
+ f.advance(6*60000);f.state.feed.slates[0].rows[0].checkedAt=old;f.state.feed.slates[0].rows[1].checkedAt=middle;f.state.feed.slates[0].rows[1].teams=['C Home','C Away'];
+ guide=await getGuide(f.env,start,f.fetcher);assert.deepEqual(guide.games.map(g=>g.local),['yes','no','yes']);assert.equal(guide.games[0].verifiedAt,latest);assert.equal(guide.games[1].verifiedAt,middle);assert.equal(guide.games[2].verifiedAt,middle);
 });

@@ -31,7 +31,7 @@ export function localReport(games,listings,checkedAt=new Date().toISOString()){
   const no=!yes&&isSundayAfternoon(g)?sameTime.find(r=>g.networks.includes(r.network)&&games.some(other=>matched(r,other)&&localDate(other.date)===day&&other.date===g.date)):null;
   if(!yes&&!no)return null;
   const row=yes||no;
-  return {id:g.id,date:g.date,local:yes?'yes':'no',station:yes?STATIONS[row.network]:null,
+  return {id:g.id,date:g.date,checkedAt:row.checkedAt||checkedAt,local:yes?'yes':'no',station:yes?STATIONS[row.network]:null,
    mobile:g.mobile===true,requiredService:yes?null:'NFL Sunday Ticket',
    notes:yes?`Denver listing: ${row.call} carries this matchup in the kickoff window.`:`Denver's ${row.call} listing selects ${row.title} in this window.`,
    sources:[{title:`${row.call} ${row.day} · TV Passport station listing`,url:row.url,evidence:row.title},...(g.sources||[])]};
