@@ -30,11 +30,17 @@ Use Settings → Pages → GitHub Actions. The pages.yml workflow builds and pub
 
 The refresh-listings.yml workflow runs at minutes 17 and 47 of every hour using only GitHub's built-in repository token. It publishes public listing data without user API secrets. It can also be run manually from Actions. Its data-only commits do not trigger Pages builds; the Worker reads the raw JSON directly.
 
-## Android reminders
+## Install and enable reminders
 
-Open the HTTPS app in Chrome, choose Install app or Add to Home screen, save games with the bell buttons, and enable Game reminders. The Worker checks every five minutes and sends reminders during the 15 minutes before kickoff. Android battery settings and push providers can delay delivery. Turn off reminders to remove the server subscription.
+- **iPhone or iPad:** In Safari, choose Share (under the page menu in some layouts), then Add to Home Screen. Keep Open as Web App on if offered, and tap Add. Open Huddle from its Home Screen icon. Web push requires iOS or iPadOS 16.4 or later; it is not available from an ordinary browser tab.
+- **Android:** In Chrome, open the three-dot menu, then Install and create shortcut → Install. Some versions label this Install app or Add to Home screen. Follow the install prompt, then open Huddle from its icon.
+- **On either platform:** Save games with the bell buttons, open Game reminders, tap Enable notifications and allow the permission prompt. Background alerts require HTTPS, a browser with web push support, and a connected live guide service in Settings. Installation alone does not enable reminders.
 
-Calendar exports include an independent 15-minute alarm. They are snapshots and do not follow flex scheduling. Offline mode displays the last loaded guide with a saved-data label.
+If notifications are blocked, use Settings → Notifications → Huddle (or your chosen app name) on iPhone/iPad. On Android, check the site's notification permission in Chrome and your device's notification settings. Focus, Do Not Disturb, battery settings and push providers may delay or silence alerts; delivery is not guaranteed. The Worker checks every five minutes and sends kickoff reminders during the 15 minutes before the game. Use Turn off reminders before uninstalling to remove the server subscription.
+
+Calendar exports include an independent 15-minute alarm and work without push notifications. They are snapshots and do not follow flex scheduling. Offline mode displays the last loaded guide with a saved-data label.
+
+Platform instructions: [Apple's Home Screen web app guide](https://support.apple.com/guide/iphone/iphea86e5236/ios), [WebKit's iOS/iPadOS web push requirements](https://webkit.org/blog/13878/web-push-for-web-apps-on-ios-and-ipados/), [Chrome's Android web app guide](https://support.google.com/chrome/answer/9658361?hl=en&co=GENIE.Platform%3DAndroid), and [Chrome notification settings](https://support.google.com/chrome/answer/3220216?hl=en&co=GENIE.Platform%3DAndroid).
 
 ## Companion service
 
@@ -64,4 +70,4 @@ For unchanged games, partial/unconfirmed refreshes cannot erase previously confi
 
 ## Validation and limitations
 
-Tests cover Mountain Time/daylight saving, regional access, stale evidence, exact station matching, pregame windows, published-feed expiry, push endpoint validation, reminder timing and calendar exports. Physical Android delivery must be checked on the user's device. Data providers can block requests or change their page format; source failures remain visible and are not treated as verified access.
+Tests cover Mountain Time/daylight saving, regional access, stale evidence, exact station matching, pregame windows, published-feed expiry, push endpoint validation, reminder timing and calendar exports. Physical iPhone/iPad and Android installation, permission prompts and push delivery must be checked on real devices; capability tests are not proof of device delivery. Data providers can block requests or change their page format; source failures remain visible and are not treated as verified access.
