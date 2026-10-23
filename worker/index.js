@@ -1,8 +1,8 @@
 import {fetchSchedule} from '../src/schedule.js';
 import {buildPushPayload} from '@block65/webcrypto-web-push';
-import {mergeVerification,slateRange,access,kickoff,DEFAULT_SERVICES,unavailableGame} from '../src/core.js';
-import {fetchLocalListings,localReport} from './local-listings.js';
-import {selectPublishedListings,mergeListingEvidence} from './published-listings.js';
+import {mergeVerification,slateRange,access,kickoff,DEFAULT_SERVICES,unavailableGame,isSundayAfternoon} from '../src/core.js';
+import {fetchLocalListings,localReport,pruneSupersededListings,withListingInvalidations} from './local-listings.js';
+import {selectPublishedListings,mergeListingEvidence,hasListingEvidence} from './published-listings.js';
 import {reconcileGuide,savedGuide,confirmationSummary} from '../src/guide-state.js';
 const FIVE=300000,HOUR=3600000;
 const hash=async s=>Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s)))).map(b=>b.toString(16).padStart(2,'0')).join('');
@@ -27,7 +27,7 @@ export async function getGuide(env,start,fetcher=fetch){
  const listingKey='keyless-local:'+signature;
  const validListings=value=>selectPublishedListings({schema:1,slates:[{...value,signature}]},signature,Date.now(),{allowStale:true});
  let listings=validListings(await getCache(env,listingKey,true));
- if(!listings?.rows.length)listings=null;
+ if(!hasListingEvidence(listings))listings=null;
  if(env.LISTINGS_URL){
   let feed=await getCache(env,'published-listings',true);
   if(!await getCache(env,'published-listings-refresh')){
@@ -45,18 +45,20 @@ export async function getGuide(env,start,fetcher=fetch){
    await putCache(env,'published-listings-refresh',true,refreshed?FIVE:60000);
   }
   const published=selectPublishedListings(feed,signature,Date.now(),{allowStale:true});
-  if(published?.rows.length)listings=mergeListingEvidence(listings,published);
+  if(hasListingEvidence(published))listings=mergeListingEvidence(listings,published);
  }
- if((!listings||listings.rows.some(row=>Date.now()-Date.parse(row.checkedAt||listings.checkedAt)>=2*HOUR))&&!await getCache(env,'local-listings-retry:'+signature)){
+ if((!listings||(!listings.programPages?.length&&games.some(isSundayAfternoon))||listings.rows.some(row=>Date.now()-Date.parse(row.checkedAt||listings.checkedAt)>=2*HOUR)||(listings.programPages||[]).some(page=>Date.now()-Date.parse(page.checkedAt)>=2*HOUR))&&!await getCache(env,'local-listings-retry:'+signature)){
   const candidate=validListings(await fetchLocalListings(games,fetcher));
-  if(candidate?.rows.length)listings=mergeListingEvidence(listings,candidate);
+  if(hasListingEvidence(candidate))listings=mergeListingEvidence(listings,candidate);
   else await putCache(env,'local-listings-retry:'+signature,true,60000);
  }
  if(listings){
+  listings=pruneSupersededListings(listings,games);
   await putCache(env,listingKey,listings,savedTtl);
  }else listings={rows:[],checkedAt:new Date().toISOString()};
- const local=localReport(games,listings.rows,listings.checkedAt);
+ const local=localReport(games,listings.rows,listings.checkedAt,listings.programPages);
  games=mergeVerification(games,local,Date.now(),{allowStale:true});
+ games=withListingInvalidations(games,listings.programPages);
  const result=reconcileGuide({games,checkedAt:new Date(Date.now()).toISOString(),scheduleState:'current'},previous);
  const summary=confirmationSummary(result.games);
  result.lastConfirmedAt=summary.lastConfirmedAt;

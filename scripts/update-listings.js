@@ -1,11 +1,11 @@
 import fs from 'node:fs/promises';
 import {createHash} from 'node:crypto';
-import {slateRange} from '../src/core.js';
+import {slateRange,canonicalNetwork} from '../src/core.js';
 import {pathToFileURL} from 'node:url';
 import path from 'node:path';
 import {fetchSchedule} from '../src/schedule.js';
-import {fetchLocalListings} from '../worker/local-listings.js';
-import {mergeListingEvidence} from '../worker/published-listings.js';
+import {fetchLocalListings,pruneSupersededListings} from '../worker/local-listings.js';
+import {mergeListingEvidence,hasListingEvidence} from '../worker/published-listings.js';
 
 export async function updateListings({now=new Date(),fetcher=fetch,fetchListings=fetchLocalListings,outputPath='data/listings.json',log=console.log}={}){
 let previous;
@@ -16,18 +16,19 @@ for(const offset of [0,1]){
  const games=await fetchSchedule(range,fetcher);
  const old=previous?.schema===1?previous.slates?.find(s=>s.start===range.start):null;
  // Empty data is not a cancellation notice. Keep original confirmed rows/time.
- if(!games.length&&old?.rows?.length){slates.push(old);log(`${range.start}: empty schedule response; retaining last confirmed slate.`);continue;}
+ if(!games.length&&hasListingEvidence(old)){slates.push(old);log(`${range.start}: empty schedule response; retaining last confirmed slate.`);continue;}
  const listings=await fetchListings(games,fetcher);
  const signature=createHash('sha256').update(JSON.stringify(games.map(g=>[g.id,g.date,g.networks]))).digest('hex');
- if(old?.signature===signature&&old.rows?.length){
+ if(old?.signature===signature&&hasListingEvidence(old)){
   // Partial scrapes cannot erase other confirmed games. New assignments replace
   // the same station/window; retained rows carry their own original check time.
   // The oldest row timestamp also protects older Workers during rollout.
   Object.assign(listings,mergeListingEvidence(old,listings));
  }
+ Object.assign(listings,pruneSupersededListings(listings,games));
  slates.push({...range,signature,...listings});
- log(`${range.start}: ${games.length} games; ${listings.rows.length} local station listings; ${listings.successfulPages} pages with live NFL listings.`);
- if(offset===0&&games.some(g=>g.networks.some(n=>['NBC','ABC','CBS','FOX'].includes(n)))&&!listings.rows.length)throw new Error('No current-slate local listings could be verified. Retaining previous data and timestamp.');
+ log(`${range.start}: ${games.length} games; ${listings.rows.length} local station listings; ${listings.successfulPages} pages with live NFL listings; ${listings.programPages?.length||0} validated programming pages.`);
+ if(offset===0&&games.some(g=>g.networks.some(n=>['NBC','ABC','CBS','FOX'].includes(canonicalNetwork(n))))&&!hasListingEvidence(listings))throw new Error('No current-slate local listings could be verified. Retaining previous data and timestamp.');
 }
 await fs.mkdir(path.dirname(outputPath),{recursive:true});
 const temporary=outputPath+'.tmp';
