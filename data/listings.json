@@ -1,36 +1,12 @@
 {
   "schema": 1,
-  "generatedAt": "2026-10-22T22:46:51.973Z",
+  "generatedAt": "2026-10-23T01:02:30.874Z",
   "slates": [
     {
       "start": "2026-10-20",
       "end": "2026-10-26",
       "signature": "8887ed40a7c8e22a76efc6abb373cfd975f1f5eb3cee44dae71c312a863da46c",
       "rows": [
-        {
-          "network": "FOX",
-          "call": "KDVR",
-          "day": "2026-10-25",
-          "minute": 660,
-          "teams": [
-            "San Francisco 49ers",
-            "Atlanta Falcons"
-          ],
-          "title": "San Francisco 49ers at Atlanta Falcons",
-          "url": "https://www.tvpassport.com/tv-listings/stations/fox-kdvr-denver-co-hd/6401/2026-10-25"
-        },
-        {
-          "network": "FOX",
-          "call": "KDVR",
-          "day": "2026-10-25",
-          "minute": 865,
-          "teams": [
-            "Green Bay Packers",
-            "Detroit Lions"
-          ],
-          "title": "Green Bay Packers at Detroit Lions",
-          "url": "https://www.tvpassport.com/tv-listings/stations/fox-kdvr-denver-co-hd/6401/2026-10-25"
-        },
         {
           "network": "ABC",
           "call": "KMGH",
@@ -41,7 +17,8 @@
             "Philadelphia Eagles"
           ],
           "title": "Dallas Cowboys at Philadelphia Eagles",
-          "url": "https://www.tvpassport.com/tv-listings/stations/abc-kmgh-denver-co-hd/5723/2026-10-26"
+          "url": "https://www.tvpassport.com/tv-listings/stations/abc-kmgh-denver-co-hd/5723/2026-10-26",
+          "checkedAt": "2026-10-23T01:02:30.331Z"
         },
         {
           "network": "NBC",
@@ -53,7 +30,34 @@
             "Seattle Seahawks"
           ],
           "title": "Kansas City Chiefs at Seattle Seahawks",
-          "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-10-25"
+          "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-10-25",
+          "checkedAt": "2026-10-23T01:02:30.331Z"
+        },
+        {
+          "network": "FOX",
+          "call": "KDVR",
+          "day": "2026-10-25",
+          "minute": 660,
+          "teams": [
+            "San Francisco 49ers",
+            "Atlanta Falcons"
+          ],
+          "title": "San Francisco 49ers at Atlanta Falcons",
+          "url": "https://www.tvpassport.com/tv-listings/stations/fox-kdvr-denver-co-hd/6401/2026-10-25",
+          "checkedAt": "2026-10-23T01:02:30.331Z"
+        },
+        {
+          "network": "FOX",
+          "call": "KDVR",
+          "day": "2026-10-25",
+          "minute": 865,
+          "teams": [
+            "Green Bay Packers",
+            "Detroit Lions"
+          ],
+          "title": "Green Bay Packers at Detroit Lions",
+          "url": "https://www.tvpassport.com/tv-listings/stations/fox-kdvr-denver-co-hd/6401/2026-10-25",
+          "checkedAt": "2026-10-23T01:02:30.331Z"
         },
         {
           "network": "CBS",
@@ -65,18 +69,12 @@
             "Arizona Cardinals"
           ],
           "title": "Denver Broncos at Arizona Cardinals",
-          "url": "https://www.tvpassport.com/tv-listings/stations/cbs-kcnc-denver-co/1566/2026-10-25"
+          "url": "https://www.tvpassport.com/tv-listings/stations/cbs-kcnc-denver-co/1566/2026-10-25",
+          "checkedAt": "2026-10-23T01:02:30.331Z"
         }
       ],
       "successfulPages": 4,
       "diagnostics": [
-        {
-          "call": "KDVR",
-          "day": "2026-10-25",
-          "status": 200,
-          "parsed": 2,
-          "via": "direct"
-        },
         {
           "call": "KMGH",
           "day": "2026-10-25",
@@ -99,6 +97,13 @@
           "via": "direct"
         },
         {
+          "call": "KDVR",
+          "day": "2026-10-25",
+          "status": 200,
+          "parsed": 2,
+          "via": "direct"
+        },
+        {
           "call": "KCNC",
           "day": "2026-10-25",
           "status": 200,
@@ -106,25 +111,13 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-10-22T22:46:51.591Z"
+      "checkedAt": "2026-10-23T01:02:30.331Z"
     },
     {
       "start": "2026-10-27",
       "end": "2026-11-02",
       "signature": "7cbfbd293c9fdd80507ade08446199968cb174def5cc656f62409a121574c656",
       "rows": [
-        {
-          "network": "NBC",
-          "call": "KUSA",
-          "day": "2026-11-01",
-          "minute": 1095,
-          "teams": [
-            "Philadelphia Eagles",
-            "Washington Commanders"
-          ],
-          "title": "Philadelphia Eagles at Washington Commanders",
-          "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-11-01"
-        },
         {
           "network": "FOX",
           "call": "KDVR",
@@ -135,13 +128,60 @@
             "Detroit Lions"
           ],
           "title": "Minnesota Vikings at Detroit Lions",
-          "url": "https://www.tvpassport.com/tv-listings/stations/fox-kdvr-denver-co-hd/6401/2026-11-01"
+          "url": "https://www.tvpassport.com/tv-listings/stations/fox-kdvr-denver-co-hd/6401/2026-11-01",
+          "checkedAt": "2026-10-23T01:02:30.873Z"
+        },
+        {
+          "network": "NBC",
+          "call": "KUSA",
+          "day": "2026-11-01",
+          "minute": 1095,
+          "teams": [
+            "Philadelphia Eagles",
+            "Washington Commanders"
+          ],
+          "title": "Philadelphia Eagles at Washington Commanders",
+          "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-11-01",
+          "checkedAt": "2026-10-23T01:02:30.873Z"
+        },
+        {
+          "network": "CBS",
+          "call": "KCNC",
+          "day": "2026-11-01",
+          "minute": 660,
+          "teams": [
+            "Baltimore Ravens",
+            "Buffalo Bills"
+          ],
+          "title": "Baltimore Ravens at Buffalo Bills",
+          "url": "https://www.tvpassport.com/tv-listings/stations/cbs-kcnc-denver-co/1566/2026-11-01",
+          "checkedAt": "2026-10-23T01:02:30.873Z"
+        },
+        {
+          "network": "CBS",
+          "call": "KCNC",
+          "day": "2026-11-01",
+          "minute": 865,
+          "teams": [
+            "Kansas City Chiefs",
+            "Denver Broncos"
+          ],
+          "title": "Kansas City Chiefs at Denver Broncos",
+          "url": "https://www.tvpassport.com/tv-listings/stations/cbs-kcnc-denver-co/1566/2026-11-01",
+          "checkedAt": "2026-10-23T01:02:30.873Z"
         }
       ],
-      "successfulPages": 2,
+      "successfulPages": 3,
       "diagnostics": [
         {
-          "call": "KUSA",
+          "call": "KMGH",
+          "day": "2026-11-01",
+          "status": 200,
+          "parsed": 0,
+          "via": "direct"
+        },
+        {
+          "call": "KDVR",
           "day": "2026-11-01",
           "status": 200,
           "parsed": 1,
@@ -155,28 +195,21 @@
           "via": "direct"
         },
         {
-          "call": "KDVR",
+          "call": "KUSA",
           "day": "2026-11-01",
           "status": 200,
           "parsed": 1,
           "via": "direct"
         },
         {
-          "call": "KMGH",
-          "day": "2026-11-01",
-          "status": 200,
-          "parsed": 0,
-          "via": "direct"
-        },
-        {
           "call": "KCNC",
           "day": "2026-11-01",
           "status": 200,
-          "parsed": 0,
+          "parsed": 2,
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-10-22T22:46:51.972Z"
+      "checkedAt": "2026-10-23T01:02:30.873Z"
     }
   ]
 }
