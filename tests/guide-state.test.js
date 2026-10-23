@@ -64,3 +64,26 @@ test('per-row timestamps from partial published runs remain the confirmation sou
  const g=mergeVerification([game],report,now,{allowStale:true})[0];
  assert.equal(g.verifiedAt,prior.verifiedAt);assert.equal(access(g,undefined,now).verificationState,'last-confirmed');
 });
+
+test('source-backed station invalidations reject only an older same-station local claim',()=>{
+ const valid={station:prior.station,checkedAt:'2026-09-25T16:00Z',url:prior.sources[0].url};
+ const invalidated={...game,verificationInvalidations:[valid]};
+ assert.equal(retainConfirmedGames([invalidated],[prior],now)[0].local,'unknown');
+ for(const change of [{station:'KMGH · 7.1'},{checkedAt:'2026-09-20T00:00Z'},{checkedAt:'2026-09-28T00:00Z'},{checkedAt:'bad'},{url:'javascript:bad'}]){
+  assert.equal(retainConfirmedGames([{...game,verificationInvalidations:[{...valid,...change}]}],[prior],now)[0].local,'yes');
+ }
+ assert.equal(retainConfirmedGames([invalidated],[{...prior,local:'no',station:null}],now)[0].local,'no');
+});
+
+test('station invalidations survive partial refreshes but not a changed event identity',()=>{
+ const invalidation={station:prior.station,checkedAt:'2026-09-25T16:00Z',url:prior.sources[0].url};
+ const invalidated={...game,verificationInvalidations:[invalidation]};
+ const partial=retainConfirmedGames([game],[invalidated],now)[0];
+ assert.equal(partial.verificationInvalidations[0].checkedAt,invalidation.checkedAt);
+ assert.equal(retainConfirmedGames([partial],[prior],now)[0].local,'unknown');
+ const staleIncoming=retainConfirmedGames([{...prior,notes:'KCNC carries this matchup'}],[partial],now)[0];
+ assert.equal(staleIncoming.local,'unknown','old response cannot resurrect station claim');assert.equal(staleIncoming.notes,'');
+ const fresh={...prior,verifiedAt:'2026-09-27T15:00Z'};
+ assert.equal(retainConfirmedGames([fresh],[partial],now)[0].local,'yes','new confirmation supersedes older invalidation');
+ assert.equal(retainConfirmedGames([{...game,date:'2026-09-27T20:25Z'}],[invalidated],now)[0].verificationInvalidations,undefined);
+});

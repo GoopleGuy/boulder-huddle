@@ -14,6 +14,8 @@ GitHub's standard hosted runners are free for public repositories. Schedules are
 
 The updater identifies full local OTA broadcasts and competing regional Sunday assignments. ESPN supplies kickoff and broadcaster/service listings. The app distinguishes full-game access, RedZone look-ins, mobile/tablet access and unconfirmed access for your selected services.
 
+A confirmed out-of-market result is not a full-game viewing option. The collector also keeps complete station-programming snapshots: a fresh (under two hours), exact-station, Denver-time page can establish non-carriage only when explicit non-game programs cover the entire three-hour kickoff window without gaps, overlaps, NFL games or unknown placeholders. Partial or stale raw pages never create new negative confirmations; previously established game decisions retain their original timestamps. Source broadcaster aliases such as Fox/FOX and NFL Net/NFL Network are matched consistently without rewriting saved schedule signatures.
+
 It does not independently interpret every changing streaming entitlement or NFL+ exception. Unverified mobile/exclusive rights remain pending with links to official sources. NFL+ replays are not live access; RedZone is not a full out-of-market game. Check the official listing before kickoff.
 
 ## Run locally

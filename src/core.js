@@ -1,5 +1,13 @@
 import {SERVICE_LABELS,PROVIDERS} from './preferences.js';
 export const ZONE = 'America/Denver';
+// Keep source labels/signatures intact for saved evidence; canonicalize wherever
+// broadcaster identity controls fetching, matching or viewing options.
+export function canonicalNetwork(value) {
+  const name=String(value||'').trim();
+  if(/^nfl\s*(net|network)$/i.test(name))return 'NFL Network';
+  if(/^(fox|cbs|nbc|abc|espn|espn2)$/i.test(name))return name.toUpperCase();
+  return name;
+}
 export const STATIONS = {CBS: 'KCNC · 4.1', FOX: 'KDVR · 31.1', NBC: 'KUSA · 9.1', ABC: 'KMGH · 7.1'};
 export const DEFAULT_SERVICES = {...Object.fromEntries(Object.keys(SERVICE_LABELS).map(k=>[k,false])),ota:true, prime:true, netflix:true, nfl:true, redzone:true};
 export function localDate(date) {return new Intl.DateTimeFormat('en-CA',{timeZone:ZONE,year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date(date));}
@@ -19,7 +27,7 @@ export function normalizeScoreboard(data) {
     return {id:e.id,date:e.date,away:team('away'),home:team('home'),networks:[...new Set((c.broadcasts||[]).flatMap(b=>b.names||[]))],state:e.status?.type?.state||'pre',status:e.status?.type?.shortDetail||'',statusName:e.status?.type?.name||'',timeTbd:c.timeValid===false,venue:c.venue?.fullName||'',neutral:!!c.neutralSite,week:e.week?.number||data.week?.number,season:e.season?.year,seasonType:e.season?.type,local:'unknown',sources:[],verifiedAt:null};
   }).filter(Boolean).sort((a,b)=>Date.parse(a.date)-Date.parse(b.date));
 }
-export function isSundayAfternoon(g) {const hour=+mountain(g.date,{hour:'2-digit',hourCycle:'h23'});return mountain(g.date,{weekday:'short'})==='Sun' && hour>=11 && hour<17 && g.seasonType===2 && g.networks.some(n=>/^(CBS|FOX)$/i.test(n));}
+export function isSundayAfternoon(g) {const hour=+mountain(g.date,{hour:'2-digit',hourCycle:'h23'});return mountain(g.date,{weekday:'short'})==='Sun' && hour>=11 && hour<17 && g.seasonType===2 && g.networks.some(n=>['CBS','FOX'].includes(canonicalNetwork(n)));}
 export function freshVerification(g,now=Date.now()) {return !!g.verifiedAt && now-Date.parse(g.verifiedAt)<2*3600e3 && now>=Date.parse(g.verifiedAt);}
 // Retain source-backed confirmations for the same matchup, never for a flexed
 // kickoff, changed broadcaster, or canceled/postponed game. Freshness is separate.
@@ -33,7 +41,7 @@ export function confirmationLabel(g,now=Date.now()) {
   return confirmedVerification(g,now)&&!freshVerification(g,now)?'Last confirmed '+mountain(g.verifiedAt,{month:'short',day:'numeric',year:'numeric',hour:'numeric',minute:'2-digit'})+' MT; not newly verified.':'';
 }
 export function access(g,services=DEFAULT_SERVICES,now=Date.now()) {
-  const fresh=confirmedVerification(g,now),retained=confirmationLabel(g,now),nets=g.networks.map(x=>x.toLowerCase());
+  const fresh=confirmedVerification(g,now),retained=confirmationLabel(g,now),nets=g.networks.map(x=>canonicalNetwork(x).toLowerCase());
   if(unavailableGame(g))return {kind:'pending',label:/cancel/i.test((g.statusName||'')+' '+(g.status||''))?'Canceled':'Postponed / suspended',line:g.status||'Check the official schedule for a new kickoff.',detail:'Previous kickoff and viewing options no longer apply.',mobile:false,redzone:false,station:null,options:[]};
   const has=s=>nets.some(n=>n===s||n.includes(s));
   const sunday=isSundayAfternoon(g),station=fresh&&g.local==='yes'?g.station:null;

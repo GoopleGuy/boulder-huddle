@@ -46,3 +46,14 @@ test('empty listing scrape never stamps a new confirmation on retained rows',asy
  await updateListings({now,outputPath,log:()=>{},fetcher:schedule,fetchListings:async()=>({checkedAt:'2026-09-27T16:00Z',rows:[],successfulPages:0})});
  const feed=JSON.parse(await fs.readFile(outputPath,'utf8'));assert.equal(feed.slates[0].checkedAt,checkedAt);assert.ok(feed.slates[0].rows.every(r=>r.checkedAt===checkedAt));
 });
+
+test('updater persists removal of superseded named rows across later partial programming pages',async t=>{
+ const {outputPath,checkedAt}=await seeded(t),newTime='2026-09-27T16:00Z';
+ const page={call:'KCNC',callsign:'KCNC-TV',network:'CBS',day:'2026-09-27',timeZone:'America/Denver',url:row.url,checkedAt:newTime,programs:[{minute:660,duration:180,title:'SailGP Racing',teams:['','']}]};
+ await updateListings({now,outputPath,log:()=>{},fetcher:schedule,fetchListings:async games=>({checkedAt:newTime,rows:[],programPages:games.length?[page]:[],successfulPages:0})});
+ let feed=JSON.parse(await fs.readFile(outputPath,'utf8'));
+ assert.equal(feed.slates[0].rows.some(r=>r.call==='KCNC'),false);assert.equal(feed.slates[0].rows.find(r=>r.call==='KUSA').checkedAt,checkedAt);
+ const later={...page,checkedAt:'2026-09-27T17:00Z',programs:[{minute:660,duration:60,title:'SailGP Racing',teams:['','']}]};
+ await updateListings({now,outputPath,log:()=>{},fetcher:schedule,fetchListings:async games=>({checkedAt:later.checkedAt,rows:[],programPages:games.length?[later]:[],successfulPages:0})});
+ feed=JSON.parse(await fs.readFile(outputPath,'utf8'));assert.equal(feed.slates[0].rows.some(r=>r.call==='KCNC'),false);
+});

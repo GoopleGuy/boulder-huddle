@@ -13,6 +13,7 @@ function setup(t){
  t.mock.method(Date,'now',()=>time);t.mock.method(console,'warn',()=>{});
  const checkedAt=new Date(time).toISOString();
  const feed={schema:1,slates:[{signature:signature(raw),checkedAt,rows:[{call:'KCNC',network:'CBS',day:'2026-09-27',minute:660,teams:['Home','Away'],title:'Away at Home',url:'https://www.tvpassport.com/tv-listings/stations/cbs-kcnc-denver-co/1566/2026-09-27'}]}]};
+ feed.slates[0].programPages=[{call:'KCNC',callsign:'KCNC-TV',network:'CBS',day:'2026-09-27',timeZone:'America/Denver',url:feed.slates[0].rows[0].url,checkedAt,programs:[{minute:660,duration:180,title:'NFL Football',teams:['Home','Away']}]}];
  const rows=new Map();
  const DB={prepare(sql){let params;return {bind(...args){params=args;return this;},async first(){return rows.get(params[0])||null;},async run(){assert.match(sql,/INSERT INTO cache/);rows.set(params[0],{payload:params[1],expires:params[2]});return {meta:{changes:1}};}};}};
  const state={feed,raw,fail:null,backup:false,feedCalls:0,scrapeCalls:0};
@@ -151,4 +152,64 @@ test('a newer competing assignment wins even when an unrelated cached game has a
  let guide=await getGuide(f.env,start,f.fetcher);assert.deepEqual(guide.games.map(g=>g.local),['yes','yes','no']);
  f.advance(6*60000);f.state.feed.slates[0].rows[0].checkedAt=old;f.state.feed.slates[0].rows[1].checkedAt=middle;f.state.feed.slates[0].rows[1].teams=['C Home','C Away'];
  guide=await getGuide(f.env,start,f.fetcher);assert.deepEqual(guide.games.map(g=>g.local),['yes','no','yes']);assert.equal(guide.games[0].verifiedAt,latest);assert.equal(guide.games[1].verifiedAt,middle);assert.equal(guide.games[2].verifiedAt,middle);
+});
+
+async function programming(f){
+ const fs=await import('node:fs');
+ const {parseProgramPage}=await import('../worker/program-listings.js');
+ const {LOCAL_STATIONS}=await import('../worker/local-listings.js');
+ const html=fs.readFileSync(new URL('./fixtures/kcnc-2026-10-25.html',import.meta.url),'utf8').replaceAll('2026-10-25','2026-09-27');
+ return parseProgramPage(html,LOCAL_STATIONS[0],'2026-09-27',new Date(Date.now()).toISOString());
+}
+test('window-only published evidence passes through Worker selection/cache without a direct scrape',async t=>{
+ const f=setup(t);f.state.feed.slates[0].rows=[];f.state.feed.slates[0].programPages=[await programming(f)];
+ const guide=await getGuide(f.env,start,f.fetcher);assert.equal(guide.games[0].local,'no');assert.equal(guide.games[0].verifiedAt,f.checkedAt);assert.equal(f.state.scrapeCalls,0);
+ const stored=[...f.rows].find(([key])=>key.startsWith('keyless-local:'));assert.equal(JSON.parse(stored[1].payload).programPages.length,1);
+});
+test('expired raw programming cannot newly confirm, while established negatives survive failed refreshes',async t=>{
+ const f=setup(t);f.state.feed.slates[0].rows=[];f.state.feed.slates[0].programPages=[await programming(f)];
+ await getGuide(f.env,start,f.fetcher);f.advance(3*3600000);f.state.fail='http';
+ const retained=await getGuide(f.env,start,f.fetcher);assert.equal(retained.games[0].local,'no');assert.equal(retained.games[0].verifiedAt,f.checkedAt);assert.equal(access(retained.games[0]).verificationState,'last-confirmed');
+ f.rows.clear();f.state.fail=null;
+ const unconfirmed=await getGuide(f.env,start,f.fetcher);assert.equal(unconfirmed.games[0].local,'unknown');assert.equal(unconfirmed.games[0].verifiedAt,null);
+});
+test('new programming supersedes retained named access without old feed restoring it when raw pages age',async t=>{
+ const f=setup(t);await getGuide(f.env,start,f.fetcher);f.advance(6*60000);
+ f.state.feed.slates[0].programPages=[await programming(f)];
+ let guide=await getGuide(f.env,start,f.fetcher);assert.equal(guide.games[0].local,'no');const checkedAt=guide.games[0].verifiedAt;
+ f.advance(3*3600000);f.state.fail='http';
+ guide=await getGuide(f.env,start,f.fetcher);assert.equal(guide.games[0].local,'no');assert.equal(guide.games[0].verifiedAt,checkedAt);
+});
+
+test('legacy fresh named feed triggers programming upgrade without losing confirmations on source failure',async t=>{
+ const f=setup(t);delete f.state.feed.slates[0].programPages;
+ const guide=await getGuide(f.env,start,f.fetcher);assert.equal(guide.games[0].local,'yes');assert.equal(guide.games[0].verifiedAt,f.checkedAt);assert.ok(f.state.scrapeCalls>0);
+});
+
+test('Worker prunes superseded named rows and cold stale feeds cannot restore them',async t=>{
+ const f=setup(t);await getGuide(f.env,start,f.fetcher);f.advance(6*60000);
+ f.state.feed.slates[0].programPages=[await programming(f)];
+ await getGuide(f.env,start,f.fetcher);
+ const stored=[...f.rows].find(([key])=>key.startsWith('keyless-local:'));assert.equal(JSON.parse(stored[1].payload).rows.length,0);
+ f.advance(3*3600000);f.rows.clear();
+ const cold=await getGuide(f.env,start,f.fetcher);assert.equal(cold.games[0].local,'unknown');assert.equal(cold.games[0].verifiedAt,null);
+});
+
+test('historical contradiction invalidates warm older yes without newly confirming no',async t=>{
+ const f=setup(t),old=await getGuide(f.env,start,f.fetcher);f.advance(6*60000);
+ f.state.feed.slates[0].programPages=[await programming(f)];
+ f.advance(3*3600000);
+ const guide=await getGuide(f.env,start,f.fetcher);assert.equal(guide.games[0].local,'unknown');assert.equal(guide.games[0].verifiedAt,null);assert.equal(guide.games[0].verificationInvalidations.length,1);
+ const {reconcileGuide}=await import('../src/guide-state.js');
+ assert.equal(reconcileGuide(guide,old).games[0].local,'unknown','browser cache cannot restore the superseded yes');
+});
+
+test('direct collection accepts a valid programming-only page through the full Worker pipeline',async t=>{
+ const f=setup(t);delete f.env.LISTINGS_URL;
+ const direct=async(url,options)=>{
+  if(new URL(url).hostname.endsWith('espn.com'))return f.fetcher(url,options);
+  if(url.endsWith('/save_timezone'))return new Response('',{headers:{'set-cookie':'anonymous=fixture; Path=/'}});
+  return new Response('<script>const settings={timezone: "America/Denver"};</script><div data-listDateTime="2026-09-27 11:00:00" data-callsign="KCNC-TV" data-duration="180" data-showName="SailGP Racing" data-team1="" data-team2=""></div>');
+ };
+ const guide=await getGuide(f.env,start,direct);assert.equal(guide.games[0].local,'no');assert.equal(guide.games[0].verifiedAt,f.checkedAt);assert.equal(guide.games[0].station,null);
 });
