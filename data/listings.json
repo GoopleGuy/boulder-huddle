@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-11-19T00:27:50.766Z",
+  "generatedAt": "2026-11-19T07:58:43.520Z",
   "slates": [
     {
       "start": "2026-11-17",
@@ -18,7 +18,7 @@
           ],
           "title": "Arizona Cardinals at Kansas City Chiefs",
           "url": "https://www.tvpassport.com/tv-listings/stations/cbs-kcnc-denver-co/1566/2026-11-22",
-          "checkedAt": "2026-11-19T00:27:49.966Z"
+          "checkedAt": "2026-11-19T07:58:42.726Z"
         },
         {
           "network": "CBS",
@@ -31,20 +31,7 @@
           ],
           "title": "Las Vegas Raiders at Denver Broncos",
           "url": "https://www.tvpassport.com/tv-listings/stations/cbs-kcnc-denver-co/1566/2026-11-22",
-          "checkedAt": "2026-11-19T00:27:49.966Z"
-        },
-        {
-          "network": "FOX",
-          "call": "KDVR",
-          "day": "2026-11-22",
-          "minute": 660,
-          "teams": [
-            "New Orleans Saints",
-            "Chicago Bears"
-          ],
-          "title": "New Orleans Saints at Chicago Bears",
-          "url": "https://www.tvpassport.com/tv-listings/stations/fox-kdvr-denver-co-hd/6401/2026-11-22",
-          "checkedAt": "2026-11-19T00:27:49.905Z"
+          "checkedAt": "2026-11-19T07:58:42.726Z"
         },
         {
           "network": "NBC",
@@ -57,7 +44,20 @@
           ],
           "title": "Minnesota Vikings vs. San Francisco 49ers",
           "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-11-22",
-          "checkedAt": "2026-11-19T00:27:49.859Z"
+          "checkedAt": "2026-11-19T07:58:42.673Z"
+        },
+        {
+          "network": "FOX",
+          "call": "KDVR",
+          "day": "2026-11-22",
+          "minute": 660,
+          "teams": [
+            "New Orleans Saints",
+            "Chicago Bears"
+          ],
+          "title": "New Orleans Saints at Chicago Bears",
+          "url": "https://www.tvpassport.com/tv-listings/stations/fox-kdvr-denver-co-hd/6401/2026-11-22",
+          "checkedAt": "2026-11-19T07:58:42.543Z"
         }
       ],
       "programPages": [
@@ -68,7 +68,7 @@
           "day": "2026-11-22",
           "timeZone": "America/Denver",
           "url": "https://www.tvpassport.com/tv-listings/stations/cbs-kcnc-denver-co/1566/2026-11-22",
-          "checkedAt": "2026-11-19T00:27:49.966Z",
+          "checkedAt": "2026-11-19T07:58:42.726Z",
           "programs": [
             {
               "minute": 360,
@@ -226,13 +226,550 @@
           ]
         },
         {
+          "call": "KUSA",
+          "network": "NBC",
+          "callsign": "KUSA",
+          "day": "2026-11-22",
+          "timeZone": "America/Denver",
+          "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-11-22",
+          "checkedAt": "2026-11-19T07:58:42.673Z",
+          "programs": [
+            {
+              "minute": 360,
+              "duration": 60,
+              "title": "Sunday Today With Willie Geist",
+              "teams": [
+                "",
+                ""
+              ]
+            },
+            {
+              "minute": 420,
+              "duration": 120,
+              "title": "9News at 7AM Sunday",
+              "teams": [
+                "",
+                ""
+              ]
+            },
+            {
+              "minute": 540,
+              "duration": 60,
+              "title": "Broncos Game Day Live",
+              "teams": [
+                "",
+                ""
+              ]
+            },
+            {
+              "minute": 600,
+              "duration": 30,
+              "title": "Colorado Money Matters",
+              "teams": [
+                "",
+                ""
+              ]
+            },
+            {
+              "minute": 630,
+              "duration": 30,
+              "title": "Paid Programming",
+              "teams": [
+                "",
+                ""
+              ]
+            },
+            {
+              "minute": 660,
+              "duration": 180,
+              "title": "2026 CME Group Tour Championship",
+              "teams": [
+                "",
+                ""
+              ]
+            },
+            {
+              "minute": 840,
+              "duration": 120,
+              "title": "ISU Grand Prix of Figure Skating",
+              "teams": [
+                "",
+                ""
+              ]
+            },
+            {
+              "minute": 960,
+              "duration": 30,
+              "title": "Colorado Money Matters",
+              "teams": [
+                "",
+                ""
+              ]
+            },
+            {
+              "minute": 990,
+              "duration": 30,
+              "title": "NBC Nightly News With Tom Llamas",
+              "teams": [
+                "",
+                ""
+              ]
+            },
+            {
+              "minute": 1020,
+              "duration": 75,
+              "title": "Football Night in America",
+              "teams": [
+                "",
+                ""
+              ]
+            },
+            {
+              "minute": 1095,
+              "duration": 195,
+              "title": "NFL Football",
+              "teams": [
+                "Minnesota Vikings",
+                "San Francisco 49ers"
+              ]
+            },
+            {
+              "minute": 1290,
+              "duration": 30,
+              "title": "9News at 9:30PM Special Edition",
+              "teams": [
+                "",
+                ""
+              ]
+            },
+            {
+              "minute": 1320,
+              "duration": 30,
+              "title": "9News at 10PM",
+              "teams": [
+                "",
+                ""
+              ]
+            },
+            {
+              "minute": 1350,
+              "duration": 30,
+              "title": "9News at 10:30PM",
+              "teams": [
+                "",
+                ""
+              ]
+            },
+            {
+              "minute": 1380,
+              "duration": 60,
+              "title": "Meet the Press",
+              "teams": [
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "call": "KMGH",
+          "network": "ABC",
+          "callsign": "KMGH-HD",
+          "day": "2026-11-22",
+          "timeZone": "America/Denver",
+          "url": "https://www.tvpassport.com/tv-listings/stations/abc-kmgh-denver-co-hd/5723/2026-11-22",
+          "checkedAt": "2026-11-19T07:58:42.633Z",
+          "programs": [
+            {
+              "minute": 360,
+              "duration": 60,
+              "title": "Good Morning America",
+              "teams": [
+                "",
+                ""
+              ]
+            },
+            {
+              "minute": 420,
+              "duration": 60,
+              "title": "Denver7 News Sunday at 7AM",
+              "teams": [
+                "",
+                ""
+              ]
+            },
+            {
+              "minute": 480,
+              "duration": 60,
+              "title": "This Week With George Stephanopoulos",
+              "teams": [
+                "",
+                ""
+              ]
+            },
+            {
+              "minute": 540,
+              "duration": 60,
+              "title": "Denver7 News Sunday at 9AM",
+              "teams": [
+                "",
+                ""
+              ]
+            },
+            {
+              "minute": 600,
+              "duration": 30,
+              "title": "Joel Osteen",
+              "teams": [
+                "",
+                ""
+              ]
+            },
+            {
+              "minute": 630,
+              "duration": 30,
+              "title": "Colorado Money Matters",
+              "teams": [
+                "",
+                ""
+              ]
+            },
+            {
+              "minute": 660,
+              "duration": 90,
+              "title": "Movie",
+              "teams": [
+                "",
+                ""
+              ]
+            },
+            {
+              "minute": 750,
+              "duration": 150,
+              "title": "Spanish Primera Division Soccer",
+              "teams": [
+                "",
+                ""
+              ]
+            },
+            {
+              "minute": 900,
+              "duration": 60,
+              "title": "To Be Announced",
+              "teams": [
+                "",
+                ""
+              ]
+            },
+            {
+              "minute": 960,
+              "duration": 30,
+              "title": "Colorado Money Matters",
+              "teams": [
+                "",
+                ""
+              ]
+            },
+            {
+              "minute": 990,
+              "duration": 30,
+              "title": "ABC World News Tonight With David Muir",
+              "teams": [
+                "",
+                ""
+              ]
+            },
+            {
+              "minute": 1020,
+              "duration": 30,
+              "title": "Denver7 News at 5PM",
+              "teams": [
+                "",
+                ""
+              ]
+            },
+            {
+              "minute": 1050,
+              "duration": 30,
+              "title": "Real Talk with Denver7 and CPR News",
+              "teams": [
+                "",
+                ""
+              ]
+            },
+            {
+              "minute": 1080,
+              "duration": 60,
+              "title": "America's Funniest Home Videos",
+              "teams": [
+                "",
+                ""
+              ]
+            },
+            {
+              "minute": 1140,
+              "duration": 60,
+              "title": "America's Funniest Home Videos",
+              "teams": [
+                "",
+                ""
+              ]
+            },
+            {
+              "minute": 1200,
+              "duration": 120,
+              "title": "Movie",
+              "teams": [
+                "",
+                ""
+              ]
+            },
+            {
+              "minute": 1320,
+              "duration": 35,
+              "title": "Denver7 News at 10PM",
+              "teams": [
+                "",
+                ""
+              ]
+            },
+            {
+              "minute": 1355,
+              "duration": 25,
+              "title": "Denver7 News at 10PM Late",
+              "teams": [
+                "",
+                ""
+              ]
+            },
+            {
+              "minute": 1380,
+              "duration": 60,
+              "title": "The Rookie",
+              "teams": [
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "call": "KMGH",
+          "network": "ABC",
+          "callsign": "KMGH-HD",
+          "day": "2026-11-23",
+          "timeZone": "America/Denver",
+          "url": "https://www.tvpassport.com/tv-listings/stations/abc-kmgh-denver-co-hd/5723/2026-11-23",
+          "checkedAt": "2026-11-19T07:58:42.583Z",
+          "programs": [
+            {
+              "minute": 360,
+              "duration": 60,
+              "title": "Denver7 News at 6AM",
+              "teams": [
+                "",
+                ""
+              ]
+            },
+            {
+              "minute": 420,
+              "duration": 120,
+              "title": "Good Morning America",
+              "teams": [
+                "",
+                ""
+              ]
+            },
+            {
+              "minute": 540,
+              "duration": 60,
+              "title": "Live with Kelly and Mark",
+              "teams": [
+                "",
+                ""
+              ]
+            },
+            {
+              "minute": 600,
+              "duration": 60,
+              "title": "The View",
+              "teams": [
+                "",
+                ""
+              ]
+            },
+            {
+              "minute": 660,
+              "duration": 35,
+              "title": "Denver7 News at 11AM",
+              "teams": [
+                "",
+                ""
+              ]
+            },
+            {
+              "minute": 695,
+              "duration": 25,
+              "title": "Mile High Living",
+              "teams": [
+                "",
+                ""
+              ]
+            },
+            {
+              "minute": 720,
+              "duration": 60,
+              "title": "GMA3",
+              "teams": [
+                "",
+                ""
+              ]
+            },
+            {
+              "minute": 780,
+              "duration": 60,
+              "title": "General Hospital",
+              "teams": [
+                "",
+                ""
+              ]
+            },
+            {
+              "minute": 840,
+              "duration": 30,
+              "title": "The Champion's Edge with Bonnie Bernstein",
+              "teams": [
+                "",
+                ""
+              ]
+            },
+            {
+              "minute": 870,
+              "duration": 30,
+              "title": "Scripps News",
+              "teams": [
+                "",
+                ""
+              ]
+            },
+            {
+              "minute": 900,
+              "duration": 30,
+              "title": "Family Feud",
+              "teams": [
+                "",
+                ""
+              ]
+            },
+            {
+              "minute": 930,
+              "duration": 30,
+              "title": "Family Feud",
+              "teams": [
+                "",
+                ""
+              ]
+            },
+            {
+              "minute": 960,
+              "duration": 60,
+              "title": "Denver7 News at 4PM",
+              "teams": [
+                "",
+                ""
+              ]
+            },
+            {
+              "minute": 1020,
+              "duration": 30,
+              "title": "Denver7 News at 5PM",
+              "teams": [
+                "",
+                ""
+              ]
+            },
+            {
+              "minute": 1050,
+              "duration": 30,
+              "title": "ABC World News Tonight With David Muir",
+              "teams": [
+                "",
+                ""
+              ]
+            },
+            {
+              "minute": 1080,
+              "duration": 30,
+              "title": "Denver7 News at 6PM",
+              "teams": [
+                "",
+                ""
+              ]
+            },
+            {
+              "minute": 1110,
+              "duration": 30,
+              "title": "Denver 7 News at 6:30PM",
+              "teams": [
+                "",
+                ""
+              ]
+            },
+            {
+              "minute": 1140,
+              "duration": 120,
+              "title": "Truth and Lies: The Accused",
+              "teams": [
+                "",
+                ""
+              ]
+            },
+            {
+              "minute": 1260,
+              "duration": 60,
+              "title": "High Potential",
+              "teams": [
+                "",
+                ""
+              ]
+            },
+            {
+              "minute": 1320,
+              "duration": 35,
+              "title": "Denver7 News at 10PM",
+              "teams": [
+                "",
+                ""
+              ]
+            },
+            {
+              "minute": 1355,
+              "duration": 62,
+              "title": "Jimmy Kimmel Live!",
+              "teams": [
+                "",
+                ""
+              ]
+            },
+            {
+              "minute": 1417,
+              "duration": 29,
+              "title": "Nightline",
+              "teams": [
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        {
           "call": "KDVR",
           "network": "FOX",
           "callsign": "KDVR-HD",
           "day": "2026-11-22",
           "timeZone": "America/Denver",
           "url": "https://www.tvpassport.com/tv-listings/stations/fox-kdvr-denver-co-hd/6401/2026-11-22",
-          "checkedAt": "2026-11-19T00:27:49.905Z",
+          "checkedAt": "2026-11-19T07:58:42.543Z",
           "programs": [
             {
               "minute": 360,
@@ -460,547 +997,18 @@
               ]
             }
           ]
-        },
-        {
-          "call": "KUSA",
-          "network": "NBC",
-          "callsign": "KUSA",
-          "day": "2026-11-22",
-          "timeZone": "America/Denver",
-          "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-11-22",
-          "checkedAt": "2026-11-19T00:27:49.859Z",
-          "programs": [
-            {
-              "minute": 360,
-              "duration": 60,
-              "title": "Sunday Today With Willie Geist",
-              "teams": [
-                "",
-                ""
-              ]
-            },
-            {
-              "minute": 420,
-              "duration": 120,
-              "title": "9News at 7AM Sunday",
-              "teams": [
-                "",
-                ""
-              ]
-            },
-            {
-              "minute": 540,
-              "duration": 60,
-              "title": "Broncos Game Day Live",
-              "teams": [
-                "",
-                ""
-              ]
-            },
-            {
-              "minute": 600,
-              "duration": 30,
-              "title": "Colorado Money Matters",
-              "teams": [
-                "",
-                ""
-              ]
-            },
-            {
-              "minute": 630,
-              "duration": 30,
-              "title": "Paid Programming",
-              "teams": [
-                "",
-                ""
-              ]
-            },
-            {
-              "minute": 660,
-              "duration": 180,
-              "title": "2026 CME Group Tour Championship",
-              "teams": [
-                "",
-                ""
-              ]
-            },
-            {
-              "minute": 840,
-              "duration": 120,
-              "title": "ISU Grand Prix of Figure Skating",
-              "teams": [
-                "",
-                ""
-              ]
-            },
-            {
-              "minute": 960,
-              "duration": 30,
-              "title": "Colorado Money Matters",
-              "teams": [
-                "",
-                ""
-              ]
-            },
-            {
-              "minute": 990,
-              "duration": 30,
-              "title": "NBC Nightly News With Tom Llamas",
-              "teams": [
-                "",
-                ""
-              ]
-            },
-            {
-              "minute": 1020,
-              "duration": 75,
-              "title": "Football Night in America",
-              "teams": [
-                "",
-                ""
-              ]
-            },
-            {
-              "minute": 1095,
-              "duration": 195,
-              "title": "NFL Football",
-              "teams": [
-                "Minnesota Vikings",
-                "San Francisco 49ers"
-              ]
-            },
-            {
-              "minute": 1290,
-              "duration": 30,
-              "title": "9News at 9:30PM Special Edition",
-              "teams": [
-                "",
-                ""
-              ]
-            },
-            {
-              "minute": 1320,
-              "duration": 30,
-              "title": "9News at 10PM",
-              "teams": [
-                "",
-                ""
-              ]
-            },
-            {
-              "minute": 1350,
-              "duration": 30,
-              "title": "9News at 10:30PM",
-              "teams": [
-                "",
-                ""
-              ]
-            },
-            {
-              "minute": 1380,
-              "duration": 60,
-              "title": "Meet the Press",
-              "teams": [
-                "",
-                ""
-              ]
-            }
-          ]
-        },
-        {
-          "call": "KMGH",
-          "network": "ABC",
-          "callsign": "KMGH-HD",
-          "day": "2026-11-22",
-          "timeZone": "America/Denver",
-          "url": "https://www.tvpassport.com/tv-listings/stations/abc-kmgh-denver-co-hd/5723/2026-11-22",
-          "checkedAt": "2026-11-19T00:27:49.780Z",
-          "programs": [
-            {
-              "minute": 360,
-              "duration": 60,
-              "title": "Good Morning America",
-              "teams": [
-                "",
-                ""
-              ]
-            },
-            {
-              "minute": 420,
-              "duration": 60,
-              "title": "Denver7 News Sunday at 7AM",
-              "teams": [
-                "",
-                ""
-              ]
-            },
-            {
-              "minute": 480,
-              "duration": 60,
-              "title": "This Week With George Stephanopoulos",
-              "teams": [
-                "",
-                ""
-              ]
-            },
-            {
-              "minute": 540,
-              "duration": 60,
-              "title": "Denver7 News Sunday at 9AM",
-              "teams": [
-                "",
-                ""
-              ]
-            },
-            {
-              "minute": 600,
-              "duration": 30,
-              "title": "Joel Osteen",
-              "teams": [
-                "",
-                ""
-              ]
-            },
-            {
-              "minute": 630,
-              "duration": 30,
-              "title": "Colorado Money Matters",
-              "teams": [
-                "",
-                ""
-              ]
-            },
-            {
-              "minute": 660,
-              "duration": 90,
-              "title": "Movie",
-              "teams": [
-                "",
-                ""
-              ]
-            },
-            {
-              "minute": 750,
-              "duration": 150,
-              "title": "Spanish Primera Division Soccer",
-              "teams": [
-                "",
-                ""
-              ]
-            },
-            {
-              "minute": 900,
-              "duration": 60,
-              "title": "To Be Announced",
-              "teams": [
-                "",
-                ""
-              ]
-            },
-            {
-              "minute": 960,
-              "duration": 30,
-              "title": "Colorado Money Matters",
-              "teams": [
-                "",
-                ""
-              ]
-            },
-            {
-              "minute": 990,
-              "duration": 30,
-              "title": "ABC World News Tonight With David Muir",
-              "teams": [
-                "",
-                ""
-              ]
-            },
-            {
-              "minute": 1020,
-              "duration": 30,
-              "title": "Denver7 News at 5PM",
-              "teams": [
-                "",
-                ""
-              ]
-            },
-            {
-              "minute": 1050,
-              "duration": 30,
-              "title": "Real Talk with Denver7 and CPR News",
-              "teams": [
-                "",
-                ""
-              ]
-            },
-            {
-              "minute": 1080,
-              "duration": 60,
-              "title": "America's Funniest Home Videos",
-              "teams": [
-                "",
-                ""
-              ]
-            },
-            {
-              "minute": 1140,
-              "duration": 60,
-              "title": "America's Funniest Home Videos",
-              "teams": [
-                "",
-                ""
-              ]
-            },
-            {
-              "minute": 1200,
-              "duration": 120,
-              "title": "Movie",
-              "teams": [
-                "",
-                ""
-              ]
-            },
-            {
-              "minute": 1320,
-              "duration": 35,
-              "title": "Denver7 News at 10PM",
-              "teams": [
-                "",
-                ""
-              ]
-            },
-            {
-              "minute": 1355,
-              "duration": 25,
-              "title": "Denver7 News at 10PM Late",
-              "teams": [
-                "",
-                ""
-              ]
-            },
-            {
-              "minute": 1380,
-              "duration": 60,
-              "title": "The Rookie",
-              "teams": [
-                "",
-                ""
-              ]
-            }
-          ]
-        },
-        {
-          "call": "KMGH",
-          "network": "ABC",
-          "callsign": "KMGH-HD",
-          "day": "2026-11-23",
-          "timeZone": "America/Denver",
-          "url": "https://www.tvpassport.com/tv-listings/stations/abc-kmgh-denver-co-hd/5723/2026-11-23",
-          "checkedAt": "2026-11-19T00:27:49.735Z",
-          "programs": [
-            {
-              "minute": 360,
-              "duration": 60,
-              "title": "Denver7 News at 6AM",
-              "teams": [
-                "",
-                ""
-              ]
-            },
-            {
-              "minute": 420,
-              "duration": 120,
-              "title": "Good Morning America",
-              "teams": [
-                "",
-                ""
-              ]
-            },
-            {
-              "minute": 540,
-              "duration": 60,
-              "title": "Live with Kelly and Mark",
-              "teams": [
-                "",
-                ""
-              ]
-            },
-            {
-              "minute": 600,
-              "duration": 60,
-              "title": "The View",
-              "teams": [
-                "",
-                ""
-              ]
-            },
-            {
-              "minute": 660,
-              "duration": 35,
-              "title": "Denver7 News at 11AM",
-              "teams": [
-                "",
-                ""
-              ]
-            },
-            {
-              "minute": 695,
-              "duration": 25,
-              "title": "Mile High Living",
-              "teams": [
-                "",
-                ""
-              ]
-            },
-            {
-              "minute": 720,
-              "duration": 60,
-              "title": "GMA3",
-              "teams": [
-                "",
-                ""
-              ]
-            },
-            {
-              "minute": 780,
-              "duration": 60,
-              "title": "General Hospital",
-              "teams": [
-                "",
-                ""
-              ]
-            },
-            {
-              "minute": 840,
-              "duration": 30,
-              "title": "The Champion's Edge with Bonnie Bernstein",
-              "teams": [
-                "",
-                ""
-              ]
-            },
-            {
-              "minute": 870,
-              "duration": 30,
-              "title": "Scripps News",
-              "teams": [
-                "",
-                ""
-              ]
-            },
-            {
-              "minute": 900,
-              "duration": 30,
-              "title": "Family Feud",
-              "teams": [
-                "",
-                ""
-              ]
-            },
-            {
-              "minute": 930,
-              "duration": 30,
-              "title": "Family Feud",
-              "teams": [
-                "",
-                ""
-              ]
-            },
-            {
-              "minute": 960,
-              "duration": 60,
-              "title": "Denver7 News at 4PM",
-              "teams": [
-                "",
-                ""
-              ]
-            },
-            {
-              "minute": 1020,
-              "duration": 30,
-              "title": "Denver7 News at 5PM",
-              "teams": [
-                "",
-                ""
-              ]
-            },
-            {
-              "minute": 1050,
-              "duration": 30,
-              "title": "ABC World News Tonight With David Muir",
-              "teams": [
-                "",
-                ""
-              ]
-            },
-            {
-              "minute": 1080,
-              "duration": 30,
-              "title": "Denver7 News at 6PM",
-              "teams": [
-                "",
-                ""
-              ]
-            },
-            {
-              "minute": 1110,
-              "duration": 30,
-              "title": "Denver 7 News at 6:30PM",
-              "teams": [
-                "",
-                ""
-              ]
-            },
-            {
-              "minute": 1140,
-              "duration": 120,
-              "title": "Truth and Lies: The Accused",
-              "teams": [
-                "",
-                ""
-              ]
-            },
-            {
-              "minute": 1260,
-              "duration": 60,
-              "title": "High Potential",
-              "teams": [
-                "",
-                ""
-              ]
-            },
-            {
-              "minute": 1320,
-              "duration": 35,
-              "title": "Denver7 News at 10PM",
-              "teams": [
-                "",
-                ""
-              ]
-            },
-            {
-              "minute": 1355,
-              "duration": 62,
-              "title": "Jimmy Kimmel Live!",
-              "teams": [
-                "",
-                ""
-              ]
-            },
-            {
-              "minute": 1417,
-              "duration": 29,
-              "title": "Nightline",
-              "teams": [
-                "",
-                ""
-              ]
-            }
-          ]
         }
       ],
       "successfulPages": 3,
       "diagnostics": [
+        {
+          "call": "KDVR",
+          "day": "2026-11-22",
+          "status": 200,
+          "parsed": 1,
+          "programs": 25,
+          "via": "direct"
+        },
         {
           "call": "KMGH",
           "day": "2026-11-23",
@@ -1026,14 +1034,6 @@
           "via": "direct"
         },
         {
-          "call": "KDVR",
-          "day": "2026-11-22",
-          "status": 200,
-          "parsed": 1,
-          "programs": 25,
-          "via": "direct"
-        },
-        {
           "call": "KCNC",
           "day": "2026-11-22",
           "status": 200,
@@ -1042,7 +1042,7 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-11-19T00:27:49.735Z"
+      "checkedAt": "2026-11-19T07:58:42.543Z"
     },
     {
       "start": "2026-11-24",
@@ -1060,7 +1060,7 @@
           ],
           "title": "Chicago Bears at Detroit Lions",
           "url": "https://www.tvpassport.com/tv-listings/stations/cbs-kcnc-denver-co/1566/2026-11-26",
-          "checkedAt": "2026-11-19T00:27:50.756Z"
+          "checkedAt": "2026-11-19T07:58:43.510Z"
         },
         {
           "network": "FOX",
@@ -1073,7 +1073,7 @@
           ],
           "title": "Philadelphia Eagles at Dallas Cowboys",
           "url": "https://www.tvpassport.com/tv-listings/stations/fox-kdvr-denver-co-hd/6401/2026-11-26",
-          "checkedAt": "2026-11-19T00:27:50.717Z"
+          "checkedAt": "2026-11-19T07:58:43.465Z"
         },
         {
           "network": "NBC",
@@ -1086,7 +1086,7 @@
           ],
           "title": "Kansas City Chiefs at Buffalo Bills",
           "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-11-26",
-          "checkedAt": "2026-11-19T00:27:50.671Z"
+          "checkedAt": "2026-11-19T07:58:43.421Z"
         },
         {
           "network": "ABC",
@@ -1099,7 +1099,7 @@
           ],
           "title": "Denver Broncos at Pittsburgh Steelers",
           "url": "https://www.tvpassport.com/tv-listings/stations/abc-kmgh-denver-co-hd/5723/2026-11-27",
-          "checkedAt": "2026-11-19T00:27:50.474Z"
+          "checkedAt": "2026-11-19T07:58:43.228Z"
         },
         {
           "network": "NBC",
@@ -1107,12 +1107,12 @@
           "day": "2026-11-29",
           "minute": 1095,
           "teams": [
-            "New England Patriots",
-            "Los Angeles Chargers"
+            "Las Vegas Raiders",
+            "Cleveland Browns"
           ],
-          "title": "New England Patriots at Los Angeles Chargers",
+          "title": "Las Vegas Raiders at Cleveland Browns",
           "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-11-29",
-          "checkedAt": "2026-11-19T00:27:50.411Z"
+          "checkedAt": "2026-11-19T07:58:43.068Z"
         }
       ],
       "programPages": [
@@ -1123,7 +1123,7 @@
           "day": "2026-11-26",
           "timeZone": "America/Denver",
           "url": "https://www.tvpassport.com/tv-listings/stations/cbs-kcnc-denver-co/1566/2026-11-26",
-          "checkedAt": "2026-11-19T00:27:50.756Z",
+          "checkedAt": "2026-11-19T07:58:43.510Z",
           "programs": [
             {
               "minute": 300,
@@ -1287,7 +1287,7 @@
           "day": "2026-11-26",
           "timeZone": "America/Denver",
           "url": "https://www.tvpassport.com/tv-listings/stations/fox-kdvr-denver-co-hd/6401/2026-11-26",
-          "checkedAt": "2026-11-19T00:27:50.717Z",
+          "checkedAt": "2026-11-19T07:58:43.465Z",
           "programs": [
             {
               "minute": 360,
@@ -1487,7 +1487,7 @@
           "day": "2026-11-26",
           "timeZone": "America/Denver",
           "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-11-26",
-          "checkedAt": "2026-11-19T00:27:50.671Z",
+          "checkedAt": "2026-11-19T07:58:43.421Z",
           "programs": [
             {
               "minute": 360,
@@ -1606,7 +1606,7 @@
           "day": "2026-11-27",
           "timeZone": "America/Denver",
           "url": "https://www.tvpassport.com/tv-listings/stations/cbs-kcnc-denver-co/1566/2026-11-27",
-          "checkedAt": "2026-11-19T00:27:50.621Z",
+          "checkedAt": "2026-11-19T07:58:43.374Z",
           "programs": [
             {
               "minute": 360,
@@ -1797,7 +1797,7 @@
           "day": "2026-11-27",
           "timeZone": "America/Denver",
           "url": "https://www.tvpassport.com/tv-listings/stations/fox-kdvr-denver-co-hd/6401/2026-11-27",
-          "checkedAt": "2026-11-19T00:27:50.577Z",
+          "checkedAt": "2026-11-19T07:58:43.334Z",
           "programs": [
             {
               "minute": 360,
@@ -1952,7 +1952,7 @@
           "day": "2026-11-27",
           "timeZone": "America/Denver",
           "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-11-27",
-          "checkedAt": "2026-11-19T00:27:50.527Z",
+          "checkedAt": "2026-11-19T07:58:43.276Z",
           "programs": [
             {
               "minute": 360,
@@ -2125,7 +2125,7 @@
           "day": "2026-11-27",
           "timeZone": "America/Denver",
           "url": "https://www.tvpassport.com/tv-listings/stations/abc-kmgh-denver-co-hd/5723/2026-11-27",
-          "checkedAt": "2026-11-19T00:27:50.474Z",
+          "checkedAt": "2026-11-19T07:58:43.228Z",
           "programs": [
             {
               "minute": 360,
@@ -2247,168 +2247,13 @@
           ]
         },
         {
-          "call": "KUSA",
-          "network": "NBC",
-          "callsign": "KUSA",
-          "day": "2026-11-29",
-          "timeZone": "America/Denver",
-          "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-11-29",
-          "checkedAt": "2026-11-19T00:27:50.411Z",
-          "programs": [
-            {
-              "minute": 360,
-              "duration": 60,
-              "title": "Sunday Today With Willie Geist",
-              "teams": [
-                "",
-                ""
-              ]
-            },
-            {
-              "minute": 420,
-              "duration": 120,
-              "title": "9News at 7AM Sunday",
-              "teams": [
-                "",
-                ""
-              ]
-            },
-            {
-              "minute": 540,
-              "duration": 60,
-              "title": "Broncos Game Day Live",
-              "teams": [
-                "",
-                ""
-              ]
-            },
-            {
-              "minute": 600,
-              "duration": 30,
-              "title": "Colorado Money Matters",
-              "teams": [
-                "",
-                ""
-              ]
-            },
-            {
-              "minute": 630,
-              "duration": 30,
-              "title": "Paid Programming",
-              "teams": [
-                "",
-                ""
-              ]
-            },
-            {
-              "minute": 660,
-              "duration": 120,
-              "title": "FIS Alpine Skiing",
-              "teams": [
-                "",
-                ""
-              ]
-            },
-            {
-              "minute": 780,
-              "duration": 60,
-              "title": "2026 Incredible Dog Challenge",
-              "teams": [
-                "",
-                ""
-              ]
-            },
-            {
-              "minute": 840,
-              "duration": 120,
-              "title": "The National Dog Show",
-              "teams": [
-                "",
-                ""
-              ]
-            },
-            {
-              "minute": 960,
-              "duration": 30,
-              "title": "Colorado Money Matters",
-              "teams": [
-                "",
-                ""
-              ]
-            },
-            {
-              "minute": 990,
-              "duration": 30,
-              "title": "NBC Nightly News With Tom Llamas",
-              "teams": [
-                "",
-                ""
-              ]
-            },
-            {
-              "minute": 1020,
-              "duration": 75,
-              "title": "Football Night in America",
-              "teams": [
-                "",
-                ""
-              ]
-            },
-            {
-              "minute": 1095,
-              "duration": 195,
-              "title": "NFL Football",
-              "teams": [
-                "New England Patriots",
-                "Los Angeles Chargers"
-              ]
-            },
-            {
-              "minute": 1290,
-              "duration": 30,
-              "title": "9News at 9:30PM Special Edition",
-              "teams": [
-                "",
-                ""
-              ]
-            },
-            {
-              "minute": 1320,
-              "duration": 30,
-              "title": "9News at 10PM",
-              "teams": [
-                "",
-                ""
-              ]
-            },
-            {
-              "minute": 1350,
-              "duration": 30,
-              "title": "9News at 10:30PM",
-              "teams": [
-                "",
-                ""
-              ]
-            },
-            {
-              "minute": 1380,
-              "duration": 60,
-              "title": "Meet the Press",
-              "teams": [
-                "",
-                ""
-              ]
-            }
-          ]
-        },
-        {
           "call": "KDVR",
           "network": "FOX",
           "callsign": "KDVR-HD",
           "day": "2026-11-29",
           "timeZone": "America/Denver",
           "url": "https://www.tvpassport.com/tv-listings/stations/fox-kdvr-denver-co-hd/6401/2026-11-29",
-          "checkedAt": "2026-11-19T00:27:50.365Z",
+          "checkedAt": "2026-11-19T07:58:43.182Z",
           "programs": [
             {
               "minute": 360,
@@ -2599,7 +2444,7 @@
           "day": "2026-11-30",
           "timeZone": "America/Denver",
           "url": "https://www.tvpassport.com/tv-listings/stations/abc-kmgh-denver-co-hd/5723/2026-11-30",
-          "checkedAt": "2026-11-19T00:27:50.311Z",
+          "checkedAt": "2026-11-19T07:58:43.144Z",
           "programs": [
             {
               "minute": 360,
@@ -2808,7 +2653,7 @@
           "day": "2026-11-29",
           "timeZone": "America/Denver",
           "url": "https://www.tvpassport.com/tv-listings/stations/cbs-kcnc-denver-co/1566/2026-11-29",
-          "checkedAt": "2026-11-19T00:27:50.265Z",
+          "checkedAt": "2026-11-19T07:58:43.105Z",
           "programs": [
             {
               "minute": 360,
@@ -2991,10 +2836,173 @@
               ]
             }
           ]
+        },
+        {
+          "call": "KUSA",
+          "network": "NBC",
+          "callsign": "KUSA",
+          "day": "2026-11-29",
+          "timeZone": "America/Denver",
+          "url": "https://www.tvpassport.com/tv-listings/stations/nbc-kusa-denver-co/1569/2026-11-29",
+          "checkedAt": "2026-11-19T07:58:43.068Z",
+          "programs": [
+            {
+              "minute": 360,
+              "duration": 60,
+              "title": "Sunday Today With Willie Geist",
+              "teams": [
+                "",
+                ""
+              ]
+            },
+            {
+              "minute": 420,
+              "duration": 120,
+              "title": "9News at 7AM Sunday",
+              "teams": [
+                "",
+                ""
+              ]
+            },
+            {
+              "minute": 540,
+              "duration": 60,
+              "title": "Broncos Game Day Live",
+              "teams": [
+                "",
+                ""
+              ]
+            },
+            {
+              "minute": 600,
+              "duration": 30,
+              "title": "Colorado Money Matters",
+              "teams": [
+                "",
+                ""
+              ]
+            },
+            {
+              "minute": 630,
+              "duration": 30,
+              "title": "Paid Programming",
+              "teams": [
+                "",
+                ""
+              ]
+            },
+            {
+              "minute": 660,
+              "duration": 120,
+              "title": "FIS Alpine Skiing",
+              "teams": [
+                "",
+                ""
+              ]
+            },
+            {
+              "minute": 780,
+              "duration": 60,
+              "title": "2026 Incredible Dog Challenge",
+              "teams": [
+                "",
+                ""
+              ]
+            },
+            {
+              "minute": 840,
+              "duration": 120,
+              "title": "The National Dog Show",
+              "teams": [
+                "",
+                ""
+              ]
+            },
+            {
+              "minute": 960,
+              "duration": 30,
+              "title": "Colorado Money Matters",
+              "teams": [
+                "",
+                ""
+              ]
+            },
+            {
+              "minute": 990,
+              "duration": 30,
+              "title": "NBC Nightly News With Tom Llamas",
+              "teams": [
+                "",
+                ""
+              ]
+            },
+            {
+              "minute": 1020,
+              "duration": 75,
+              "title": "Football Night in America",
+              "teams": [
+                "",
+                ""
+              ]
+            },
+            {
+              "minute": 1095,
+              "duration": 195,
+              "title": "NFL Football",
+              "teams": [
+                "Las Vegas Raiders",
+                "Cleveland Browns"
+              ]
+            },
+            {
+              "minute": 1290,
+              "duration": 30,
+              "title": "9News at 9:30PM Special Edition",
+              "teams": [
+                "",
+                ""
+              ]
+            },
+            {
+              "minute": 1320,
+              "duration": 30,
+              "title": "9News at 10PM",
+              "teams": [
+                "",
+                ""
+              ]
+            },
+            {
+              "minute": 1350,
+              "duration": 30,
+              "title": "9News at 10:30PM",
+              "teams": [
+                "",
+                ""
+              ]
+            },
+            {
+              "minute": 1380,
+              "duration": 60,
+              "title": "Meet the Press",
+              "teams": [
+                "",
+                ""
+              ]
+            }
+          ]
         }
       ],
       "successfulPages": 5,
       "diagnostics": [
+        {
+          "call": "KUSA",
+          "day": "2026-11-29",
+          "status": 200,
+          "parsed": 1,
+          "programs": 16,
+          "via": "direct"
+        },
         {
           "call": "KCNC",
           "day": "2026-11-29",
@@ -3017,14 +3025,6 @@
           "status": 200,
           "parsed": 0,
           "programs": 20,
-          "via": "direct"
-        },
-        {
-          "call": "KUSA",
-          "day": "2026-11-29",
-          "status": 200,
-          "parsed": 1,
-          "programs": 16,
           "via": "direct"
         },
         {
@@ -3084,7 +3084,7 @@
           "via": "direct"
         }
       ],
-      "checkedAt": "2026-11-19T00:27:50.265Z"
+      "checkedAt": "2026-11-19T07:58:43.068Z"
     }
   ]
 }
